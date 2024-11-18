@@ -1,5 +1,5 @@
-{
-  "title": "Landing page template for developers & startups",
+{"cs":{
+  "title": "Softwarová řešení na míru pro moderní firmy",
   "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
   "button": [
     {
@@ -10,4 +10,19 @@
       "color": "#fff"
     }
   ]
+  },
+  "en":
+  {
+  "title": "Softwarová řešení na míru pro moderní firmy",
+  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "button": [
+    {
+      "title": "Explore"
+    },
+    {
+      "title": "Learn more",
+      "color": "#fff"
+    }
+  ]
+  }
 }
