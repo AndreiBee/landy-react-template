@@ -14,7 +14,7 @@ const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 
 const Home = () => {
-  const { t, i18n } = useTranslation(); // Hook to use translations
+  const { i18n } = useTranslation(); // Hook to use translations
   const currentLanguage = i18n.language as "en" | "cs"; // Assert the language type explicitly
 
   return (
