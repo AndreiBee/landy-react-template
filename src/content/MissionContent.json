@@ -6,22 +6,22 @@
     {
       "title": "Vývoj softwaru na míru",
       "content": "Navrhujeme a implementujeme software, který přesně odpovídá vašim potřebám.",
-      "icon": "notes.svg"
+      "icon": "install-setup-product-icon.svg"
     },
     {
       "title": "Optimalizace a správa IT systémů",
       "content": "Zlepšujeme výkon, stabilitu a bezpečnost vašich systémů.",
-      "icon": "notes.svg"
+      "icon": "web-software-icon.svg"
     },
     {
       "title": "Podpora a údržba",
       "content": "Postaráme se o bezproblémový provoz vašich softwarových řešení.",
-      "icon": "notes.svg"
+      "icon": "computer-desktop-repair-icon.svg"
     },
     {
       "title": "Školení a konzultace",
       "content": "Pomáháme vašemu týmu získat maximum z používaných nástrojů a technologií",
-      "icon": "notes.svg"
+      "icon": "boy-services-support-icon.svg"
     }
   ]
 },
@@ -32,22 +32,22 @@
     {
       "title": "Custom Software Development",
       "content": "We design and implement software that perfectly matches your needs.",
-      "icon": "notes.svg"
+      "icon": "install-setup-product-icon.svg"
     },
     {
       "title": "Optimization and IT System Management",
       "content": "We improve the performance, stability, and security of your systems.",
-      "icon": "notes.svg"
+      "icon": "web-software-icon.svg"
     },
     {
       "title": "Support and Maintenance",
       "content": "We ensure the smooth operation of your software solutions.",
-      "icon": "notes.svg"
+      "icon": "computer-desktop-repair-icon.svg"
     },
     {
       "title": "Training and Consulting",
       "content": "We help your team get the most out of the tools and technologies you use.",
-      "icon": "notes.svg"
+      "icon": "boy-services-support-icon.svg"
     }
   ]
 }
