@@ -33,14 +33,14 @@ const MiddleBlock = ({ title, section, t }: MiddleBlockProps) => {
               <ButtonWrapper>
                 {Array.isArray(section) &&
                   section.map((item, id) => (
-                    <div key={id}>
-                      {/* Clickable image */}
                       <ImageWrapper
                         onClick={() => window.open(item.link, "_blank")}
                       >
+                    <div key={id}>
+                      {/* Clickable image */}
                       <SvgIcon src={item.icon} width="100%" height="100%" />
-                      </ImageWrapper>
                     </div>
+                      </ImageWrapper>
                 ))}
               </ButtonWrapper>
             </Col>

@@ -20,27 +20,22 @@
     ]
   },
   "en":{
-    "title": "Introduce your product quickly & effectively",
+    "title": "Our Satisfied Customers",
     "section": [
       {
         "title": "VÚTS",
         "link": "https://www.vuts.cz/",
-        "icon": "notes.svg"
+        "icon": "logo-vuts.png"
       },
       {
-        "title": "VÚTS",
-        "link": "https://www.vuts.cz/",
-        "icon": "notes.svg"
+        "title": "Arcibiskupství pražské",
+        "link": "https://apha.cz/",
+        "icon": "logo-ap.png"
       },      
       {
-        "title": "VÚTS",
-        "link": "https://www.vuts.cz/",
-        "icon": "notes.svg"
-      },      
-      {
-        "title": "VÚTS",
-        "link": "https://www.vuts.cz/",
-        "icon": "notes.svg"
+        "title": "Rigaku",
+        "link": "https://rigaku.com/",
+        "icon": "logo-rigaku.png"
       }
     ]
   }

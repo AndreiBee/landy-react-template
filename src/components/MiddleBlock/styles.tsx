@@ -25,7 +25,7 @@ export const ContentWrapper = styled("div")`
 `;
 
 export const ButtonWrapper = styled("div")`
-  display: ruby;
+  display: contents;
   max-width: 100%;
 
   @media screen and (min-width: 1024px) {
@@ -43,7 +43,7 @@ export const ImageWrapper = styled.div`
   margin: 20px;
 
   img {
-    width: 140px; /* Adjust image size */
+    width: 8rem; /* Adjust image size */
     height: auto;
     border-radius: 8px; /* Optional styling */
   }

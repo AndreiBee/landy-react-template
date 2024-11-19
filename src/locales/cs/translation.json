@@ -3,10 +3,10 @@
   "Policy": "Zásady",
   "Mission": "Mise",
   "Product": "Produkt",
-  "Tell us everything": "Řekněte nám vše",
+  "Tell us everything": "Začít konverzaci",
   "Contact": "Kontakt",
   "Do you have any question? Feel free to reach out.": "Máte nějaké dotazy? Neváhejte nás kontaktovat.",
-  "Let's Chat": "Pojďme si popovídat",
+  "Let's Chat": "Napsat Email",
   "Application Security": "Bezpečnost aplikací",
   "Software Principles": "Principy softwaru",
   "Support Center": "Centrum podpory",
@@ -24,7 +24,7 @@
   "message": "Zpráva",
   "Your Message": "Vaše zpráva",
   "name": "Jméno",
-  "Your Name": "Vaše jméno",
+  "Your Name": "Vaše jméno a příjmení",
   "email": "Email",
-  "Your Email": "Váš Email"
+  "Your Email": "Vaše E-mailová adresa"
 }

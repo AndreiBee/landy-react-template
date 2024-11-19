@@ -20,25 +20,26 @@
     }
   ]
 },
-"en":{
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+"en": {
+  "title": "Why Choose Arvion?",
+  "text": "Arvion provides companies not only with innovative custom software solutions but also with complete support for their IT systems. With years of experience in software development and optimization, we help businesses tackle technological challenges and focus on growing their operations.",
   "section": [
     {
       "title": "",
-      "content": "Individuální přístup ke každému projektu",
+      "content": "Individual approach to every project",
       "icon": "notes.svg"
     },
     {
       "title": "",
-      "content": "Profesionální tým odborníků s rozsáhlými zkušenostmi",
+      "content": "Professional team of experts with extensive experience",
       "icon": "notes.svg"
     },
     {
       "title": "",
-      "content": "Moderní technologie a nejlepší praktiky v oboru",
+      "content": "Modern technologies and best practices in the industry",
       "icon": "notes.svg"
     }
   ]
 }
+
 }

@@ -15,18 +15,19 @@
     }
   ]
   },
-  "en":
-  {
-  "title": "Softwarová řešení na míru pro moderní firmy",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+"en": {
+  "title": "Custom Software Solutions for Modern Businesses",
+  "text": "Arvion is your reliable partner for software development, management, and support. From system optimization to implementing innovative solutions – we are here for you.",
   "button": [
     {
-      "title": "Explore"
+      "title": "Learn More",
+      "scrollToSection": "about"
     },
     {
-      "title": "Learn more",
+      "title": "Contact Us",
+      "scrollToSection": "contact",
       "color": "#fff"
     }
   ]
-  }
+}
 }

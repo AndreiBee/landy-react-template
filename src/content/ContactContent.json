@@ -3,43 +3,14 @@
 {
     "title": "Kontaktní formulář",
     "text": "Spojte se s námi ještě dnes!",
-    "section": [
-        {
-        "content": "Telefon: +420 773 972 XXX"
-        },
-        {
-        "content": "E-mail: mailto:someone@example.com"
-        },
-        {
-        "content": "Praha"
-        }
-    ]
+    "phone": "+420 773 972 894",
+    "email": "arvioncz@gmail.com"
 },
 "en":
 {
     "title": "Contact form",
-    "text": "The following form demonstrates form validation in action. Contact form component reduces the amount of time it is being re-rendered by the user as it embraces uncontrolled form validation to reduce any unnecessary performance penalty.",
-  "section": [
-    {
-      "title": "Vývoj softwaru na míru",
-      "content": "Navrhujeme a implementujeme software, který přesně odpovídá vašim potřebám.",
-      "icon": "notes.svg"
-    },
-    {
-      "title": "Optimalizace a správa IT systémů",
-      "content": "Zlepšujeme výkon, stabilitu a bezpečnost vašich systémů.",
-      "icon": "notes.svg"
-    },
-    {
-      "title": "Podpora a údržba",
-      "content": "Postaráme se o bezproblémový provoz vašich softwarových řešení.",
-      "icon": "notes.svg"
-    },
-    {
-      "title": "Školení a konzultace",
-      "content": "Pomáháme vašemu týmu získat maximum z používaných nástrojů a technologií",
-      "icon": "notes.svg"
-    }
-  ]
+    "text": "Contact us today!",
+    "phone": "+420 773 972 894",
+    "email": "arvioncz@gmail.com"
 }
 }

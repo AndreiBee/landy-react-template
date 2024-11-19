@@ -58,7 +58,8 @@ const Home = () => {
       <Contact
         title={ContactContent[currentLanguage].title}
         content={ContactContent[currentLanguage].text}
-        section={ContactContent[currentLanguage].section}
+        phone={ContactContent[currentLanguage].phone}
+        email={ContactContent[currentLanguage].email}
         id="contact"
       />
     </Container>

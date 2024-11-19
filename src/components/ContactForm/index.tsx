@@ -8,9 +8,9 @@ import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
-import { ContactContainer, FormGroup, Span, ButtonContainer, MinPara } from "./styles";
+import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
 
-const Contact = ({ title, content, section, id, t }: ContactProps) => {
+const Contact = ({ title, content, phone, email, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
@@ -24,23 +24,21 @@ const Contact = ({ title, content, section, id, t }: ContactProps) => {
         <Col lg={12} md={11} sm={24} xs={24}>
           <Slide direction="left" triggerOnce>
             <Block title={title} content={content} />
-              <Row justify="space-between">
-                {typeof section === "object" &&
-                  section.map(
-                    (
-                      item: {
-                        content: string;
-                      },
-                      id: number
-                    ) => {
-                      return (
-                        <Col key={id} span={11}>
-                          <MinPara>{t(item.content)}</MinPara>
-                        </Col>
-                      );
-                    }
-                  )}
-              </Row>
+            <Row style={{ margin: "10px"}} justify="space-between">
+              <a href={`tel:${phone}`} style={{ textDecoration: "none", color: "inherit" }}>
+                {t(phone)}
+              </a>
+            </Row>
+            <Row style={{ margin: "10px"}} justify="space-between">
+              <a href={`mailto:${email}`} style={{ textDecoration: "none", color: "inherit" }}>
+                {t(email)}
+              </a>
+            </Row>
+            <Row style={{ margin: "10px"}} justify="space-between">
+              <div>
+                {t("AddressLine1")}, {t("AddressLine2")}
+              </div>
+            </Row>
           </Slide>
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>

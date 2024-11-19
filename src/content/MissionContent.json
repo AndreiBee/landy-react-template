@@ -25,28 +25,28 @@
     }
   ]
 },
-"en":{
-  "title": "Ready made sections",
-  "text": "Landy comes with a set of ready to use sections to help you easily create a landing page for your own brand, with all the content your startup desires. In order to replace any dummy elements (text, image, etc..) all you need to do is go to content folder and input your real content.",
+"en": {
+  "title": "Complete Software Support",
+  "text": "We will take care of you",
   "section": [
     {
-      "title": "Vývoj softwaru na míru",
-      "content": "Navrhujeme a implementujeme software, který přesně odpovídá vašim potřebám.",
+      "title": "Custom Software Development",
+      "content": "We design and implement software that perfectly matches your needs.",
       "icon": "notes.svg"
     },
     {
-      "title": "Optimalizace a správa IT systémů",
-      "content": "Zlepšujeme výkon, stabilitu a bezpečnost vašich systémů.",
+      "title": "Optimization and IT System Management",
+      "content": "We improve the performance, stability, and security of your systems.",
       "icon": "notes.svg"
     },
     {
-      "title": "Podpora a údržba",
-      "content": "Postaráme se o bezproblémový provoz vašich softwarových řešení.",
+      "title": "Support and Maintenance",
+      "content": "We ensure the smooth operation of your software solutions.",
       "icon": "notes.svg"
     },
     {
-      "title": "Školení a konzultace",
-      "content": "Pomáháme vašemu týmu získat maximum z používaných nástrojů a technologií",
+      "title": "Training and Consulting",
+      "content": "We help your team get the most out of the tools and technologies you use.",
       "icon": "notes.svg"
     }
   ]
