@@ -12,6 +12,8 @@
   "Support Center": "Support Center",
   "Customer Support": "Customer Support",
   "Address": "Address",
+  "AddressLine1": "Prague",
+  "AddressLine2": "Czech Republic",
   "Press": "Press",
   "Careers & Culture": "Careers & Culture",
   "Language": "Language",
@@ -19,10 +21,10 @@
   "Learn more": "Learn more",
   "Get started": "Get started",
   "Submit": "Submit",
-  "Message" : "Message",
+  "message" : "Message",
   "Your Message": "Your Message",
-  "Name" : "Name",
+  "name" : "Name",
   "Your Name": "Your Name",
-  "Email" : "Email",
+  "email" : "Email",
   "Your Email": "Your Email"
 }

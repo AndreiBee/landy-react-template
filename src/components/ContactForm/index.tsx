@@ -8,9 +8,9 @@ import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
-import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
+import { ContactContainer, FormGroup, Span, ButtonContainer, MinPara } from "./styles";
 
-const Contact = ({ title, content, id, t }: ContactProps) => {
+const Contact = ({ title, content, section, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
@@ -20,10 +20,27 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
 
   return (
     <ContactContainer id={id}>
-      <Row justify="space-between" align="middle">
+      <Row justify="space-between" align="top">
         <Col lg={12} md={11} sm={24} xs={24}>
           <Slide direction="left" triggerOnce>
             <Block title={title} content={content} />
+              <Row justify="space-between">
+                {typeof section === "object" &&
+                  section.map(
+                    (
+                      item: {
+                        content: string;
+                      },
+                      id: number
+                    ) => {
+                      return (
+                        <Col key={id} span={11}>
+                          <MinPara>{t(item.content)}</MinPara>
+                        </Col>
+                      );
+                    }
+                  )}
+              </Row>
           </Slide>
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>

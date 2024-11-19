@@ -1,16 +1,21 @@
 {
 "cs":{
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "Proč si vybrat Arvion?",
+  "text": "Arvion přináší firmám nejen inovativní softwarová řešení na míru, ale také kompletní podporu jejich IT systémů. S dlouholetými zkušenostmi v oblasti vývoje a optimalizace softwaru pomáháme firmám zvládnout technologické výzvy a soustředit se na růst svého podnikání.",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
+      "title": "",
+      "content": "Individuální přístup ke každému projektu",
       "icon": "notes.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
+      "title": "",
+      "content": "Profesionální tým odborníků s rozsáhlými zkušenostmi",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "",
+      "content": "Moderní technologie a nejlepší praktiky v oboru",
       "icon": "notes.svg"
     }
   ]
@@ -20,13 +25,18 @@
   "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
+      "title": "",
+      "content": "Individuální přístup ke každému projektu",
       "icon": "notes.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
+      "title": "",
+      "content": "Profesionální tým odborníků s rozsáhlými zkušenostmi",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "",
+      "content": "Moderní technologie a nejlepší praktiky v oboru",
       "icon": "notes.svg"
     }
   ]

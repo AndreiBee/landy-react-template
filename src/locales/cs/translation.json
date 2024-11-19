@@ -12,6 +12,8 @@
   "Support Center": "Centrum podpory",
   "Customer Support": "Zákaznická podpora",
   "Address": "Adresa",
+  "AddressLine1": "Praha",
+  "AddressLine2": "Česká republika",
   "Press": "Tisk",
   "Careers & Culture": "Kariéra a kultura",
   "Language": "Jazyk",
@@ -19,10 +21,10 @@
   "Learn more": "Zjistit více",
   "Get started": "Začít",
   "Submit": "Odeslat",
-  "Message": "Zpráva",
+  "message": "Zpráva",
   "Your Message": "Vaše zpráva",
-  "Name": "Jméno",
+  "name": "Jméno",
   "Your Name": "Vaše jméno",
-  "Email": "E-mail",
-  "Your Email": "Váš e-mail"
+  "email": "Email",
+  "Your Email": "Váš Email"
 }

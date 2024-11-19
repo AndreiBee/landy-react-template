@@ -26,6 +26,10 @@ export const Span = styled("span")`
   padding: 0 0.675rem;
 `;
 
+export const MinPara = styled("p")`
+  font-size: 13px;
+`;
+
 export const ButtonContainer = styled("div")`
   text-align: end;
   position: relative;

@@ -1,10 +1,54 @@
 {
 "cs":{
-  "title": "Ready made sections",
-  "text": "Landy comes with a set of ready to use sections to help you easily create a landing page for your own brand, with all the content your startup desires. In order to replace any dummy elements (text, image, etc..) all you need to do is go to content folder and input your real content."
+  "title": "Kompletní softwarová podpora",
+  "text": "My se postarame o Vas",
+  "section": [
+    {
+      "title": "Vývoj softwaru na míru",
+      "content": "Navrhujeme a implementujeme software, který přesně odpovídá vašim potřebám.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Optimalizace a správa IT systémů",
+      "content": "Zlepšujeme výkon, stabilitu a bezpečnost vašich systémů.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Podpora a údržba",
+      "content": "Postaráme se o bezproblémový provoz vašich softwarových řešení.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Školení a konzultace",
+      "content": "Pomáháme vašemu týmu získat maximum z používaných nástrojů a technologií",
+      "icon": "notes.svg"
+    }
+  ]
 },
 "en":{
   "title": "Ready made sections",
-  "text": "Landy comes with a set of ready to use sections to help you easily create a landing page for your own brand, with all the content your startup desires. In order to replace any dummy elements (text, image, etc..) all you need to do is go to content folder and input your real content."
+  "text": "Landy comes with a set of ready to use sections to help you easily create a landing page for your own brand, with all the content your startup desires. In order to replace any dummy elements (text, image, etc..) all you need to do is go to content folder and input your real content.",
+  "section": [
+    {
+      "title": "Vývoj softwaru na míru",
+      "content": "Navrhujeme a implementujeme software, který přesně odpovídá vašim potřebám.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Optimalizace a správa IT systémů",
+      "content": "Zlepšujeme výkon, stabilitu a bezpečnost vašich systémů.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Podpora a údržba",
+      "content": "Postaráme se o bezproblémový provoz vašich softwarových řešení.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Školení a konzultace",
+      "content": "Pomáháme vašemu týmu získat maximum z používaných nástrojů a technologií",
+      "icon": "notes.svg"
+    }
+  ]
 }
 }

@@ -1,12 +1,16 @@
-{"cs":{
+{
+  "cs":
+  {
   "title": "Softwarová řešení na míru pro moderní firmy",
-  "text": "Arvion je váš spolehlivý partner pro vývoj, správu a podporu softwaru. Od optimalizace systémů po implementaci inovativních řešení – jsme tady pro vás.",
+  "text": "Arvion je váš spolehlivý partner pro vývoj, správu a podporu softwaru. Od optimalizace systémů po implementaci inovativních řešení – jsme tady pro Vás.",
   "button": [
     {
-      "title": "Zjistit více"
+      "title": "Zjistit více",
+      "scrollToSection": "about"
     },
     {
       "title": "Kontaktujte nás",
+      "scrollToSection": "contact",
       "color": "#fff"
     }
   ]
