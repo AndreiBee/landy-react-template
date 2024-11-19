@@ -1,12 +1,47 @@
 {
 "cs":{
-    "title": "Proč si vybrat Arvion?",
-    "text": "Arvion přináší firmám nejen inovativní softwarová řešení na míru, ale také kompletní podporu jejich IT systémů. S dlouholetými zkušenostmi v oblasti vývoje a optimalizace softwaru pomáháme firmám zvládnout technologické výzvy a soustředit se na růst svého podnikání.",
-    "button": "Get started"
+    "title": "Naši spokojení zákazníci",
+    "section": [
+      {
+        "title": "VÚTS",
+        "link": "https://www.vuts.cz/",
+        "icon": "logo-vuts.png"
+      },
+      {
+        "title": "Arcibiskupství pražské",
+        "link": "https://apha.cz/",
+        "icon": "logo-ap.png"
+      },      
+      {
+        "title": "Rigaku",
+        "link": "https://rigaku.com/",
+        "icon": "logo-rigaku.png"
+      }
+    ]
   },
   "en":{
     "title": "Introduce your product quickly & effectively",
-    "text": "Landy comes with multi-lingual support, all of the content is stored in the JSON files, so that you can manage the texts without having any prior knowledge in developing web applications using React.js.",
-    "button": "Get started"
+    "section": [
+      {
+        "title": "VÚTS",
+        "link": "https://www.vuts.cz/",
+        "icon": "notes.svg"
+      },
+      {
+        "title": "VÚTS",
+        "link": "https://www.vuts.cz/",
+        "icon": "notes.svg"
+      },      
+      {
+        "title": "VÚTS",
+        "link": "https://www.vuts.cz/",
+        "icon": "notes.svg"
+      },      
+      {
+        "title": "VÚTS",
+        "link": "https://www.vuts.cz/",
+        "icon": "notes.svg"
+      }
+    ]
   }
 }

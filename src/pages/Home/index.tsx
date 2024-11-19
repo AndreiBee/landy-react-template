@@ -1,13 +1,13 @@
 import { lazy } from "react";
 import { useTranslation } from "react-i18next";
 import IntroContent from "../../content/IntroContent.json";
-// import MiddleBlockContent from "../../content/MiddleBlockContent.json";
+import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 import AboutContent from "../../content/AboutContent.json";
 import MissionContent from "../../content/MissionContent.json";
 import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
 
-// const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
+const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
@@ -28,34 +28,33 @@ const Home = () => {
         icon="developer.svg"
         id="intro"
       />
-      {/* <MiddleBlock
-        title={MiddleBlockContent[currentLanguage].title}
-        content={MiddleBlockContent[currentLanguage].text}
-        button={MiddleBlockContent[currentLanguage].button}
-      /> */}
       <ContentBlock
         direction="left"
         title={AboutContent[currentLanguage].title}
         content={AboutContent[currentLanguage].text}
         section={AboutContent[currentLanguage].section}
-        icon="graphs.svg"
+        icon="product-launch.svg"
         id="about"
+      />
+      <MiddleBlock
+        title={MiddleBlockContent[currentLanguage].title}
+        section={MiddleBlockContent[currentLanguage].section}
       />
       <ContentBlock
         direction="left"
         title={MissionContent[currentLanguage].title}
         content={MissionContent[currentLanguage].text}
         section={MissionContent[currentLanguage].section}
-        icon="product-launch.svg"
+        icon="graphs.svg"
         id="mission"
       />
-      <ContentBlock
+      {/* <ContentBlock
         direction="left"
         title={ProductContent[currentLanguage].title}
         content={ProductContent[currentLanguage].text}
         icon="waving.svg"
         id="product"
-      />
+      /> */}
       <Contact
         title={ContactContent[currentLanguage].title}
         content={ContactContent[currentLanguage].text}

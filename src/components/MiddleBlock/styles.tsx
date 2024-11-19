@@ -23,3 +23,32 @@ export const ContentWrapper = styled("div")`
     max-width: 100%;
   }
 `;
+
+export const ButtonWrapper = styled("div")`
+  display: ruby;
+  max-width: 100%;
+
+  @media screen and (min-width: 1024px) {
+    max-width: 80%;
+  }
+
+  button:last-child {
+    margin-left: 20px;
+  }
+`;
+
+export const ImageWrapper = styled.div`
+  cursor: pointer;
+  display: inline-block;
+  margin: 20px;
+
+  img {
+    width: 140px; /* Adjust image size */
+    height: auto;
+    border-radius: 8px; /* Optional styling */
+  }
+
+  &:hover {
+    opacity: 0.8; /* Visual feedback on hover */
+  }
+`;
