@@ -21,10 +21,12 @@
   "Learn more": "Zjistit více",
   "Get started": "Začít",
   "Submit": "Odeslat",
-  "message": "Zpráva",
+  "phone": "Telefon*",
+  "Your Mobile Phone": "Vaše telefonní číslo",
+  "message": "Zpráva*",
   "Your Message": "Vaše zpráva",
-  "name": "Jméno",
+  "name": "Jméno*",
   "Your Name": "Vaše jméno a příjmení",
-  "email": "Email",
+  "email": "Email*",
   "Your Email": "Vaše E-mailová adresa"
 }

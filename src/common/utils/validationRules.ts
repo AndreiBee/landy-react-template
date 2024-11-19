@@ -14,5 +14,8 @@ export default function validate(values: validateProps) {
   if (!values.message) {
     errors.message = "Message is required";
   }
+  if (!values.phone) {
+    errors.phone = "Phone number is required";
+  }
   return errors;
 }

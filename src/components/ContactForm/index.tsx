@@ -8,7 +8,7 @@ import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
-import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
+import { ContactContainer, FormGroup, Span, ButtonContainer, PhoneLink, EmailLink, AddressLine } from "./styles";
 
 const Contact = ({ title, content, phone, email, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
@@ -25,19 +25,15 @@ const Contact = ({ title, content, phone, email, id, t }: ContactProps) => {
           <Slide direction="left" triggerOnce>
             <Block title={title} content={content} />
             <Row style={{ margin: "10px"}} justify="space-between">
-              <a href={`tel:${phone}`} style={{ textDecoration: "none", color: "inherit" }}>
-                {t(phone)}
-              </a>
+              <PhoneLink href={`tel:${phone}`}>{t(phone)}</PhoneLink>
             </Row>
             <Row style={{ margin: "10px"}} justify="space-between">
-              <a href={`mailto:${email}`} style={{ textDecoration: "none", color: "inherit" }}>
-                {t(email)}
-              </a>
+              <EmailLink href={`mailto:${email}`}>{t(email)}</EmailLink>
             </Row>
             <Row style={{ margin: "10px"}} justify="space-between">
-              <div>
+              <AddressLine>
                 {t("AddressLine1")}, {t("AddressLine2")}
-              </div>
+              </AddressLine>
             </Row>
           </Slide>
         </Col>
@@ -63,6 +59,16 @@ const Contact = ({ title, content, phone, email, id, t }: ContactProps) => {
                   onChange={handleChange}
                 />
                 <ValidationType type="email" />
+              </Col>
+              <Col span={24}>
+                <Input
+                  type="tel"
+                  name="phone"
+                  placeholder="Your Mobile Phone"
+                  value={values.phone || ""}
+                  onChange={handleChange}
+                />
+                <ValidationType type="phone" />
               </Col>
               <Col span={24}>
                 <TextArea

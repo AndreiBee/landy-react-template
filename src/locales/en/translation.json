@@ -21,10 +21,12 @@
   "Learn more": "Learn more",
   "Get started": "Get started",
   "Submit": "Submit",
-  "message" : "Message",
+  "phone": "Phone*",
+  "Your Mobile Phone": "Your Mobile Phone",
+  "message" : "Message*",
   "Your Message": "Your Message",
-  "name" : "Name",
+  "name" : "Name*",
   "Your Name": "Your Name",
-  "email" : "Email",
+  "email" : "Email*",
   "Your Email": "Your Email"
 }

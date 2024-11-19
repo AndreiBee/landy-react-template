@@ -38,3 +38,38 @@ export const ButtonContainer = styled("div")`
     padding-top: 0.75rem;
   }
 `;
+
+export const PhoneLink = styled.a`
+  text-decoration: none;
+  // color: blue;
+  // font-weight: bold;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif; /* Set the font style */
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: rgb(255, 130, 92);  /* Change color on hover */
+  }
+`;
+
+export const EmailLink = styled.a`
+  text-decoration: none;
+  // color: blue;  /* Change the color as needed */
+  // font-weight: bold;  /* Set font weight */
+  font-size: 20px;  /* Set font size */
+  font-family: "Roboto", sans-serif;  /* Set the font family */
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: rgb(255, 130, 92);  /* Change color on hover */
+  }
+`;
+
+export const AddressLine = styled.div`
+  text-decoration: none;
+  // color: rgb(255, 130, 92);  /* Change the color as needed */
+  // font-weight: bold;  /* Set font weight */
+  font-size: 20px;  /* Set font size */
+  font-family: "Roboto", sans-serif;  /* Set the font family */
+  transition: color 0.3s ease;
+`;
