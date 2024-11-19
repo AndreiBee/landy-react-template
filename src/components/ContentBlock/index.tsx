@@ -87,7 +87,7 @@ const ContentBlock = ({
                           id: number
                         ) => {
                           return (
-                            <Col key={id} span={11}>
+                            <Col key={id} span={11} style={{ textAlign: "center" }}>
                               <SvgIcon
                                 src={item.icon}
                                 width="60px"

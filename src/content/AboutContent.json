@@ -17,6 +17,11 @@
       "title": "",
       "content": "Moderní technologie a nejlepší praktiky v oboru",
       "icon": "solution-icon.svg"
+    },
+    {
+      "title": "",
+      "content": "Rychlé a efektivní řešení problémů",
+      "icon": "quick-icon.svg"
     }
   ]
 },
@@ -38,6 +43,11 @@
       "title": "",
       "content": "Modern technologies and best practices in the industry",
       "icon": "solution-icon.svg"
+    },
+    {
+      "title": "",
+      "content": "Fast and effective problem solving",
+      "icon": "quick-icon.svg"
     }
   ]
 }
