@@ -96,6 +96,11 @@ export const FooterContainer = styled("div")`
   align-items: center;
   transition: all 0.1s ease-in-out;
 
+  /* For right-aligning a specific element */
+  > *:last-child {
+    margin-left: auto; /* Pushes the last child to the far right */
+  }
+    
   a {
     &:hover,
     &:active,

@@ -7,7 +7,7 @@
    viewBox="0 0 38.364582 10.583333"
    version="1.1"
    id="svg1"
-   sodipodi:docname="test.svg"
+   sodipodi:docname="logo.svg"
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,7 +24,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="9.7780022"
-     inkscape:cx="68.521154"
+     inkscape:cx="68.521155"
      inkscape:cy="50.930649"
      inkscape:window-width="2880"
      inkscape:window-height="1676"
@@ -93,7 +93,7 @@
        font-size="9.70557px"
        font-weight="700"
        id="text1"
-       x="10.306862"
+       x="10.836028"
        style="stroke-width:0.225708">rvion</text>
   </g>
 </svg>
