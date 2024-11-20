@@ -37,7 +37,7 @@ export const Burger = styled("div")`
   @media only screen and (max-width: 890px) {
     display: block;
     align-self: center; /* Vertically center the Burger in the flex container */
-    margin: 0 50px; /* Add horizontal margins */
+    margin: 0px 0px 0px 50px; /* Add horizontal margins */
     cursor: pointer;
   }
 
