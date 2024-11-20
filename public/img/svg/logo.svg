@@ -1,3 +1,99 @@
-<svg viewBox="0 0 135 40" xmlns="http://www.w3.org/2000/svg">
-  <text y="30" font-family="Motiva Sans Bold, sans-serif" fill="#18216d" font-size="43px" font-weight="700">Arvion</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="145"
+   height="40"
+   viewBox="0 0 38.364582 10.583333"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="test.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="9.7780022"
+     inkscape:cx="68.521154"
+     inkscape:cy="50.930649"
+     inkscape:window-width="2880"
+     inkscape:window-height="1676"
+     inkscape:window-x="-12"
+     inkscape:window-y="-12"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="powerclip"
+       message=""
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false" />
+    <inkscape:path-effect
+       effect="powermask"
+       id="path-effect2"
+       is_visible="true"
+       lpeversion="1"
+       uri="#mask-powermask-path-effect2"
+       invert="false"
+       hide_mask="false"
+       background="true"
+       background_color="#ffffffff" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1">
+      <path
+         d="M 398.87108,393.71097 H 335.98046 L 310.98042,328.67188 H 196.52729 l -23.63282,65.03909 H 111.56632 L 223.08981,107.38276 h 61.13281 z M 292.42573,280.42968 252.97264,174.17965 214.30074,280.42968 Z"
+         id="path1"
+         style="font-weight:700;font-size:8.26823px;font-family:Arial, sans-serif;dominant-baseline:middle;text-anchor:middle;display:none;stroke:#000000;stroke-width:2"
+         aria-label="A" />
+      <path
+         id="lpe_path-effect1"
+         style="font-weight:700;font-size:8.26823px;font-family:Arial, sans-serif;dominant-baseline:middle;text-anchor:middle;stroke:#000000;stroke-width:2"
+         class="powerclip"
+         d="M -5,-5 H 517 V 517 H -5 Z M 398.87108,393.71097 284.22262,107.38276 H 223.08981 L 111.56632,393.71097 h 61.32815 l 23.63282,-65.03909 h 114.45313 l 25.00004,65.03909 z M 292.42573,280.42968 252.97264,174.17965 214.30074,280.42968 Z" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Vrstva 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       x="0"
+       y="0"
+       width="512"
+       height="512"
+       rx="120"
+       fill="#18216d"
+       id="rect1"
+       mask="none"
+       sodipodi:type="rect"
+       transform="scale(0.02067057)"
+       clip-path="url(#clipPath1)"
+       inkscape:path-effect="#path-effect1"
+       d="m 120,0 h 272 c 66.48,0 120,53.52 120,120 v 272 c 0,66.48 -53.52,120 -120,120 H 120 C 53.52,512 0,458.48 0,392 V 120 C 0,53.52 53.52,0 120,0 Z" />
+    <text
+       y="8.2206192"
+       font-family="'Motiva Sans Bold', sans-serif"
+       fill="#18216d"
+       font-size="9.70557px"
+       font-weight="700"
+       id="text1"
+       x="10.306862"
+       style="stroke-width:0.225708">rvion</text>
+  </g>
 </svg>

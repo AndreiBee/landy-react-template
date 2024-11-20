@@ -4,6 +4,7 @@ import { withTranslation, TFunction } from "react-i18next";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
+import i18n from "i18next";
 import {
   HeaderSection,
   LogoContainer,
@@ -14,10 +15,17 @@ import {
   Label,
   Outline,
   Span,
+  LanguageSwitch,
+  LanguageSwitchContainer,
+  LanguageAndNavBarDiv,
 } from "./styles";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
+
+  const handleChange = (language: string) => {
+    i18n.changeLanguage(language);
+  };
 
   const toggleButton = () => {
     setVisibility(!visible);
@@ -42,6 +50,7 @@ const Header = ({ t }: { t: TFunction }) => {
         <CustomNavLinkSmall onClick={() => scrollTo("product")}>
           <Span>{t("Product")}</Span>
         </CustomNavLinkSmall> */}
+
         <CustomNavLinkSmall
           style={{ width: "180px" }}
           onClick={() => scrollTo("contact")}
@@ -61,12 +70,32 @@ const Header = ({ t }: { t: TFunction }) => {
           <LogoContainer to="/" aria-label="homepage">
             <SvgIcon src="logo.svg" width="101px" height="64px" />
           </LogoContainer>
-          <NotHidden>
-            <MenuItem />
-          </NotHidden>
-          <Burger onClick={toggleButton}>
-            <Outline />
-          </Burger>
+          <LanguageAndNavBarDiv>
+            <LanguageSwitchContainer>
+              <LanguageSwitch onClick={() => handleChange("cs")}>
+                <SvgIcon
+                  src="czech-republic.svg"
+                  aria-label="homepage"
+                  width="30px"
+                  height="30px"
+                />
+              </LanguageSwitch>
+              <LanguageSwitch onClick={() => handleChange("en")}>
+                <SvgIcon
+                  src="united-states.svg"
+                  aria-label="homepage"
+                  width="30px"
+                  height="30px"
+                />
+              </LanguageSwitch>
+            </LanguageSwitchContainer>
+            <NotHidden>
+              <MenuItem />
+            </NotHidden>
+            <Burger onClick={toggleButton}>
+              <Outline />
+            </Burger>
+          </LanguageAndNavBarDiv>
         </Row>
         <Drawer closable={false} open={visible} onClose={toggleButton}>
           <Col style={{ marginBottom: "2.5rem" }}>
