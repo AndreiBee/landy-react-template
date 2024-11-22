@@ -128,7 +128,7 @@ const Footer = ({ t }: { t: TFunction }) => {
             </NavLink>
             <FooterContainer>
               <SocialLink
-                href="https://www.linkedin.com/in/andrej-p%C4%8Delovodov-%F0%9F%92%BB-863508150/"
+                href="https://www.linkedin.com/company/arvioncz"
                 src="linkedin.svg"
               />
             </FooterContainer>

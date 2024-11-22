@@ -5,46 +5,68 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description"
-      content="Landy is a free React landing page template designed for developers and startups." />
-    <meta name="keywords"
-      content="Landy is a free React landing page template designed for developers and startups." />
-    <meta property="og:title" content="Landy - React Template" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://landy.website/" />
-    <meta property="og:description"
-      content="Landy is a free React landing page template designed for developers and startups." />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:locale" content="en_EN" />
-    <meta property="og:site_name" content="Landy" />
-    <meta property="og:url" content="https://landy.website/" />
-    <meta property="twitter:title" content="Landy - React Template" />
-    <meta property="twitter:description"
-      content="Landy is a free React landing page template designed for developers and startups." />
-    <meta property="twitter:site" content="https://landy.website/" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Arvion | Software Solutions for Your Company</title>
+    <!-- Default Meta Tags (English as fallback) -->
+    <meta name="description" content="Arvion provides tailored software solutions to help businesses optimize processes and improve efficiency." />
+    <meta name="keywords" content="software solutions, custom software, business optimization, Arvion, software development, IT solutions" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Arvion | Tailored Software Solutions" />
+    <meta property="og:description" content="Discover Arvion's innovative software solutions designed to help you achieve your business goals." />
+    <meta property="og:image" content="%PUBLIC_URL%/img/svg/logo.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Arvion" />
+    
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:title" content="Arvion | Tailored Software Solutions" />
+    <meta property="twitter:description" content="Discover Arvion's innovative software solutions designed to help you achieve your business goals." />
+    <meta property="twitter:image" content="%PUBLIC_URL%/img/svg/logo.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Dynamic Title -->
+    <title id="dynamic-title">Arvion | Software Solutions for Your Company</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <script>
+      // Detect user's language
+      const userLang = navigator.language || navigator.userLanguage;
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+      // Reference to meta tags
+      const titleElement = document.getElementById('dynamic-title');
+      const descriptionMeta = document.querySelector('meta[name="description"]');
+      const ogTitleMeta = document.querySelector('meta[property="og:title"]');
+      const ogDescriptionMeta = document.querySelector('meta[property="og:description"]');
+      const ogLocaleMeta = document.querySelector('meta[property="og:locale"]');
+      const twitterTitleMeta = document.querySelector('meta[property="twitter:title"]');
+      const twitterDescriptionMeta = document.querySelector('meta[property="twitter:description"]');
+
+      // Update meta tags based on language
+      if (userLang.startsWith('cs')) {
+        // Čeština
+        titleElement.textContent = 'Arvion | Softwarová řešení pro vaši firmu';
+        descriptionMeta.setAttribute('content', 'Arvion poskytuje softwarová řešení na míru pro optimalizaci procesů a zlepšení efektivity firem.');
+        ogTitleMeta.setAttribute('content', 'Arvion | Softwarová řešení na míru');
+        ogDescriptionMeta.setAttribute('content', 'Objevte inovativní softwarová řešení od Arvionu, která vám pomohou dosáhnout obchodních cílů.');
+        ogLocaleMeta.setAttribute('content', 'cs_CZ');
+        twitterTitleMeta.setAttribute('content', 'Arvion | Softwarová řešení na míru');
+        twitterDescriptionMeta.setAttribute('content', 'Objevte inovativní softwarová řešení od Arvionu, která vám pomohou dosáhnout obchodních cílů.');
+      } else {
+        // Default to English
+        titleElement.textContent = 'Arvion | Software Solutions for Your Company';
+        descriptionMeta.setAttribute('content', 'Arvion provides tailored software solutions to help businesses optimize processes and improve efficiency.');
+        ogTitleMeta.setAttribute('content', 'Arvion | Tailored Software Solutions');
+        ogDescriptionMeta.setAttribute('content', 'Discover Arvion\'s innovative software solutions designed to help you achieve your business goals.');
+        ogLocaleMeta.setAttribute('content', 'en_US');
+        twitterTitleMeta.setAttribute('content', 'Arvion | Tailored Software Solutions');
+        twitterDescriptionMeta.setAttribute('content', 'Discover Arvion\'s innovative software solutions designed to help you achieve your business goals.');
+      }
+    </script>
   </body>
 </html>
