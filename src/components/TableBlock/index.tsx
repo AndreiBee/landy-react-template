@@ -1,4 +1,4 @@
-import { Row, Col } from "antd";
+import { Col } from "antd";
 import { Fade } from "react-awesome-reveal";
 import { withTranslation } from "react-i18next";
 
@@ -7,9 +7,9 @@ import { SvgIcon } from "../../common/SvgIcon";
 import {
   ContentSection,
   ContentWrapper,
-  ServiceWrapper,
-  MinTitle,
-  MinPara,
+  // ServiceWrapper,
+  // MinTitle,
+  // MinPara,
   StyledRow,
 } from "./styles";
 
@@ -22,12 +22,12 @@ const ContentBlock = ({
   id,
   direction,
 }: ContentBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+  // const scrollTo = (id: string) => {
+  //   const element = document.getElementById(id) as HTMLDivElement;
+  //   element.scrollIntoView({
+  //     behavior: "smooth",
+  //   });
+  // };
 
   return (
     <ContentSection>
