@@ -25,7 +25,7 @@ const Home = () => {
         title={IntroContent[currentLanguage].title}
         content={IntroContent[currentLanguage].text}
         button={IntroContent[currentLanguage].button}
-        icon="developer.svg"
+        icon="team-of-programmers.svg"
         id="intro"
       />
       <ContentBlock
@@ -33,7 +33,7 @@ const Home = () => {
         title={AboutContent[currentLanguage].title}
         content={AboutContent[currentLanguage].text}
         section={AboutContent[currentLanguage].section}
-        icon="product-launch.svg"
+        icon="programmer-working-on-computer.svg"
         id="about"
       />
       <MiddleBlock
@@ -45,7 +45,7 @@ const Home = () => {
         title={MissionContent[currentLanguage].title}
         content={MissionContent[currentLanguage].text}
         section={MissionContent[currentLanguage].section}
-        icon="graphs.svg"
+        icon="programmer-working-with-team.svg"
         id="mission"
       />
       {/* <ContentBlock

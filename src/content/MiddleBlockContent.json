@@ -16,6 +16,11 @@
         "title": "Rigaku",
         "link": "https://rigaku.com/",
         "icon": "logo-rigaku.png"
+      },
+      {
+        "title": "ELI Beamlines",
+        "link": "https://www.eli-beams.eu/",
+        "icon": "logo-eli.png"
       }
     ]
   },
@@ -36,6 +41,11 @@
         "title": "Rigaku",
         "link": "https://rigaku.com/",
         "icon": "logo-rigaku.png"
+      },
+      {
+        "title": "ELI Beamlines",
+        "link": "https://www.eli-beams.eu/",
+        "icon": "logo-eli.png"
       }
     ]
   }

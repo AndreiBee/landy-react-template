@@ -1,0 +1,46 @@
+{
+"cs":
+{
+  "title": "Hodinové sazby",
+  "columns": ["Služba", "Cena bez smlouvy", "Cena při uzavření smlouvy"],
+  "rows": [
+    {
+      "service": "Konzultace a analýza",
+      "priceWithoutContract": "1 200 Kč/h",
+      "priceWithContract": "1 000 Kč/h"
+    },
+    {
+      "service": "Vývoj softwaru",
+      "priceWithoutContract": "1 500 Kč/h",
+      "priceWithContract": "1 250 Kč/h"
+    },
+    {
+      "service": "Údržba a podpora",
+      "priceWithoutContract": "1 000 Kč/h",
+      "priceWithContract": "850 Kč/h"
+    }
+  ]
+},
+"en": 
+{
+  "title": "Hodinové sazby",
+  "columns": ["Služba", "Cena bez smlouvy", "Cena při uzavření smlouvy"],
+  "rows": [
+    {
+      "service": "Konzultace a analýza",
+      "priceWithoutContract": "1 200 Kč/h",
+      "priceWithContract": "1 000 Kč/h"
+    },
+    {
+      "service": "Vývoj softwaru",
+      "priceWithoutContract": "1 500 Kč/h",
+      "priceWithContract": "1 250 Kč/h"
+    },
+    {
+      "service": "Údržba a podpora",
+      "priceWithoutContract": "1 000 Kč/h",
+      "priceWithContract": "850 Kč/h"
+    }
+  ]
+}
+}
