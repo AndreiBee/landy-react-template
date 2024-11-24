@@ -11,6 +11,10 @@ import {
   // MinTitle,
   // MinPara,
   StyledRow,
+  TableContainer,
+  StyledTable,
+  TableHead,
+  TableBody
 } from "./styles";
 
 const ContentBlock = ({
@@ -22,6 +26,12 @@ const ContentBlock = ({
   id,
   direction,
 }: ContentBlockProps) => {
+  // Map column names to row keys
+  const columnKeyMap: { [key: string]: string } = {
+    "Služba": "service",
+    "Cena bez smlouvy": "priceWithoutContract",
+    "Cena při uzavření smlouvy": "priceWithContract",
+  };
   // const scrollTo = (id: string) => {
   //   const element = document.getElementById(id) as HTMLDivElement;
   //   element.scrollIntoView({
@@ -44,6 +54,29 @@ const ContentBlock = ({
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
               <h6>{t(title)}</h6>
+              {/* Render the table if columns and rows are provided */}
+              {columns && rows && (
+                <TableContainer>
+                  <StyledTable>
+                    <TableHead>
+                      <tr>
+                        {columns.map((col, index) => (
+                          <th key={index}>{t(col)}</th>
+                        ))}
+                      </tr>
+                    </TableHead>
+                    <TableBody>
+                      {rows.map((row, rowIndex) => (
+                        <tr key={rowIndex}>
+                          {columns.map((col, colIndex) => (
+                            <td key={colIndex}>{row[columnKeyMap[col]]}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </TableBody>
+                  </StyledTable>
+                </TableContainer>
+              )}
             </ContentWrapper>
           </Col>
         </StyledRow>

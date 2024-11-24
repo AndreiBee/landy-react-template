@@ -60,3 +60,55 @@ export const ButtonWrapper = styled("div")`
     margin-left: 20px;
   }
 `;
+
+/* Table Styling */
+export const TableContainer = styled("div")`
+  overflow-x: auto;
+  margin-top: 20px;
+`;
+
+export const StyledTable = styled("table")`
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 18px;
+  font-family: "Arial", sans-serif;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
+
+export const TableHead = styled("thead")`
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+
+  th {
+    padding: 12px 15px;
+  }
+`;
+
+export const TableBody = styled("tbody")`
+  tr {
+    border-bottom: 1px solid #ddd;
+
+    &:nth-of-type(even) {
+      background-color: #f9f9f9;
+    }
+
+    &:hover {
+      background-color: #f1f1f1;
+      cursor: pointer;
+    }
+  }
+
+  td {
+    padding: 12px 15px;
+  }
+
+  tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+`;
