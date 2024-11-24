@@ -36,12 +36,9 @@ const Home = () => {
         icon="programmer-working-on-computer.svg"
         id="about"
       />
-      <MiddleBlock
-        title={MiddleBlockContent[currentLanguage].title}
-        section={MiddleBlockContent[currentLanguage].section}
-      />
+
       <ContentBlock
-        direction="left"
+        direction="right"
         title={MissionContent[currentLanguage].title}
         content={MissionContent[currentLanguage].text}
         section={MissionContent[currentLanguage].section}
@@ -54,7 +51,11 @@ const Home = () => {
         content={ProductContent[currentLanguage].text}
         icon="waving.svg"
         id="product"
-      /> */}
+      /> */} 
+      <MiddleBlock
+        title={MiddleBlockContent[currentLanguage].title}
+        section={MiddleBlockContent[currentLanguage].section}
+      />
       <Contact
         title={ContactContent[currentLanguage].title}
         content={ContactContent[currentLanguage].text}
