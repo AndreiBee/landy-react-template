@@ -25,6 +25,7 @@ const Home = () => {
         title={IntroContent[currentLanguage].title}
         content={IntroContent[currentLanguage].text}
         button={IntroContent[currentLanguage].button}
+        withButtons={true}
         icon="team-of-programmers.svg"
         id="intro"
       />
@@ -33,6 +34,7 @@ const Home = () => {
         title={AboutContent[currentLanguage].title}
         content={AboutContent[currentLanguage].text}
         section={AboutContent[currentLanguage].section}
+        withButtons={false}
         icon="programmer-working-on-computer.svg"
         id="about"
       />
@@ -42,6 +44,7 @@ const Home = () => {
         title={MissionContent[currentLanguage].title}
         content={MissionContent[currentLanguage].text}
         section={MissionContent[currentLanguage].section}
+        withButtons={false}
         icon="programmer-working-with-team.svg"
         id="mission"
       />
