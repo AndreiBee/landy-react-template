@@ -114,7 +114,7 @@ const Footer = ({ t }: { t: TFunction }) => {
           <Row
             justify="space-between"
             align="middle"
-            style={{ paddingTop: "3rem" }}
+            style={{ paddingTop: "3rem"}}
           >
             <NavLink to="/">
               <LogoContainer>
@@ -130,6 +130,12 @@ const Footer = ({ t }: { t: TFunction }) => {
               <SocialLink
                 href="https://www.linkedin.com/company/arvioncz"
                 src="linkedin.svg"
+              />
+            </FooterContainer>
+            <FooterContainer>
+              <SocialLink
+                href="https://www.facebook.com/arvioncz/"
+                src="facebook.svg"
               />
             </FooterContainer>
           </Row>
