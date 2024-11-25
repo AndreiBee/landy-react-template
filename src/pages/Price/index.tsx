@@ -13,7 +13,7 @@ const TableBlock = lazy(() => import("../../components/TableBlock"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 // const Contact = lazy(() => import("../../components/ContactForm"));
 
-const Home = () => {
+const Price = () => {
   const { i18n } = useTranslation(); // Hook to use translations
   const currentLanguage = i18n.language as "en" | "cs"; // Assert the language type explicitly
 
@@ -67,4 +67,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Price;
