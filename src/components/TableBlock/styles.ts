@@ -57,7 +57,7 @@ export const TableContainer = styled("div")`
 export const StyledTable = styled("table")`
   border-collapse: collapse;
   margin: 25px auto;
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Arial", sans-serif;
   width: 100%;
   text-align: left;

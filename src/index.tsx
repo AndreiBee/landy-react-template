@@ -6,12 +6,15 @@ import "antd/dist/antd.css";
 import Router from "./router";
 import i18n from "./translation";
 
+import CookieBanner from './components/CookieBanner';
+
 const App = () => (
-  <BrowserRouter>
-    <I18nextProvider i18n={i18n}>
+  <I18nextProvider i18n={i18n}>
+    <BrowserRouter>
+      <CookieBanner />
       <Router />
-    </I18nextProvider>
-  </BrowserRouter>
+    </BrowserRouter>
+  </I18nextProvider>
 );
 
 ReactDOM.render(<App />, document.getElementById("root"));

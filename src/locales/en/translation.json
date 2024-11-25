@@ -1,6 +1,8 @@
 {
+  "Company": "Company",
   "About": "About",
   "Policy": "Policy",
+  "Price List": "Price List",
   "Mission": "Mission",
   "Product": "Product",
   "Tell us everything": "Tell us everything",
@@ -28,5 +30,8 @@
   "name" : "Name*",
   "Your Name": "Your Name",
   "email" : "Email*",
-  "Your Email": "Your Email"
+  "Your Email": "Your Email",
+  "cookieBannerMsg": "We use cookies to improve your experience. By continuing, you agree to our use of cookies.",
+  "cookieBannerAcceptBtn": "Accept",
+  "cookieBannerRejectBtn": "Reject"
 }

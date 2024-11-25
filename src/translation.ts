@@ -11,7 +11,7 @@ i18n
   .init({
     debug: false,
     lng: "cs",
-    fallbackLng: "cs",
+    fallbackLng: "en",
 
     keySeparator: false,
     interpolation: {

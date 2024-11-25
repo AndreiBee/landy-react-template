@@ -24,11 +24,15 @@ const ContentBlock = ({
   direction,
 }: ContentBlockProps) => {
   // Map column names to row keys
-  const columnKeyMap: { [key: string]: string } = {
-    "Služba": "service",
-    "Cena bez smlouvy [Kč/h]": "priceWithoutContract",
-    "Cena při uzavření smlouvy [Kč/h]": "priceWithContract",
+const columnKeyMap = {
+    [t("Služba")]: "service",
+    [t("Cena bez smlouvy [Kč/h]")]: "priceWithoutContract",
+    [t("Cena při uzavření smlouvy [Kč/h]")]: "priceWithContract",
+    [t("Service")]: "service",
+    [t("Price Without Contract [USD/h]")]: "priceWithoutContract",
+    [t("Price With Contract [USD/h]")]: "priceWithContract",
   };
+
   // const scrollTo = (id: string) => {
   //   const element = document.getElementById(id) as HTMLDivElement;
   //   element.scrollIntoView({
@@ -66,7 +70,7 @@ const ContentBlock = ({
                       {rows.map((row, rowIndex) => (
                         <tr key={rowIndex}>
                           {columns.map((col, colIndex) => (
-                            <td key={colIndex}>{row[columnKeyMap[col]]}</td>
+                            <td key={colIndex}>{row[columnKeyMap[t(col)]]}</td>
                           ))}
                         </tr>
                       ))}
