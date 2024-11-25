@@ -4,12 +4,14 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import routes from "./config";
 import { Styles } from "../styles/styles";
+import ScrollToTop from "../components/ScrollToTop"; 
 
 const Router = () => {
   return (
     <Suspense fallback={null}>
       <Styles />
       <Header />
+      <ScrollToTop /> {/* Přidejte tuto komponentu */}
       <Switch>
         {routes.map((routeItem) => {
           return (

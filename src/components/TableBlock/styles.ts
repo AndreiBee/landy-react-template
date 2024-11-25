@@ -17,34 +17,21 @@ export const Content = styled("p")`
 export const StyledRow = styled(Row)`
   flex-direction: ${({ direction }: { direction: string }) =>
     direction === "left" ? "row" : "row-reverse"};
+  justify-content: center; /* Zarovnání obsahu na střed */
 `;
 
 export const ContentWrapper = styled("div")`
   position: relative;
-  max-width: 540px;
+  max-width: auto;
+  // max-width: 540px;
 
   @media only screen and (max-width: 575px) {
     padding-top: 4rem;
   }
-`;
 
-export const ServiceWrapper = styled("div")`
-  display: flex;
-  justify-content: space-between;
-  max-width: 100%;
-`;
-
-export const MinTitle = styled("h6")`
-  font-size: 15px;
-  line-height: 1rem;
-  padding: 0.5rem 0;
-  text-transform: uppercase;
-  color: #000;
-  font-family: "Motiva Sans Light", sans-serif;
-`;
-
-export const MinPara = styled("p")`
-  font-size: 13px;
+  @media screen and (min-width: 765px) {
+    padding-right: 4rem;
+  }
 `;
 
 export const ButtonWrapper = styled("div")`
@@ -69,13 +56,13 @@ export const TableContainer = styled("div")`
 
 export const StyledTable = styled("table")`
   border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 18px;
+  margin: 25px auto;
+  font-size: 12px;
   font-family: "Arial", sans-serif;
   width: 100%;
   text-align: left;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
@@ -108,7 +95,7 @@ export const TableBody = styled("tbody")`
     padding: 12px 15px;
   }
 
-  tr:last-of-type {
-    border-bottom: 2px solid #009879;
-  }
+  // tr:last-of-type {
+  //   border-bottom: 2px solid #009879;
+  // }
 `;

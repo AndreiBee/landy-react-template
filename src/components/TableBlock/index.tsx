@@ -7,9 +7,6 @@ import { SvgIcon } from "../../common/SvgIcon";
 import {
   ContentSection,
   ContentWrapper,
-  // ServiceWrapper,
-  // MinTitle,
-  // MinPara,
   StyledRow,
   TableContainer,
   StyledTable,
@@ -29,8 +26,8 @@ const ContentBlock = ({
   // Map column names to row keys
   const columnKeyMap: { [key: string]: string } = {
     "Služba": "service",
-    "Cena bez smlouvy": "priceWithoutContract",
-    "Cena při uzavření smlouvy": "priceWithContract",
+    "Cena bez smlouvy [Kč/h]": "priceWithoutContract",
+    "Cena při uzavření smlouvy [Kč/h]": "priceWithContract",
   };
   // const scrollTo = (id: string) => {
   //   const element = document.getElementById(id) as HTMLDivElement;
@@ -48,10 +45,10 @@ const ContentBlock = ({
           id={id}
           direction={direction}
         >
-          <Col lg={11} md={11} sm={12} xs={24}>
+          <Col lg={10} md={10} sm={16} xs={16}>
             <SvgIcon src={icon} width="100%" height="100%" />
           </Col>
-          <Col lg={11} md={11} sm={11} xs={24}>
+          <Col lg={14} md={14} sm={24} xs={24}>
             <ContentWrapper>
               <h6>{t(title)}</h6>
               {/* Render the table if columns and rows are provided */}
