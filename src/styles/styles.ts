@@ -2,8 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 export const Styles = createGlobalStyle`
 
-    * {
-    box-sizing: border-box;
+    body {
+        overflow-x: hidden;  /* Zamezí horizontálnímu posouvání */
     }
 
     @font-face {
