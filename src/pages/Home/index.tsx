@@ -26,7 +26,7 @@ const Home = () => {
         content={IntroContent[currentLanguage].text}
         button={IntroContent[currentLanguage].button}
         withButtons={true}
-        icon="team-of-programmers.svg"
+        icon="team-of-programmers-opt.svg"
         id="intro"
       />
       <ContentBlock
@@ -35,7 +35,7 @@ const Home = () => {
         content={AboutContent[currentLanguage].text}
         section={AboutContent[currentLanguage].section}
         withButtons={false}
-        icon="programmer-working-on-computer.svg"
+        icon="programmer-working-on-computer-opt.svg"
         id="about"
       />
 
@@ -45,7 +45,7 @@ const Home = () => {
         content={MissionContent[currentLanguage].text}
         section={MissionContent[currentLanguage].section}
         withButtons={false}
-        icon="programmer-working-with-team.svg"
+        icon="programmer-working-with-team-opt.svg"
         id="mission"
       />
       {/* <ContentBlock

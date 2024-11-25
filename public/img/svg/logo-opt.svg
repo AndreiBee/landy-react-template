@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="148" height="40" version="1.1" viewBox="0 0 39.158 10.583" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clipPath1">
+   <path d="m398.87 393.71h-62.891l-25-65.039h-114.45l-23.633 65.039h-61.328l111.52-286.33h61.133zm-106.45-113.28-39.453-106.25-38.672 106.25z" display="none" dominant-baseline="middle" stroke="#000" stroke-width="2" aria-label="A"/>
+   <path class="powerclip" d="m-5-5h522v522h-522zm403.87 398.71-114.65-286.33h-61.133l-111.52 286.33h61.328l23.633-65.039h114.45l25 65.039zm-106.45-113.28-39.453-106.25-38.672 106.25z" dominant-baseline="middle" stroke="#000" stroke-width="2"/>
+  </clipPath>
+ </defs>
+ <g fill="#18216d">
+  <path transform="scale(.020671)" x="0" y="0" width="512" height="512" rx="120" d="m120 0h272c66.48 0 120 53.52 120 120v272c0 66.48-53.52 120-120 120h-272c-66.48 0-120-53.52-120-120v-272c0-66.48 53.52-120 120-120z" clip-path="url(#clipPath1)"/>
+  <text x="11.365194" y="8.2206192" font-family="'Motiva Sans Bold', sans-serif" font-size="9.7056px" font-weight="700" stroke-width=".22571">rvion</text>
+ </g>
+</svg>

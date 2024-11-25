@@ -25,7 +25,7 @@ const Price = () => {
         title={PriceContent[currentLanguage].title}
         columns={PriceContent[currentLanguage].columns}
         rows={PriceContent[currentLanguage].rows}
-        icon="payment.svg"
+        icon="payment-opt.svg"
         id="intro"
       />
       {/* <ContentBlock
