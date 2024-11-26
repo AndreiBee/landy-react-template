@@ -29,7 +29,7 @@ export const ContentWrapper = styled("div")`
 `;
 
 export const ServiceWrapper = styled("div")`
-  display: flex;
+  // display: flex;
   justify-content: space-between;
   max-width: 100%;
 `;
@@ -59,4 +59,22 @@ export const ButtonWrapper = styled("div")`
   button:last-child {
     margin-left: 20px;
   }
+`;
+
+export const StyledTitle = styled("h3")`
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+`;
+
+export const StyledList = styled("ul")`
+  list-style: disc;
+  margin: 0 0 1rem 1.5rem;
+  padding: 0;
+`;
+
+export const StyledListItem = styled("li")`
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #555;
 `;

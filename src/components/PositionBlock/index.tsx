@@ -1,4 +1,4 @@
-import { Row, Col } from "antd";
+import { Col } from "antd";
 import { Fade } from "react-awesome-reveal";
 import { withTranslation } from "react-i18next";
 
@@ -11,7 +11,10 @@ import {
   ContentWrapper,
   ServiceWrapper,
   MinTitle,
-  MinPara,
+  StyledTitle,
+  StyledList,
+  StyledListItem,
+  // MinPara,
   StyledRow,
   ButtonWrapper,
 } from "./styles";
@@ -76,38 +79,30 @@ const PositionBlock = ({
                     )}
                 </ButtonWrapper>
               ) : (
-                <div>
+              <div>
                 <ServiceWrapper>
-                  <Content>{t("Requirements")}</Content>
-                  <Row justify="space-between">
-                    {typeof requirements === "object" &&
-                      requirements.map(
-                        (requirement, id) => {
-                          return (
-                            <Col key={id} span={11} style={{ textAlign: "center" }}>
-                              <MinTitle>{t(requirement)}</MinTitle>
-                            </Col>
-                          );
-                        }
-                      )}
-                  </Row>
+                  <StyledTitle>{t("Requirements")}</StyledTitle>
+                  <StyledList>
+                    {Array.isArray(requirements) &&
+                      requirements.map((requirement, id) => (
+                        <StyledListItem key={id}>
+                          <MinTitle>{t(requirement)}</MinTitle>
+                        </StyledListItem>
+                      ))}
+                  </StyledList>
                 </ServiceWrapper>
                 <ServiceWrapper>
-                  <Content>{t("WeOffer")}</Content>
-                  <Row justify="space-between">
-                    {typeof offer === "object" &&
-                      offer.map(
-                        (text, id) => {
-                          return (
-                            <Col key={id} span={11} style={{ textAlign: "center" }}>
-                              <MinTitle>{t(text)}</MinTitle>
-                            </Col>
-                          );
-                        }
-                      )}
-                  </Row>
+                  <StyledTitle>{t("WeOffer")}</StyledTitle>
+                  <StyledList>
+                    {Array.isArray(offer) &&
+                      offer.map((text, id) => (
+                        <StyledListItem key={id}>
+                          <MinTitle>{t(text)}</MinTitle>
+                        </StyledListItem>
+                      ))}
+                  </StyledList>
                 </ServiceWrapper>
-                </div>
+              </div>
               )}
             </ContentWrapper>
           </Col>
