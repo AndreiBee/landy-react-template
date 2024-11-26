@@ -1,0 +1,70 @@
+{
+"cs":{
+  "title1": "Softwarový vývojář",
+  "text1": "Hledáme talentovaného a motivovaného softwarového vývojáře, který se připojí k našemu mladému týmu. Budeš pracovat na vývoji inovativních a efektivních softwarových řešení, které pomáhají našim klientům. Pokud máš vášeň pro technologii a chceš se podílet na vytváření moderních aplikací, tato pozice je pro tebe!",
+  "requirements1": [
+    "Zkušenosti s řízením IT projektů", 
+    "Výborné organizační schopnosti a orientace na detail", 
+    "Schopnost komunikovat s klienty a týmem",
+    "Znalost nástrojů pro řízení projektů (např. Jira, Trello)",
+    "Angličtina na komunikativní úrovni"
+  ],
+  "offer1": [
+    "Zajímavou a dynamickou práci v moderní technologické firmě", 
+    "Možnost podílet se na významných projektech", 
+    "Profesionální růst a možnost kariérního postupu",
+    "Flexibilní pracovní dobu a možnost práce na dálku",
+    "Přátelské a inspirující pracovní prostředí"
+  ],
+  "title2": "Projektový manažer",
+  "text2": "Chceš se podílet na řízení projektů, které mění způsob, jakým firmy fungují? Jako projektový manažer budeš mít na starosti organizaci a koordinaci vývoje softwarových projektů od začátku až do konce. Budeš komunikovat s našimi klienty, vést tým a zajišťovat, že každý projekt bude dokončen včas a v souladu s požadavky.",
+  "requirements2": [
+    "Zkušenosti s řízením IT projektů", 
+    "Výborné organizační schopnosti a orientace na detail", 
+    "Schopnost komunikovat s klienty a týmem",
+    "Znalost nástrojů pro řízení projektů (např. Jira, Trello)",
+    "Angličtina na komunikativní úrovni"
+  ],
+  "offer2": [
+    "Zajímavou a dynamickou práci v moderní technologické firmě", 
+    "Možnost podílet se na významných projektech", 
+    "Profesionální růst a možnost kariérního postupu",
+    "Flexibilní pracovní dobu a možnost práce na dálku",
+    "Přátelské a inspirující pracovní prostředí"
+  ]
+},
+"en": {
+  "title1": "Softwarový vývojář",
+  "text1": "Hledáme talentovaného a motivovaného softwarového vývojáře, který se připojí k našemu mladému týmu. Budeš pracovat na vývoji inovativních a efektivních softwarových řešení, které pomáhají našim klientům. Pokud máš vášeň pro technologii a chceš se podílet na vytváření moderních aplikací, tato pozice je pro tebe!",
+  "requirements1": [
+    "Zkušenosti s řízením IT projektů", 
+    "Výborné organizační schopnosti a orientace na detail", 
+    "Schopnost komunikovat s klienty a týmem",
+    "Znalost nástrojů pro řízení projektů (např. Jira, Trello)",
+    "Angličtina na komunikativní úrovni"
+  ],
+  "offer1": [
+    "Zajímavou a dynamickou práci v moderní technologické firmě", 
+    "Možnost podílet se na významných projektech", 
+    "Profesionální růst a možnost kariérního postupu",
+    "Flexibilní pracovní dobu a možnost práce na dálku",
+    "Přátelské a inspirující pracovní prostředí"
+  ],
+  "title2": "Projektový manažer",
+  "text2": "Chceš se podílet na řízení projektů, které mění způsob, jakým firmy fungují? Jako projektový manažer budeš mít na starosti organizaci a koordinaci vývoje softwarových projektů od začátku až do konce. Budeš komunikovat s našimi klienty, vést tým a zajišťovat, že každý projekt bude dokončen včas a v souladu s požadavky.",
+  "requirements2": [
+    "Zkušenosti s řízením IT projektů", 
+    "Výborné organizační schopnosti a orientace na detail", 
+    "Schopnost komunikovat s klienty a týmem",
+    "Znalost nástrojů pro řízení projektů (např. Jira, Trello)",
+    "Angličtina na komunikativní úrovni"
+  ],
+  "offer2": [
+    "Zajímavou a dynamickou práci v moderní technologické firmě", 
+    "Možnost podílet se na významných projektech", 
+    "Profesionální růst a možnost kariérního postupu",
+    "Flexibilní pracovní dobu a možnost práce na dálku",
+    "Přátelské a inspirující pracovní prostředí"
+  ]
+}
+}

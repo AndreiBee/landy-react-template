@@ -1,42 +1,43 @@
 import { lazy } from "react";
 import { useTranslation } from "react-i18next";
-import PriceContent from "../../content/PriceContent.json";
+import CareerPageContent from "../../content/CareerPageContent.json";
 // import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 // import AboutContent from "../../content/AboutContent.json";
 // import MissionContent from "../../content/MissionContent.json";
 // import ProductContent from "../../content/ProductContent.json";
 // import ContactContent from "../../content/ContactContent.json";
 
-// const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
-const TableBlock = lazy(() => import("../../components/TableBlock"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
-// const Contact = lazy(() => import("../../components/ContactForm"));
+const PositionBlock = lazy(() => import("../../components/PositionBlock"));
 
-const Price = () => {
+const Career = () => {
   const { i18n } = useTranslation(); // Hook to use translations
   const currentLanguage = i18n.language as "en" | "cs"; // Assert the language type explicitly
 
   return (
     <Container>
       <ScrollToTop />
-      <TableBlock
-        direction="right"
-        title={PriceContent[currentLanguage].title}
-        columns={PriceContent[currentLanguage].columns}
-        rows={PriceContent[currentLanguage].rows}
-        priceNote={PriceContent[currentLanguage].priceNote}
-        icon="payment-opt.svg"
-        id="priceTable"
-      />
-      {/* <ContentBlock
+      <PositionBlock
         direction="left"
-        title={AboutContent[currentLanguage].title}
-        content={AboutContent[currentLanguage].text}
-        section={AboutContent[currentLanguage].section}
-        icon="programmer-working-on-computer.svg"
-        id="about"
-      /> */}
+        title={CareerPageContent[currentLanguage].title1}
+        content={CareerPageContent[currentLanguage].text1}
+        requirements={CareerPageContent[currentLanguage].requirements1}
+        offer={CareerPageContent[currentLanguage].offer1}
+        withButtons={false}
+        icon="programmer.svg"
+        id="firstSection"
+      />
+      <PositionBlock
+        direction="right"
+        title={CareerPageContent[currentLanguage].title2}
+        content={CareerPageContent[currentLanguage].text2}
+        requirements={CareerPageContent[currentLanguage].requirements2}
+        offer={CareerPageContent[currentLanguage].offer2}
+        withButtons={false}
+        icon="project_manager.svg"
+        id="secondSection"
+      />
       {/* <MiddleBlock
         title={MiddleBlockContent[currentLanguage].title}
         section={MiddleBlockContent[currentLanguage].section}
@@ -68,4 +69,4 @@ const Price = () => {
   );
 };
 
-export default Price;
+export default Career;

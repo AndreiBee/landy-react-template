@@ -2,7 +2,7 @@ import { Col } from "antd";
 import { Fade } from "react-awesome-reveal";
 import { withTranslation } from "react-i18next";
 
-import { ContentBlockProps } from "./types";
+import { TableBlockProps } from "./types";
 import { SvgIcon } from "../../common/SvgIcon";
 import {
   Para,
@@ -15,7 +15,7 @@ import {
   TableBody
 } from "./styles";
 
-const ContentBlock = ({
+const TableBlock = ({
   icon,
   title,
   columns,
@@ -24,7 +24,7 @@ const ContentBlock = ({
   t,
   id,
   direction,
-}: ContentBlockProps) => {
+}: TableBlockProps) => {
   // Map column names to row keys
 const columnKeyMap = {
     [t("Služba")]: "service",
@@ -91,4 +91,4 @@ const columnKeyMap = {
   );
 };
 
-export default withTranslation()(ContentBlock);
+export default withTranslation()(TableBlock);

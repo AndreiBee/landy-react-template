@@ -1,5 +1,5 @@
 import { TFunction } from "react-i18next";
-export interface ContentBlockProps {
+export interface TableBlockProps {
   icon: string;
   title: string;
   columns?: string[];
