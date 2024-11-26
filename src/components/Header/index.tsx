@@ -20,7 +20,7 @@ import {
   LanguageAndNavBarDiv,
   CustomLink,
 } from "./styles";
-import { Link, NavLink } from "react-router-dom";
+// import { Link, NavLink } from "react-router-dom";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
