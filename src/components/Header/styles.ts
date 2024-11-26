@@ -33,6 +33,17 @@ export const CustomNavLink = styled("div")`
   }
 `;
 
+export const CustomLink = styled(Link)`
+  font-size: 1.2rem;
+  color: #18216d;
+  transition: color 0.2s ease-in;
+  margin: 0.5rem 2rem;
+
+  @media only screen and (max-width: 768px) {
+    margin: 1.25rem 2rem;
+  }
+`;
+
 export const Burger = styled("div")`
   @media only screen and (max-width: 890px) {
     display: block;
@@ -63,10 +74,18 @@ export const Menu = styled("h5")`
 `;
 
 export const CustomNavLinkSmall = styled(NavLink)`
+  width: 120px;
   font-size: 1.2rem;
   color: #18216d;
   transition: color 0.2s ease-in;
-  margin: 0.5rem 2rem;
+  // margin: 0; /* Reset margin */
+  // padding: 0; /* Reset padding */
+  // display: flex;
+  align-items: center; /* Vertikální zarovnání uvnitř tlačítka */
+  justify-content: center; /* Horizontální zarovnání */
+  margin: 0.5rem 0rem 0.5rem 1rem;
+  // margin: 0;
+  // margin: 0.9rem;
 
   @media only screen and (max-width: 768px) {
     margin: 1.25rem 2rem;
@@ -89,6 +108,7 @@ export const Outline = styled(MenuOutlined)`
 export const Span = styled("span")`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  // justify-content: center;
 
   &:hover,
   &:active,
@@ -121,8 +141,9 @@ export const LanguageSwitchContainer = styled("div")`
 
 export const LanguageAndNavBarDiv = styled("div")`
   display: flex;
+  align-items: center;
+  justify-content: center;
   // flex-wrap: wrap;
-  align-item: center;
-  // justify-content: space-between;
-  // width: 85px;
+  // width: 200px;
+  // height: 200px;
 `;

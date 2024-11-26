@@ -14,6 +14,12 @@ export const Content = styled("p")`
   margin: 1.5rem 0 2rem 0;
 `;
 
+export const Para = styled("div")`
+  color: #18216d;
+  font-size: 14px;
+  width: 70%;
+`;
+
 export const StyledRow = styled(Row)`
   flex-direction: ${({ direction }: { direction: string }) =>
     direction === "left" ? "row" : "row-reverse"};
@@ -60,7 +66,7 @@ export const StyledTable = styled("table")`
   font-size: 14px;
   font-family: "Arial", sans-serif;
   width: 100%;
-  text-align: left;
+  text-align: center;
   border: 1px solid #ddd;
   border-radius: 20px;
   overflow: hidden;

@@ -2,6 +2,7 @@
 "cs":
 {
   "title": "Hodinové sazby",
+  "priceNote": "*Uvedené ceny jsou bez DPH",
   "columns": ["Služba", "Cena bez smlouvy [Kč/h]", "Cena při uzavření smlouvy [Kč/h]"],
   "rows": [
     {
@@ -24,6 +25,7 @@
 "en": 
 {
   "title": "Hourly Rates",
+  "priceNote": "*The prices listed are excluding VAT",
   "columns": ["Service", "Price Without Contract [USD/h]", "Price With Contract [USD/h]"],
   "rows": [
     {

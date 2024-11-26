@@ -5,6 +5,7 @@ import { withTranslation } from "react-i18next";
 import { ContentBlockProps } from "./types";
 import { SvgIcon } from "../../common/SvgIcon";
 import {
+  Para,
   ContentSection,
   ContentWrapper,
   StyledRow,
@@ -19,6 +20,7 @@ const ContentBlock = ({
   title,
   columns,
   rows,
+  priceNote,
   t,
   id,
   direction,
@@ -78,6 +80,9 @@ const columnKeyMap = {
                   </StyledTable>
                 </TableContainer>
               )}
+              <Para>
+                {t(priceNote)}
+              </Para>
             </ContentWrapper>
           </Col>
         </StyledRow>

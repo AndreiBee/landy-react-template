@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Cookies from "js-cookie";
 import { withTranslation } from "react-i18next";
+import { SvgIcon } from "../../common/SvgIcon";
 import {
   CookieBannerContainer,
   Message,
@@ -25,8 +26,9 @@ const CookieBanner = ({ t }: { t: (key: string) => string }) => {
 
   return (
     <CookieBannerContainer>
+      <SvgIcon src="cookies.svg" width="80px" height="80px"/>
       <Message>{t("cookieBannerMsg")}</Message>
-      <div>
+      <div style={{display: "flex", justifyContent: "space-between"}}>
         <AcceptButton onClick={handleAccept}>{t("cookieBannerAcceptBtn")}</AcceptButton>
         <RejectButton onClick={handleReject}>{t("cookieBannerRejectBtn")}</RejectButton>
       </div>

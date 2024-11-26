@@ -112,33 +112,44 @@ const Footer = ({ t }: { t: TFunction }) => {
       <Extra>
         <Container border={true}>
           <Row
-            justify="space-between"
+            justify="space-between" // Rozdělí logo a sociální sítě na opačné strany
             align="middle"
-            style={{ paddingTop: "3rem"}}
+            style={{ paddingTop: "3rem" }}
           >
-            <NavLink to="/">
-              <LogoContainer>
-                <SvgIcon
-                  src="logo-opt.svg"
-                  aria-label="homepage"
-                  width="100%"
-                  height="100%"
+            {/* Logo vlevo */}
+            <Col style={{
+              // display: "flex", // Nastaví flexbox
+              // flexDirection: "column", // Zarovná prvky vertikálně
+              // justifyContent: "center", // Vertikální zarovnání na střed
+              // alignItems: "flex-start", // Horizontální zarovnání doleva (volitelné)
+            }}>
+              <NavLink to="/">
+                <LogoContainer>
+                  <SvgIcon
+                    src="logo-opt.svg"
+                    aria-label="homepage"
+                    width="100%"
+                    height="100%"
+                  />
+                </LogoContainer>
+              </NavLink>
+            </Col>
+
+            {/* Sociální sítě vpravo */}
+            <Col style={{ textAlign: "right" }}>
+              <FooterContainer>
+                <SocialLink
+                  href="https://www.linkedin.com/company/arvioncz"
+                  src="linkedin.svg"
                 />
-              </LogoContainer>
-            </NavLink>
-            <FooterContainer>
-              <SocialLink
-                href="https://www.linkedin.com/company/arvioncz"
-                src="linkedin.svg"
-              />
-            </FooterContainer>
-            <FooterContainer>
-              <SocialLink
-                href="https://www.facebook.com/arvioncz/"
-                src="facebook.svg"
-              />
-            </FooterContainer>
+                <SocialLink
+                  href="https://www.facebook.com/arvioncz/"
+                  src="facebook.svg"
+                />
+              </FooterContainer>
+            </Col>
           </Row>
+ 
         </Container>
       </Extra>
     </>

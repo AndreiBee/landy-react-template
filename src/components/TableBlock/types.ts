@@ -4,6 +4,7 @@ export interface ContentBlockProps {
   title: string;
   columns?: string[];
   rows?: { [key: string]: string }[];
+  priceNote: string;
   t: TFunction;
   id: string;
   direction: "left" | "right";

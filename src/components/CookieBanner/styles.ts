@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const CookieBannerContainer = styled.div`
   position: fixed;
+  text-align: center;
+  align-items: center;
   bottom: 20px;
   left: 20px;
   background: #ffffff;
