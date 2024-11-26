@@ -17,7 +17,7 @@ import {
   Span,
   LanguageSwitch,
   LanguageSwitchContainer,
-  LanguageAndNavBarDiv,
+  LogoAndNavBarDiv,
   CustomLink,
 } from "./styles";
 // import { Link, NavLink } from "react-router-dom";
@@ -80,10 +80,10 @@ const Header = ({ t }: { t: TFunction }) => {
     <HeaderSection>
       <Container>
         <Row justify="space-between">
-          <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo-opt.svg" width="101px" height="64px" />
-          </LogoContainer>
-          <LanguageAndNavBarDiv>
+          <LogoAndNavBarDiv>
+            <LogoContainer to="/" aria-label="homepage">
+              <SvgIcon src="logo-opt.svg" width="101px" height="64px" />
+            </LogoContainer>
             <LanguageSwitchContainer>
               <LanguageSwitch onClick={() => handleChange("cs")}>
                 <SvgIcon
@@ -102,13 +102,13 @@ const Header = ({ t }: { t: TFunction }) => {
                 />
               </LanguageSwitch>
             </LanguageSwitchContainer>
+          </LogoAndNavBarDiv>
             <NotHidden>
               <MenuItem />
             </NotHidden>
             <Burger onClick={toggleButton}>
               <Outline />
             </Burger>
-          </LanguageAndNavBarDiv>
         </Row>
         <Drawer closable={false} open={visible} onClose={toggleButton}>
           <Col style={{ marginBottom: "2.5rem" }}>

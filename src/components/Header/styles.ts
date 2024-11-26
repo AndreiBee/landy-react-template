@@ -139,7 +139,7 @@ export const LanguageSwitchContainer = styled("div")`
   // width: 85px;
 `;
 
-export const LanguageAndNavBarDiv = styled("div")`
+export const LogoAndNavBarDiv = styled("div")`
   display: flex;
   align-items: center;
   justify-content: center;
