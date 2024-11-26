@@ -1,6 +1,7 @@
 {
   "Company": "Společnost",
   "About": "O nás",
+  "Career": "Kariéra",
   "Policy": "Zásady",
   "Price List": "Ceník Služeb",
   "Product": "Produkt",
@@ -30,7 +31,7 @@
   "Your Name": "Vaše jméno a příjmení",
   "email": "Email*",
   "Your Email": "Vaše E-mailová adresa",
-  "cookieBannerMsg": "Používáme cookies ke zlepšení vašich zkušeností. Pokračováním souhlasíte s jejich použitím.",
+  "cookieBannerMsg": "Používáme cookies ke zlepšení Vašich zkušeností. Pokračováním souhlasíte s jejich použitím.",
   "cookieBannerAcceptBtn": "Přijmout",
   "cookieBannerRejectBtn": "Odmítnout"
 }

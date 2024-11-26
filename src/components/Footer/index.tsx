@@ -82,6 +82,8 @@ const Footer = ({ t }: { t: TFunction }) => {
               <Title>{t("Company")}</Title>
               {/* <Large to="/">{t("About")}</Large> */}
               <Large to="/price">{t("Price List")}</Large>
+              <Large to="/about">{t("About")}</Large>
+              <Large to="/career">{t("Career")}</Large>
               {/* <Large to="/">{t("Press")}</Large> */}
               {/* <Large to="/">{t("Careers & Culture")}</Large> */}
             </Col>
@@ -128,8 +130,8 @@ const Footer = ({ t }: { t: TFunction }) => {
                   <SvgIcon
                     src="logo-opt.svg"
                     aria-label="homepage"
-                    width="100%"
-                    height="100%"
+                    width="70%"
+                    height="auto"
                   />
                 </LogoContainer>
               </NavLink>

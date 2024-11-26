@@ -37,7 +37,7 @@ export const CustomLink = styled(Link)`
   font-size: 1.2rem;
   color: #18216d;
   transition: color 0.2s ease-in;
-  margin: 0.5rem 2rem;
+  margin: 0.5rem 0rem 0.5rem 1rem;
 
   @media only screen and (max-width: 768px) {
     margin: 1.25rem 2rem;
@@ -48,7 +48,7 @@ export const Burger = styled("div")`
   @media only screen and (max-width: 890px) {
     display: block;
     align-self: center; /* Vertically center the Burger in the flex container */
-    margin: 0px 0px 0px 50px; /* Add horizontal margins */
+    margin: 0.5rem 0rem 0.5rem 1.5rem; /* Add horizontal margins */
     cursor: pointer;
   }
 
@@ -136,7 +136,7 @@ export const LanguageSwitch = styled("div")`
 export const LanguageSwitchContainer = styled("div")`
   display: flex;
   align-items: center;
-  width: 85px;
+  // width: 85px;
 `;
 
 export const LanguageAndNavBarDiv = styled("div")`
