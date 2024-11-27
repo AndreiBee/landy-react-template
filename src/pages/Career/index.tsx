@@ -19,7 +19,8 @@ const Career = () => {
         content={CareerPageContent[currentLanguage].text1}
         requirements={CareerPageContent[currentLanguage].requirements1}
         offer={CareerPageContent[currentLanguage].offer1}
-        withButtons={false}
+        button={CareerPageContent[currentLanguage].button}
+        withButtons={true}
         icon="programmer.svg"
         id="firstSection"
       />
@@ -29,7 +30,8 @@ const Career = () => {
         content={CareerPageContent[currentLanguage].text2}
         requirements={CareerPageContent[currentLanguage].requirements2}
         offer={CareerPageContent[currentLanguage].offer2}
-        withButtons={false}
+        button={CareerPageContent[currentLanguage].button}
+        withButtons={true}
         icon="project_manager.svg"
         id="secondSection"
       />

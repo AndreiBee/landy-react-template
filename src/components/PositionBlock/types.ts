@@ -13,6 +13,7 @@ export interface PositionBlockProps {
     | {
         title: string;
         color: string;
+        scrollToSection: string;
       }
   )[];
   t: TFunction;

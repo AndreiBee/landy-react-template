@@ -54,31 +54,7 @@ const PositionBlock = ({
             <ContentWrapper>
               <h6>{t(title)}</h6>
               <Content>{t(content)}</Content>
-              {withButtons === true ? (
-                <ButtonWrapper>
-                  {typeof button === "object" &&
-                    button.map(
-                      (
-                        item: {
-                          color?: string;
-                          title: string;
-                          scrollToSection?: string;
-                        },
-                        id: number
-                      ) => {
-                        return (
-                          <Button
-                            key={id}
-                            color={item.color}
-                            onClick={() => scrollTo(item.scrollToSection ? item.scrollToSection : "contact")}
-                          >
-                            {t(item.title)}
-                          </Button>
-                        );
-                      }
-                    )}
-                </ButtonWrapper>
-              ) : (
+
               <div>
                 <ServiceWrapper>
                   <StyledTitle>{t("Requirements")}</StyledTitle>
@@ -103,7 +79,37 @@ const PositionBlock = ({
                   </StyledList>
                 </ServiceWrapper>
               </div>
-              )}
+              {withButtons === true ? (
+                <ButtonWrapper>
+                  {typeof button === "object" &&
+                    button.map(
+                      (
+                        item: {
+                          color?: string;
+                          title: string;
+                          scrollToSection?: string;
+                        },
+                        id: number
+                      ) => {
+                        return (
+                          <Button
+                            key={id}
+                            color={item.color}
+                            onClick={() => {
+                              if (item.scrollToSection && item.scrollToSection.includes("/")) {
+                                  window.location.href = item.scrollToSection; // Přesměruje na stránku za lomítkem
+                                } else {
+                                  scrollTo(item.scrollToSection ? item.scrollToSection : "contact"); // Posune stránku
+                                }
+                            }}
+                          >
+                            {t(item.title)}
+                          </Button>
+                        );
+                      }
+                    )}
+                </ButtonWrapper>
+              ) : {}}
             </ContentWrapper>
           </Col>
         </StyledRow>

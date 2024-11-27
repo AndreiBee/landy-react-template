@@ -71,7 +71,13 @@ const ContentBlock = ({
                           <Button
                             key={id}
                             color={item.color}
-                            onClick={() => scrollTo(item.scrollToSection ? item.scrollToSection : "contact")}
+                            onClick={() => {
+                              if (item.scrollToSection && item.scrollToSection.includes("/")) {
+                                  window.location.href = item.scrollToSection; // Přesměruje na stránku za lomítkem
+                                } else {
+                                  scrollTo(item.scrollToSection ? item.scrollToSection : "contact"); // Posune stránku
+                                }
+                            }}
                           >
                             {t(item.title)}
                           </Button>

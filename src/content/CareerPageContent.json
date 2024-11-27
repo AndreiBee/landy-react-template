@@ -31,7 +31,13 @@
     "Profesionální růst a možnost kariérního postupu",
     "Flexibilní pracovní dobu a možnost práce na dálku",
     "Přátelské a inspirující pracovní prostředí"
-  ]
+  ],
+  "button": 
+    [{
+      "title": "Kontaktujte nás",
+      "scrollToSection": "/contact",
+      "color": "#fff"
+    }]
 },
 "en": {
   "title1": "Software Developer",
@@ -65,6 +71,12 @@
     "Professional growth and career advancement",
     "Flexible working hours and remote work options",
     "Friendly and inspiring work environment"
-  ]
+  ],
+  "button": 
+    [{
+      "title": "Contact Us",
+      "scrollToSection": "/contact",
+      "color": "#fff"
+    }]
 }
 }

@@ -33,7 +33,8 @@ const About = () => {
         direction="left"
         title={AboutContent[currentLanguage].title3}
         content={AboutContent[currentLanguage].text3}
-        withButtons={false}
+        button={AboutContent[currentLanguage].button}
+        withButtons={true}
         icon="target-opt.svg"
         id="thirdSection"
       />
