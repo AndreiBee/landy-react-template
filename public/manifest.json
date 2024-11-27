@@ -1,6 +1,6 @@
 {
-  "short_name": "Landy",
-  "name": "Landy - React Template",
+  "short_name": "Arvion",
+  "name": "Arvion - Custom Software Solutions",
   "icons": [
     {
       "src": "img/icons/logo192.png",
@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
