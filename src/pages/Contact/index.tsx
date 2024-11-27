@@ -1,71 +1,54 @@
 import { lazy } from "react";
 import { useTranslation } from "react-i18next";
-import PriceContent from "../../content/PricePageContent.json";
-// import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-// import AboutContent from "../../content/AboutContent.json";
-// import MissionContent from "../../content/MissionContent.json";
-// import ProductContent from "../../content/ProductContent.json";
-// import ContactContent from "../../content/ContactContent.json";
+import ContactPageContent from "../../content/ContactPageContent.json";
+import ContactFormContent from "../../content/HomePageContactContent.json";
 
-// const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
+const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const Container = lazy(() => import("../../common/Container"));
-const TableBlock = lazy(() => import("../../components/TableBlock"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
-// const Contact = lazy(() => import("../../components/ContactForm"));
+const ContactForm = lazy(() => import("../../components/ContactForm"));
 
-const Price = () => {
+const Contact = () => {
   const { i18n } = useTranslation(); // Hook to use translations
   const currentLanguage = i18n.language as "en" | "cs"; // Assert the language type explicitly
 
   return (
     <Container>
       <ScrollToTop />
-      <TableBlock
-        direction="right"
-        title={PriceContent[currentLanguage].title}
-        columns={PriceContent[currentLanguage].columns}
-        rows={PriceContent[currentLanguage].rows}
-        priceNote={PriceContent[currentLanguage].priceNote}
-        icon="payment-opt.svg"
-        id="priceTable"
+      <ContentBlock
+        direction="left"
+        title={ContactPageContent[currentLanguage].title1}
+        content={ContactPageContent[currentLanguage].text1}
+        withButtons={false}
+        icon="contact.svg"
+        id="firstSection"
       />
-      {/* <ContentBlock
+      <ContentBlock
+        direction="right"
+        title={""}
+        content={ContactPageContent[currentLanguage].text2}
+        withButtons={false}
+        icon="support.svg"
+        id="secondSection"
+      />
+      <ContentBlock
         direction="left"
-        title={AboutContent[currentLanguage].title}
-        content={AboutContent[currentLanguage].text}
-        section={AboutContent[currentLanguage].section}
-        icon="programmer-working-on-computer.svg"
-        id="about"
-      /> */}
-      {/* <MiddleBlock
-        title={MiddleBlockContent[currentLanguage].title}
-        section={MiddleBlockContent[currentLanguage].section}
-      /> */}
-      {/* <ContentBlock
-        direction="left"
-        title={MissionContent[currentLanguage].title}
-        content={MissionContent[currentLanguage].text}
-        section={MissionContent[currentLanguage].section}
-        icon="programmer-working-with-team.svg"
-        id="mission"
-      /> */}
-      {/* <ContentBlock
-        direction="left"
-        title={ProductContent[currentLanguage].title}
-        content={ProductContent[currentLanguage].text}
-        icon="waving.svg"
-        id="product"
-      /> */}
-      {/* <Contact
-        title={ContactContent[currentLanguage].title}
-        content={ContactContent[currentLanguage].text}
-        phone={ContactContent[currentLanguage].phone}
-        email={ContactContent[currentLanguage].email}
+        title={""}
+        content={ContactPageContent[currentLanguage].text3}
+        withButtons={false}
+        icon="contact_form-opt.svg"
+        id="secondSection"
+      />
+      <ContactForm
+        title={ContactFormContent[currentLanguage].title}
+        content={ContactFormContent[currentLanguage].text}
+        phone={ContactFormContent[currentLanguage].phone}
+        email={ContactFormContent[currentLanguage].email}
         id="contact"
       />
-      */}
+     
     </Container> 
   );
 };
 
-export default Price;
+export default Contact;

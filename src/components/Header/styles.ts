@@ -15,10 +15,7 @@ export const LogoContainer = styled(Link)`
   display: flex;
 `;
 
-export const NavLink = styled("div")`
-  display: inline-block;
-  text-align: center;
-`;
+
 
 export const CustomNavLink = styled("div")`
   width: 203px;
@@ -73,10 +70,12 @@ export const Menu = styled("h5")`
   text-align: center;
 `;
 
-export const CustomNavLinkSmall = styled(NavLink)`
+export const CustomNavLinkSmall = styled(Link)`
   width: 120px;
   font-size: 1.2rem;
-  color: #18216d;
+  color: #18216d; 
+  display: inline-block;
+  text-align: center;
   transition: color 0.2s ease-in;
   // margin: 0; /* Reset margin */
   // padding: 0; /* Reset padding */
