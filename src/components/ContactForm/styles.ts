@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ContactContainer = styled("div")`
   padding: 5rem 0;
+  box-sizing: border-box;
 
   @media only screen and (max-width: 1024px) {
     padding: 3rem 0;
@@ -11,6 +12,7 @@ export const ContactContainer = styled("div")`
 export const FormGroup = styled("form")`
   width: 100%;
   max-width: 520px;
+  overflow-x: hidden;
 
   @media only screen and (max-width: 1045px) {
     max-width: 100%;
@@ -33,6 +35,8 @@ export const MinPara = styled("p")`
 export const ButtonContainer = styled("div")`
   text-align: end;
   position: relative;
+  max-width: 100%; /* Přidání */
+  overflow-x: hidden; /* Přidání */
 
   @media only screen and (max-width: 414px) {
     padding-top: 0.75rem;
@@ -46,6 +50,8 @@ export const PhoneLink = styled.a`
   font-size: 20px;
   font-family: "Roboto", sans-serif; /* Set the font style */
   transition: color 0.3s ease;
+  word-wrap: break-word; /* Přidání */
+  overflow-wrap: break-word; /* Přidání */
 
   &:hover {
     color: rgb(255, 130, 92);  /* Change color on hover */
