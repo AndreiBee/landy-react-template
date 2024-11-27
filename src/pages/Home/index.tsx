@@ -1,11 +1,10 @@
 import { lazy } from "react";
 import { useTranslation } from "react-i18next";
-import IntroContent from "../../content/IntroContent.json";
-import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-import AboutContent from "../../content/AboutContent.json";
-import MissionContent from "../../content/MissionContent.json";
-// import ProductContent from "../../content/ProductContent.json";
-import ContactContent from "../../content/ContactContent.json";
+import IntroContent from "../../content/HomePageIntroContent.json";
+import MiddleBlockContent from "../../content/HomePageMiddleBlockContent.json";
+import AboutContent from "../../content/HomePageAboutContent.json";
+import MissionContent from "../../content/HomePageMissionContent.json";
+import ContactContent from "../../content/HomePageContactContent.json";
 
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
@@ -48,13 +47,6 @@ const Home = () => {
         icon="programmer-working-with-team-opt.svg"
         id="mission"
       />
-      {/* <ContentBlock
-        direction="left"
-        title={ProductContent[currentLanguage].title}
-        content={ProductContent[currentLanguage].text}
-        icon="waving.svg"
-        id="product"
-      /> */} 
       <MiddleBlock
         title={MiddleBlockContent[currentLanguage].title}
         section={MiddleBlockContent[currentLanguage].section}

@@ -1,11 +1,6 @@
 import { lazy } from "react";
 import { useTranslation } from "react-i18next";
 import CareerPageContent from "../../content/CareerPageContent.json";
-// import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-// import AboutContent from "../../content/AboutContent.json";
-// import MissionContent from "../../content/MissionContent.json";
-// import ProductContent from "../../content/ProductContent.json";
-// import ContactContent from "../../content/ContactContent.json";
 
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
@@ -38,33 +33,6 @@ const Career = () => {
         icon="project_manager.svg"
         id="secondSection"
       />
-      {/* <MiddleBlock
-        title={MiddleBlockContent[currentLanguage].title}
-        section={MiddleBlockContent[currentLanguage].section}
-      /> */}
-      {/* <ContentBlock
-        direction="left"
-        title={MissionContent[currentLanguage].title}
-        content={MissionContent[currentLanguage].text}
-        section={MissionContent[currentLanguage].section}
-        icon="programmer-working-with-team.svg"
-        id="mission"
-      /> */}
-      {/* <ContentBlock
-        direction="left"
-        title={ProductContent[currentLanguage].title}
-        content={ProductContent[currentLanguage].text}
-        icon="waving.svg"
-        id="product"
-      /> */}
-      {/* <Contact
-        title={ContactContent[currentLanguage].title}
-        content={ContactContent[currentLanguage].text}
-        phone={ContactContent[currentLanguage].phone}
-        email={ContactContent[currentLanguage].email}
-        id="contact"
-      />
-      */}
     </Container> 
   );
 };

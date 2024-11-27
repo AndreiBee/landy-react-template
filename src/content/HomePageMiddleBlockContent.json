@@ -1,0 +1,52 @@
+{
+"cs":{
+    "title": "Naši spokojení zákazníci",
+    "section": [
+      {
+        "title": "VÚTS",
+        "link": "https://www.vuts.cz/",
+        "icon": "logo-vuts.png"
+      },
+      {
+        "title": "Arcibiskupství pražské",
+        "link": "https://apha.cz/",
+        "icon": "logo-ap.png"
+      },      
+      {
+        "title": "Rigaku",
+        "link": "https://rigaku.com/",
+        "icon": "logo-rigaku.png"
+      },
+      {
+        "title": "ELI Beamlines",
+        "link": "https://www.eli-beams.eu/",
+        "icon": "logo-eli.png"
+      }
+    ]
+  },
+  "en":{
+    "title": "Our Satisfied Customers",
+    "section": [
+      {
+        "title": "VÚTS",
+        "link": "https://www.vuts.cz/",
+        "icon": "logo-vuts.png"
+      },
+      {
+        "title": "Arcibiskupství pražské",
+        "link": "https://apha.cz/",
+        "icon": "logo-ap.png"
+      },      
+      {
+        "title": "Rigaku",
+        "link": "https://rigaku.com/",
+        "icon": "logo-rigaku.png"
+      },
+      {
+        "title": "ELI Beamlines",
+        "link": "https://www.eli-beams.eu/",
+        "icon": "logo-eli.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+"cs":{
+  "title": "Proč si vybrat Arvion?",
+  "text": "Arvion přináší firmám nejen inovativní softwarová řešení na míru, ale také kompletní podporu jejich IT systémů. S dlouholetými zkušenostmi v oblasti vývoje a optimalizace softwaru pomáháme firmám zvládnout technologické výzvy a soustředit se na růst svého podnikání.",
+  "section": [
+    {
+      "title": "",
+      "content": "Individuální přístup ke každému projektu",
+      "icon": "male-icon.svg"
+    },
+    {
+      "title": "",
+      "content": "Profesionální tým odborníků s rozsáhlými zkušenostmi",
+      "icon": "briefcase-icon.svg"
+    },
+    {
+      "title": "",
+      "content": "Moderní technologie a nejlepší praktiky v oboru",
+      "icon": "solution-icon.svg"
+    },
+    {
+      "title": "",
+      "content": "Rychlé a efektivní řešení problémů",
+      "icon": "quick-icon.svg"
+    }
+  ]
+},
+"en": {
+  "title": "Why Choose Arvion?",
+  "text": "Arvion provides companies not only with innovative custom software solutions but also with complete support for their IT systems. With years of experience in software development and optimization, we help businesses tackle technological challenges and focus on growing their operations.",
+  "section": [
+    {
+      "title": "",
+      "content": "Individual approach to every project",
+      "icon": "male-icon.svg"
+    },
+    {
+      "title": "",
+      "content": "Professional team of experts with extensive experience",
+      "icon": "briefcase-icon.svg"
+    },
+    {
+      "title": "",
+      "content": "Modern technologies and best practices in the industry",
+      "icon": "solution-icon.svg"
+    },
+    {
+      "title": "",
+      "content": "Fast and effective problem solving",
+      "icon": "quick-icon.svg"
+    }
+  ]
+}
+
+}
