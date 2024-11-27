@@ -20,7 +20,6 @@ import {
   LogoAndNavBarDiv,
   CustomLink,
 } from "./styles";
-// import { Link, NavLink } from "react-router-dom";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
@@ -41,31 +40,25 @@ const Header = ({ t }: { t: TFunction }) => {
     //   });
     //   setVisibility(false);
     // };
+
+    const handleLinkClick = () => {
+      setVisibility(false); // Zavře menu
+    };
     return (
       <>
-        {/* <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("About")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          <Span>{t("Mission")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <Span>{t("Product")}</Span>
-        </CustomNavLinkSmall> */}
-
-        <CustomLink to="/about">
+        <CustomLink to="/about" onClick={handleLinkClick}>
           <Span>{t("About")}</Span>
         </CustomLink>
 
-        <CustomLink to="/price">
+        <CustomLink to="/price" onClick={handleLinkClick}>
           <Span>{t("Price List")}</Span>
         </CustomLink>
 
-        <CustomLink to="/career">
+        <CustomLink to="/career" onClick={handleLinkClick}>
           <Span>{t("Career")}</Span>
         </CustomLink>
 
-        <CustomNavLinkSmall to="/contact">
+        <CustomNavLinkSmall to="/contact" onClick={handleLinkClick}>
           <Span>
             <Button>{t("Contact")}</Button>
           </Span>
