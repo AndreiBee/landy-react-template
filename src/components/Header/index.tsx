@@ -26,6 +26,11 @@ const Header = ({ t }: { t: TFunction }) => {
 
   const handleChange = (language: string) => {
     i18n.changeLanguage(language);
+    if (language === 'en') {
+      document.title = 'Arvion | Tailored Software Solutions';
+    } else if (language === 'cs') {
+      document.title = 'Arvion | Softwarová řešení na míru';
+    }
   };
 
   const toggleButton = () => {

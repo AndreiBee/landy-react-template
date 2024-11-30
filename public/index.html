@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="https://arvion.cz/favicon.ico" />
     <link rel="manifest" href="/manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -10,10 +10,10 @@
 
     <!-- Default Meta Tags (English as fallback) -->
     <meta name="description" content="Arvion provides tailored software solutions to help businesses optimize processes and improve efficiency." />
-    <meta name="keywords" content="software solutions, custom software, business optimization, Arvion, software development, IT solutions" />
+    <meta name="keywords" content="pomoc se softwarem, vývoj software na míru, správa software, softwarová řešení na míru, údržba firemního software, softwarová podpora, firemní IT služby" />
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Arvion | Tailored Software Solutions" />
+    <meta property="og:title" content="Arvion | Softwarová řešení na míru" />
     <meta property="og:description" content="Discover Arvion's innovative software solutions designed to help you achieve your business goals." />
     <meta property="og:image" content="https://arvion.cz/img/svg/logo.png" />
     <meta property="og:type" content="website" />
@@ -22,7 +22,7 @@
     <meta property="og:url" content="https://arvion.cz/" />
     
     <!-- Twitter Meta Tags -->
-    <meta property="twitter:title" content="Arvion | Tailored Software Solutions" />
+    <meta property="twitter:title" content="Arvion | Softwarová řešení na míru" />
     <meta property="twitter:description" content="Discover Arvion's innovative software solutions designed to help you achieve your business goals." />
     <meta property="twitter:image" content="https://arvion.cz/img/svg/logo.png" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -31,8 +31,32 @@
     <!-- Robots -->
     <meta name="robots" content="index, follow" />
 
+    <!-- JSON-LD strukturovaná data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Arvion",
+      "url": "https://arvion.cz",
+      "logo": "https://arvion.cz/img/svg/capitalA.png",
+      "description": "Arvion poskytuje softwarová řešení na míru pro optimalizaci procesů a zlepšení efektivity firem.",
+      "keywords": "softwarová řešení, tvorba software, vývoj na míru, IT služby, podnikové aplikace, softwarová podpora"
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Praha",
+        "addressCountry": "CZ"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+420773972894",
+        "contactType": "customer service",
+        "availableLanguage": ["Czech", "English"]
+      }
+    }
+    </script>
+
     <!-- Dynamic Title -->
-    <title id="dynamic-title">Arvion | Software Solutions for Your Company</title>
+    <title id="dynamic-title">Arvion | Softwarová řešení na míru</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -62,8 +86,8 @@
         twitterTitleMeta.setAttribute('content', 'Arvion | Softwarová řešení na míru');
         twitterDescriptionMeta.setAttribute('content', 'Objevte inovativní softwarová řešení od Arvionu, která vám pomohou dosáhnout obchodních cílů.');
       } else {
-        // Default to English
-        titleElement.textContent = 'Arvion | Software Solutions for Your Company';
+        // English
+        titleElement.textContent = 'Arvion | Tailored Software Solutions';
         descriptionMeta.setAttribute('content', 'Arvion provides tailored software solutions to help businesses optimize processes and improve efficiency.');
         ogTitleMeta.setAttribute('content', 'Arvion | Tailored Software Solutions');
         ogDescriptionMeta.setAttribute('content', 'Discover Arvion\'s innovative software solutions designed to help you achieve your business goals.');
