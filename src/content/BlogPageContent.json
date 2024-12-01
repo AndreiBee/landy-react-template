@@ -1,0 +1,128 @@
+{
+  "en": [
+    {
+      "id": 1,
+      "title": "What to do when your software stops working?",
+      "description": "Learn how to troubleshoot and fix issues with malfunctioning software. Get the right guidance to restore your software’s functionality.",
+      "fullContent": {
+        "Check Basic Issues": [
+          "Restart the software and your device to refresh the system.",
+          "Ensure your internet connection is stable if the software requires online access.",
+          "Verify that you are using the latest software version and a compatible operating system."
+        ],
+        "Search for Error Messages": [
+          "Error messages often provide key information about what is happening.",
+          "Use Google to search for solutions based on the error code you encounter."
+        ],
+        "Explore Documentation and Community": [
+          "Check the official software documentation for troubleshooting steps.",
+          "Join forums and communities where similar issues may have already been resolved."
+        ],
+        "Contact Support": [
+          "If the problem persists, contact technical support. Be ready to provide information such as software version, operating system, and a detailed description of the issue."
+        ],
+        "Consider Professional Help": [
+          "If the software is critical to your business operations, don’t hesitate to seek professional help to resolve the issue quickly."
+        ]
+      },
+      "tags": ["SoftwareProblems", "TechnicalSupport", "MalfunctioningSoftware", "Diagnostics", "ErrorSolutions"],
+      "image": "/img/svg/maintenance.svg"
+    },
+    {
+      "id": 2,
+      "title": "How to Choose the Right Partner for Custom Software Development?",
+      "description": "Choosing the right partner for custom software development is crucial for the success of your project. Learn how to evaluate potential partners based on their capabilities, experience, and approach.",
+      "fullContent": {
+        "Define Your Needs": [
+          "Clearly define what you expect from the software.",
+          "Consider your project goals, budget, and timeline."
+        ],
+        "Check Partner Experience": [
+          "Look for a company or team with proven experience in your industry.",
+          "Request examples of previous projects or references from clients."
+        ],
+        "Evaluate Communication Skills": [
+          "Good communication is key to a smooth project process.",
+          "Find out how often they will update you on the project’s progress."
+        ],
+        "Verify Technical Expertise": [
+          "Check what technologies they use and ensure they align with your needs.",
+          "Ask about their experience integrating software into existing infrastructure."
+        ],
+        "Consider Price and Flexibility": [
+          "Don’t be lured by the lowest price – quality is more important.",
+          "Check if the partner is open to making adjustments during the development process."
+        ],
+        "Watch for Long-Term Collaboration": [
+          "Find out if the partner offers ongoing support after the project is completed.",
+          "Explore future expansion opportunities for the software."
+        ]
+      },
+      "tags": ["CustomSoftware", "SoftwareDevelopment", "RightPartner", "ITCollaboration", "BusinessSolutions"],
+      "image": "/img/svg/business-referral.svg"
+    }
+  ],
+  "cs": [
+    {
+      "id": 1,
+      "title": "Co dělat, když váš software přestane fungovat?",
+      "description": "Zjistěte, jak postupovat při řešení problémů s nefunkčním softwarem. Získejte správné rady pro obnovení funkčnosti vašeho softwaru.",
+      "fullContent": {
+        "Zkontrolujte základní problémy": [
+          "Restartujte software a zařízení pro obnovení systému.",
+          "Zkontrolujte stabilitu připojení k internetu, pokud software vyžaduje online přístup.",
+          "Ověřte, že používáte nejnovější verzi softwaru a kompatibilní operační systém."
+        ],
+        "Vyhledejte chybové zprávy": [
+          "Chybové zprávy často obsahují klíčové informace o problému.",
+          "Použijte Google pro vyhledání řešení na základě chybového kódu."
+        ],
+        "Prozkoumejte dokumentaci a komunitu": [
+          "Podívejte se do oficiální dokumentace softwaru pro kroky k odstranění problému.",
+          "Připojte se k diskusním fórům a komunitám, kde mohou být podobné problémy již vyřešeny."
+        ],
+        "Kontaktujte podporu": [
+          "Pokud problém přetrvává, kontaktujte technickou podporu. Připravte si informace jako verzi softwaru, operační systém a podrobný popis problému."
+        ],
+        "Zvažte profesionální pomoc": [
+          "Pokud je software kritický pro vaše podnikání, neváhejte se obrátit na odborníky, kteří problém rychle vyřeší."
+        ]
+      },
+      "tags": ["SoftwareProblémy", "TechnickáPodpora", "NefunkčníSoftware", "Diagnostika", "ŘešeníChyb"],
+      "image": "/img/svg/maintenance.svg"
+    },
+    {
+      "id": 2,
+      "title": "Jak si vybrat správného partnera pro vývoj software na míru?",
+      "description": "Výběr správného partnera pro vývoj software na míru je klíčový pro úspěch vašeho projektu. Naučte se, jak hodnotit schopnosti, zkušenosti a přístup potenciálních partnerů.",
+      "fullContent": {
+        "Definujte své potřeby": [
+          "Jasně si ujasněte, co od softwaru očekáváte.",
+          "Zvažte cíle, rozpočet a časový rámec."
+        ],
+        "Zkontrolujte zkušenosti partnera": [
+          "Vyhledejte firmu nebo tým s prokazatelnými zkušenostmi ve vašem oboru.",
+          "Požádejte o ukázky předchozích projektů nebo reference od klientů."
+        ],
+        "Hodnoťte komunikační dovednosti": [
+          "Dobrá komunikace je klíčová pro hladký průběh projektu.",
+          "Zjistěte, jak často vás budou informovat o postupu."
+        ],
+        "Ověřte technické schopnosti": [
+          "Zjistěte, jaké technologie používají a zda odpovídají vašim potřebám.",
+          "Zeptejte se na jejich zkušenosti s integrací softwaru do stávající infrastruktury."
+        ],
+        "Zvažte cenu a flexibilitu": [
+          "Nenechte se zlákat nejnižší cenou – kvalita je důležitější.",
+          "Ověřte, zda je partner ochoten upravit projekt během vývoje."
+        ],
+        "Pozor na dlouhodobou spolupráci": [
+          "Zjistěte, zda partner poskytuje podporu i po dokončení projektu.",
+          "Prozkoumejte možnosti budoucího rozšíření softwaru."
+        ]
+      },
+      "tags": ["SoftwareNaMíru", "VývojSoftwaru", "SprávnýPartner", "ITSpolupráce", "Podnikání"],
+      "image": "/img/svg/business-referral.svg"
+    }
+  ]
+}

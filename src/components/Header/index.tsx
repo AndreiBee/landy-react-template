@@ -63,6 +63,10 @@ const Header = ({ t }: { t: TFunction }) => {
           <Span>{t("Career")}</Span>
         </CustomLink>
 
+        <CustomLink to="/blog" onClick={handleLinkClick}>
+          <Span>{t("Blog")}</Span>
+        </CustomLink>
+
         <CustomNavLinkSmall to="/contact" onClick={handleLinkClick}>
           <Span>
             <Button>{t("Contact")}</Button>

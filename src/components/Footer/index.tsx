@@ -90,6 +90,7 @@ const Footer = ({ t }: { t: TFunction }) => {
               <Large to="/career">{t("Career")}</Large>
               <Large to="/contact">{t("Contact")}</Large>
               <Large to="/about">{t("About")}</Large>
+              <Large to="/blog">{t("Blog")}</Large>
               {/* <Large to="/">{t("Press")}</Large> */}
               {/* <Large to="/">{t("Careers & Culture")}</Large> */}
             </Col>

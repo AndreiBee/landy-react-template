@@ -5,11 +5,6 @@ const routes = [
     component: "Home",
   },
   {
-    path: ["/price"],
-    exact: true,
-    component: "Price",
-  },
-  {
     path: ["/about"],
     exact: true,
     component: "About",
@@ -23,6 +18,16 @@ const routes = [
     path: ["/contact"],
     exact: true,
     component: "Contact",
+  },
+  {
+    path: ["/price"],
+    exact: true,
+    component: "Price",
+  },
+  {
+    path: ["/blog"],
+    exact: true,
+    component: "Blog",
   },
 ];
 
