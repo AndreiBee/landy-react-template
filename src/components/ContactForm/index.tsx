@@ -10,7 +10,7 @@ import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
 import { ContactContainer, FormGroup, Span, ButtonContainer, PhoneLink, EmailLink, AddressLine } from "./styles";
 
-const Contact = ({ title, content, phone, email, id, t }: ContactProps) => {
+const Contact = ({ title, content, phone, email, in_number, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
@@ -33,6 +33,11 @@ const Contact = ({ title, content, phone, email, id, t }: ContactProps) => {
             <Row style={{ margin: "10px"}} justify="space-between">
               <AddressLine>
                 {t("AddressLine1")}, {t("AddressLine2")}
+              </AddressLine>
+            </Row>
+            <Row style={{ margin: "10px"}} justify="space-between">
+              <AddressLine>
+                {t("IN")}: {in_number}
               </AddressLine>
             </Row>
           </Slide>

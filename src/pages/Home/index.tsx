@@ -56,6 +56,7 @@ const Home = () => {
         content={ContactContent[currentLanguage].text}
         phone={ContactContent[currentLanguage].phone}
         email={ContactContent[currentLanguage].email}
+        in_number={ContactContent[currentLanguage].in_number}
         id="contact"
       />
     </Container>

@@ -44,6 +44,7 @@ const Contact = () => {
         content={ContactFormContent[currentLanguage].text}
         phone={ContactFormContent[currentLanguage].phone}
         email={ContactFormContent[currentLanguage].email}
+        in_number={ContactFormContent[currentLanguage].in_number}
         id="contact"
       />
      
