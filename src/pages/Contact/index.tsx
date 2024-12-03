@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet"; // Import Helmet
 import ContactPageContent from "../../content/ContactPageContent.json";
 import ContactFormContent from "../../content/HomePageContactContent.json";
 
@@ -13,6 +14,20 @@ const Contact = () => {
   const currentLanguage = i18n.language as "en" | "cs"; // Assert the language type explicitly
 
   return (
+    <>
+    <Helmet>
+      <title>{`Contact | ${
+        currentLanguage === "en" ? "Get in Touch" : "Kontaktujte nás"
+      }`}</title>
+      <meta
+        name="description"
+        content={
+          currentLanguage === "en"
+            ? "Reach out to us for any questions or inquiries."
+            : "Kontaktujte nás pro jakékoli dotazy nebo informace."
+        }
+      />
+    </Helmet>
     <Container>
       <ScrollToTop />
       <ContentBlock
@@ -47,8 +62,8 @@ const Contact = () => {
         in_number={ContactFormContent[currentLanguage].in_number}
         id="contact"
       />
-     
     </Container> 
+    </>
   );
 };
 

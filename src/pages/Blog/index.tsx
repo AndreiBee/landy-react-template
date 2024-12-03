@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
+import { Helmet } from "react-helmet"; // Import Helmet
 import BlogContent from "../../content/BlogPageContent.json";
 
 const Container = lazy(() => import("../../common/Container"));
@@ -24,6 +25,19 @@ const Blog = () => {
   const articles = BlogContent[currentLanguage];
 
   return (
+    <>
+    {/* Přidání Helmet pro SEO */}
+    <Helmet>
+    <title>{`Blog | ${currentLanguage === "en" ? "Our Articles" : "Naše články"}`}</title>
+    <meta
+      name="description"
+      content={
+        currentLanguage === "en"
+          ? "Read our articles and learn more about our services."
+          : "Přečtěte si naše články a zjistěte více o našich službách."
+      }
+    />
+    </Helmet> 
     <Container>
       <ScrollToTop />
       <BlogWrapper>
@@ -41,6 +55,7 @@ const Blog = () => {
         ))}
       </BlogWrapper>
     </Container>
+    </>
   );
 };
 

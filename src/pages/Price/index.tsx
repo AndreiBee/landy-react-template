@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet"; // Import Helmet
 import PriceContent from "../../content/PricePageContent.json";
 
 const Container = lazy(() => import("../../common/Container"));
@@ -11,6 +12,20 @@ const Price = () => {
   const currentLanguage = i18n.language as "en" | "cs"; // Assert the language type explicitly
 
   return (
+    <>
+    <Helmet>
+      <title>{`Price List | ${
+        currentLanguage === "en" ? "Our Pricing" : "Ceník"
+      }`}</title>
+      <meta
+        name="description"
+        content={
+          currentLanguage === "en"
+            ? "Check out our competitive pricing for all services."
+            : "Prohlédněte si náš konkurenceschopný ceník služeb."
+        }
+      />
+    </Helmet>
     <Container>
       <ScrollToTop />
       <TableBlock
@@ -23,6 +38,7 @@ const Price = () => {
         id="priceTable"
       />
     </Container> 
+    </>
   );
 };
 

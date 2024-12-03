@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet"; // Import Helmet
 import IntroContent from "../../content/HomePageIntroContent.json";
 import MiddleBlockContent from "../../content/HomePageMiddleBlockContent.json";
 import AboutContent from "../../content/HomePageAboutContent.json";
@@ -17,6 +18,20 @@ const Home = () => {
   const currentLanguage = i18n.language as "en" | "cs"; // Assert the language type explicitly
 
   return (
+    <>
+    <Helmet>
+      <title>{`Home | ${
+        currentLanguage === "en" ? "Welcome to Our Website" : "Vítejte na našem webu"
+      }`}</title>
+      <meta
+        name="description"
+        content={
+          currentLanguage === "en"
+            ? "Discover our services and solutions tailored to your needs."
+            : "Objevte naše služby a řešení přizpůsobené vašim potřebám."
+        }
+      />
+    </Helmet>
     <Container>
       <ScrollToTop />
       <ContentBlock
@@ -60,6 +75,7 @@ const Home = () => {
         id="contact"
       />
     </Container>
+    </>
   );
 };
 

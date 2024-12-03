@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet"; // Import Helmet
 import AboutContent from "../../content/AboutPageContent.json";
 
 const Container = lazy(() => import("../../common/Container"));
@@ -11,6 +12,20 @@ const About = () => {
   const currentLanguage = i18n.language as "en" | "cs"; // Assert the language type explicitly
 
   return (
+    <>
+    <Helmet>
+      <title>{`About | ${
+        currentLanguage === "en" ? "About Us" : "O nás"
+      }`}</title>
+      <meta
+        name="description"
+        content={
+          currentLanguage === "en"
+            ? "Learn more about our company and team."
+            : "Zjistěte více o naší společnosti a týmu."
+        }
+      />
+    </Helmet>
     <Container>
       <ScrollToTop />
       <ContentBlock
@@ -39,6 +54,7 @@ const About = () => {
         id="thirdSection"
       />
     </Container> 
+    </>
   );
 };
 
