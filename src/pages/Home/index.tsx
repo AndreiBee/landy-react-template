@@ -40,7 +40,7 @@ const Home = () => {
         content={IntroContent[currentLanguage].text}
         button={IntroContent[currentLanguage].button}
         withButtons={true}
-        icon="team-of-programmers-opt.svg"
+        icon="team-of-programmers-opt.png"
         id="intro"
       />
       <ContentBlock
@@ -49,7 +49,7 @@ const Home = () => {
         content={AboutContent[currentLanguage].text}
         section={AboutContent[currentLanguage].section}
         withButtons={false}
-        icon="programmer-working-on-computer-opt.svg"
+        icon="programmer-working-on-computer-opt.png"
         id="about"
       />
 
@@ -59,7 +59,7 @@ const Home = () => {
         content={MissionContent[currentLanguage].text}
         section={MissionContent[currentLanguage].section}
         withButtons={false}
-        icon="programmer-working-with-team-opt.svg"
+        icon="programmer-working-with-team-opt.png"
         id="mission"
       />
       <MiddleBlock
