@@ -7,18 +7,18 @@
   "rows": [
     {
       "service": "Konzultace a analýza",
-      "priceWithoutContract": "720",
-      "priceWithContract": "580"
+      "priceWithoutContract": "580",
+      "priceWithContract": "480"
     },
     {
       "service": "Vývoj softwaru",
-      "priceWithoutContract": "780",
-      "priceWithContract": "625"
+      "priceWithoutContract": "600",
+      "priceWithContract": "500"
     },
     {
       "service": "Údržba a podpora",
-      "priceWithoutContract": "760",
-      "priceWithContract": "610"
+      "priceWithoutContract": "600",
+      "priceWithContract": "500"
     }
   ]
 },
@@ -30,18 +30,18 @@
   "rows": [
     {
       "service": "Consultation and Analysis",
-      "priceWithoutContract": "30",
-      "priceWithContract": "24"
+      "priceWithoutContract": "23",
+      "priceWithContract": "19"
     },
     {
       "service": "Software Development",
-      "priceWithoutContract": "32",
-      "priceWithContract": "26"
+      "priceWithoutContract": "24",
+      "priceWithContract": "20"
     },
     {
       "service": "Maintenance and Support",
-      "priceWithoutContract": "32",
-      "priceWithContract": "26"
+      "priceWithoutContract": "24",
+      "priceWithContract": "20"
     }
   ]
 }
