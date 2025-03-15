@@ -33,7 +33,7 @@ const About = () => {
         title={AboutContent[currentLanguage].title1}
         content={AboutContent[currentLanguage].text1}
         withButtons={false}
-        icon="teamwork.svg"
+        icon="teamwork.png"
         id="firstSection"
       />
       <ContentBlock
@@ -41,7 +41,7 @@ const About = () => {
         title={AboutContent[currentLanguage].title2}
         content={AboutContent[currentLanguage].text2}
         withButtons={false}
-        icon="investment-opt.svg"
+        icon="investment-opt.png"
         id="secondSection"
       />
       <ContentBlock
@@ -50,7 +50,7 @@ const About = () => {
         content={AboutContent[currentLanguage].text3}
         button={AboutContent[currentLanguage].button}
         withButtons={true}
-        icon="target-opt.svg"
+        icon="target-opt.png"
         id="thirdSection"
       />
     </Container> 

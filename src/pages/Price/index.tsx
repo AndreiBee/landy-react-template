@@ -34,7 +34,7 @@ const Price = () => {
         columns={PriceContent[currentLanguage].columns}
         rows={PriceContent[currentLanguage].rows}
         priceNote={PriceContent[currentLanguage].priceNote}
-        icon="payment-opt.svg"
+        icon="payment-opt.png"
         id="priceTable"
       />
     </Container> 

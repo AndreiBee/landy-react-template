@@ -43,7 +43,7 @@ const Contact = () => {
         title={ContactPageContent[currentLanguage].title1}
         content={ContactPageContent[currentLanguage].text1}
         withButtons={false}
-        icon="contact.svg"
+        icon="contact.png"
         id="firstSection"
       />
       <ContentBlock
@@ -51,7 +51,7 @@ const Contact = () => {
         title={""}
         content={ContactPageContent[currentLanguage].text2}
         withButtons={false}
-        icon="support.svg"
+        icon="support.png"
         id="secondSection"
       />
       <ContentBlock
@@ -59,7 +59,7 @@ const Contact = () => {
         title={""}
         content={ContactPageContent[currentLanguage].text3}
         withButtons={false}
-        icon="contact_form-opt.svg"
+        icon="contact_form-opt.png"
         id="secondSection"
       />
     </Container> 
