@@ -77,7 +77,7 @@ const Header = ({ t }: { t: TFunction }) => {
   };
 
   return (
-    <HeaderSection>
+    <HeaderSection id="site-header">
       <Container>
         <Row justify="space-between">
           <LogoAndNavBarDiv>

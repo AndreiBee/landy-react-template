@@ -23,12 +23,15 @@ const ScrollToTop = () => {
   }, [checkScrollTop]);
 
   const scrollUp = () => {
-    const element = document.getElementById("intro") as HTMLDivElement;
-    element.scrollIntoView({
+    const header = document.getElementById("site-header");
+    if (header) {
+      window.scrollTo({
+      top: header.offsetTop,
       behavior: "smooth",
-      block: "end",
-      inline: "nearest",
     });
+    } else {
+      console.warn("Header not found");
+    }
   };
 
   return (
