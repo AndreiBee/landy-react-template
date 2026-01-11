@@ -7,8 +7,8 @@
   "rows": [
     {
       "service": "Konzultace a analýza",
-      "priceWithoutContract": "880",
-      "priceWithContract": "780"
+      "priceWithoutContract": "950",
+      "priceWithContract": "850"
     },
     {
       "service": "Vývoj softwaru",
@@ -30,8 +30,8 @@
   "rows": [
     {
       "service": "Consultation and Analysis",
-      "priceWithoutContract": "44",
-      "priceWithContract": "39"
+      "priceWithoutContract": "48",
+      "priceWithContract": "43"
     },
     {
       "service": "Software Development",
