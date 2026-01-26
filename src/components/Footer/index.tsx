@@ -86,7 +86,7 @@ const Footer = ({ t }: { t: TFunction }) => {
             <Col lg={10} md={10} sm={12} xs={12}>
               <Title>{t("Company")}</Title>
               {/* <Large to="/">{t("About")}</Large> */}
-              <Large to="/price">{t("Price List")}</Large>
+              {/* <Large to="/price">{t("Price List")}</Large> */}
               <Large to="/career">{t("Career")}</Large>
               <Large to="/contact">{t("Contact")}</Large>
               <Large to="/about">{t("About")}</Large>
