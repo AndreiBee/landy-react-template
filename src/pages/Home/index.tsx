@@ -73,6 +73,7 @@ const Home = () => {
         email={ContactContent[currentLanguage].email}
         in_number={ContactContent[currentLanguage].in_number}
         acc_number={ContactContent[currentLanguage].acc_number}
+        qr_payment_image={ContactContent[currentLanguage].qr_payment_image}
         id="contact"
       />
     </Container>

@@ -9,6 +9,25 @@ export const ContactContainer = styled("div")`
   }
 `;
 
+export const Image = styled("img")`
+  max-width: 15rem;
+  max-height: 15rem;
+  border-radius: 8px;
+  // margin-bottom: 16px;
+  display: block;
+
+  /* Media query pro menší obrazovky */
+  @media (max-width: 768px) {
+    max-width: 15rem; /* Zmenší maximální šířku obrázku na menších obrazovkách */
+    max-height: 15rem; /* Zmenší maximální výšku obrázku */
+  }
+
+  @media (max-width: 480px) {
+    max-width: 12rem; /* Ještě menší obrázek pro velmi malé obrazovky */
+    max-height: 12rem;
+  }
+`;
+
 export const FormGroup = styled("form")`
   width: 100%;
   max-width: 520px;

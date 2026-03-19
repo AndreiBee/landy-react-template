@@ -8,9 +8,9 @@ import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
-import { ContactContainer, FormGroup, Span, ButtonContainer, PhoneLink, EmailLink, AddressLine } from "./styles";
+import { ContactContainer, FormGroup, Span, ButtonContainer, PhoneLink, EmailLink, AddressLine, Image } from "./styles";
 
-const Contact = ({ title, content, phone, email, in_number, acc_number, id, t }: ContactProps) => {
+const Contact = ({ title, content, phone, email, in_number, acc_number, qr_payment_image, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
@@ -44,6 +44,9 @@ const Contact = ({ title, content, phone, email, in_number, acc_number, id, t }:
               <AddressLine>
                 {t("Account Number")}: {acc_number}
               </AddressLine>
+            </Row>
+            <Row style={{ margin: "10px"}} justify="space-between">
+              <Image src={qr_payment_image} />
             </Row>
           </Slide>
         </Col>

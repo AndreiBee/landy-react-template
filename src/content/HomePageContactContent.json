@@ -6,7 +6,8 @@
     "phone": "+420 773 972 894",
     "email": "arvioncz@gmail.com",
     "in_number": "19641648",
-    "acc_number": "1737581000/2700"
+    "acc_number": "1737581000/2700",
+    "qr_payment_image": "/img/svg/qr_unicredit.png"
 },
 "en":
 {
@@ -15,6 +16,7 @@
     "phone": "+420 773 972 894",
     "email": "arvioncz@gmail.com",
     "in_number": "19641648",
-    "acc_number": "1737581000/2700"
+    "acc_number": "arvioncz@gmail.com",
+    "qr_payment_image": "/img/svg/qr_paypal.jpg"
 }
 }

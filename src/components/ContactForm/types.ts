@@ -6,6 +6,7 @@ export interface ContactProps {
   email: string;
   in_number: string;
   acc_number: string;
+  qr_payment_image: string;
   id: string;
   t: TFunction;
 }

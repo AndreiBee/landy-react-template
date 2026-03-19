@@ -36,6 +36,7 @@ const Contact = () => {
         email={ContactFormContent[currentLanguage].email}
         in_number={ContactFormContent[currentLanguage].in_number}
         acc_number={ContactFormContent[currentLanguage].acc_number}
+        qr_payment_image={ContactFormContent[currentLanguage].qr_payment_image}
         id="contact"
       />
       <ScrollToTop />
