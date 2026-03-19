@@ -5,6 +5,7 @@ export interface ContactProps {
   phone: string;
   email: string;
   in_number: string;
+  acc_number: string;
   id: string;
   t: TFunction;
 }

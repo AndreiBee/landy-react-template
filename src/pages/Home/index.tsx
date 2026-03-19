@@ -72,6 +72,7 @@ const Home = () => {
         phone={ContactContent[currentLanguage].phone}
         email={ContactContent[currentLanguage].email}
         in_number={ContactContent[currentLanguage].in_number}
+        acc_number={ContactContent[currentLanguage].acc_number}
         id="contact"
       />
     </Container>
