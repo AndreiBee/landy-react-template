@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { notification } from "antd";
+import i18n from "../../translation";
 
 interface IValues {
   name: string;
   phone: string;
   email: string;
   message: string;
+  _gotcha: string;
 }
 
 const initialValues: IValues = {
@@ -13,66 +15,85 @@ const initialValues: IValues = {
   phone: "",
   email: "",
   message: "",
+  _gotcha: "",
 };
 
-export const useForm = (validate: { (values: IValues): IValues }) => {
+const FORMSPREE_URL = "https://formspree.io/f/myzypwqy";
+
+export const useForm = (validate: { (values: IValues): Partial<IValues> }) => {
   const [formState, setFormState] = useState<{
     values: IValues;
-    errors: IValues;
+    errors: Partial<IValues>;
   }>({
     values: { ...initialValues },
-    errors: { ...initialValues },
+    errors: {},
   });
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>) => {
+  const t = (key: string) => i18n.t(key);
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (submitting) return;
+
     const values = formState.values;
     const errors = validate(values);
     setFormState((prevState) => ({ ...prevState, errors }));
 
-    const url = "https://formspree.io/f/myzypwqy"; // Fill in your API URL here
+    if (Object.values(errors).some((error) => error)) {
+      return;
+    }
 
+    // Bots fill the hidden "_gotcha" field; pretend success and drop it.
+    if (values._gotcha) {
+      setFormState({ values: { ...initialValues }, errors: {} });
+      return;
+    }
+
+    setSubmitting(true);
     try {
-      if (Object.values(errors).every((error) => error === "")) {
-        const response = await fetch(url, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(values),
+      const response = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: values.name.trim(),
+          email: values.email.trim(),
+          phone: values.phone.trim(),
+          message: values.message.trim(),
+          language: i18n.language,
+          _replyto: values.email.trim(),
+          _subject: `arvion.cz – ${values.name.trim()}`,
+        }),
+      });
+
+      if (!response.ok) {
+        notification.error({
+          message: t("formErrorTitle"),
+          description: t("formErrorSend"),
         });
-
-        if (!response.ok) {
-          notification["error"]({
-            message: "Error",
-            description:
-              "There was an error sending your message, please try again later.",
-          });
-        } else {
-          event.target.reset();
-          setFormState(() => ({
-            values: { ...initialValues },
-            errors: { ...initialValues },
-          }));
-
-          notification["success"]({
-            message: "Success",
-            description: "Your message has been sent!",
-          });
-        }
+      } else {
+        setFormState({ values: { ...initialValues }, errors: {} });
+        notification.success({
+          message: t("formSuccessTitle"),
+          description: t("formSuccessSent"),
+        });
       }
     } catch (error) {
-      notification["error"]({
-        message: "Error",
-        description: "Failed to submit form. Please try again later.",
+      notification.error({
+        message: t("formErrorTitle"),
+        description: t("formErrorNetwork"),
       });
+    } finally {
+      setSubmitting(false);
     }
   };
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    event.persist();
     const { name, value } = event.target;
     setFormState((prevState) => ({
       ...prevState,
@@ -90,6 +111,7 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
   return {
     handleChange,
     handleSubmit,
+    submitting,
     values: formState.values,
     errors: formState.errors,
   };

@@ -9,6 +9,7 @@ export interface ButtonProps {
   name?: string;
   children: React.ReactNode;
   onClick?: () => void;
+  disabled?: boolean;
 }
 
 export interface SvgIconProps {
@@ -23,6 +24,9 @@ export interface InputProps {
   t: TFunction;
   type?: string;
   value?: string;
+  autoComplete?: string;
+  invalid?: boolean;
+  errorId?: string;
   onChange: (
     event:
       | React.ChangeEvent<HTMLInputElement>

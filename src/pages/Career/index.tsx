@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet"; // Import Helmet
+import PageMeta from "../../components/PageMeta";
+import { getLanguage } from "../../translation";
 import CareerPageContent from "../../content/CareerPageContent.json";
 
 const Container = lazy(() => import("../../common/Container"));
@@ -9,23 +10,11 @@ const PositionBlock = lazy(() => import("../../components/PositionBlock"));
 
 const Career = () => {
   const { i18n } = useTranslation(); // Hook to use translations
-  const currentLanguage = i18n.language as "en" | "cs"; // Assert the language type explicitly
+  const currentLanguage = getLanguage(i18n.language);
 
   return (
     <>
-    <Helmet>
-      <title>{`Career | ${
-        currentLanguage === "en" ? "Join Our Team" : "Přidejte se k nám"
-      }`}</title>
-      <meta
-        name="description"
-        content={
-          currentLanguage === "en"
-            ? "Explore career opportunities and join our growing team."
-            : "Prozkoumejte pracovní příležitosti a připojte se k našemu týmu."
-        }
-      />
-    </Helmet>
+    <PageMeta page="career" />
     <Container>
       <ScrollToTop />
       <PositionBlock

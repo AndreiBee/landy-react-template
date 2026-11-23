@@ -8,14 +8,21 @@ import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
-import { ContactContainer, FormGroup, Span, ButtonContainer, PhoneLink, EmailLink, AddressLine, Image } from "./styles";
+import { ContactContainer, FormGroup, Span, ButtonContainer, PhoneLink, EmailLink, AddressLine, Image, HoneyPot } from "./styles";
 
 const Contact = ({ title, content, phone, email, in_number, acc_number, qr_payment_image, id, t }: ContactProps) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(validate);
+  const { values, errors, handleChange, handleSubmit, submitting } = useForm(validate);
+
+  const errorId = (type: string) => `${id}-${type}-error`;
+  const hasError = (type: keyof typeof errors) => Boolean(errors[type]);
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
-    const ErrorMessage = errors[type as keyof typeof errors];
-    return <Span>{ErrorMessage}</Span>;
+    const errorKey = errors[type as keyof typeof errors];
+    return (
+      <Span id={errorId(type)} role="alert">
+        {errorKey ? t(errorKey) : ""}
+      </Span>
+    );
   };
 
   return (
@@ -25,10 +32,10 @@ const Contact = ({ title, content, phone, email, in_number, acc_number, qr_payme
           <Slide direction="left" triggerOnce>
             <Block title={title} content={content} />
             <Row style={{ margin: "10px"}} justify="space-between">
-              <PhoneLink href={`tel:${phone}`}>{t(phone)}</PhoneLink>
+              <PhoneLink href={`tel:${phone.replace(/\s+/g, "")}`}>{phone}</PhoneLink>
             </Row>
             <Row style={{ margin: "10px"}} justify="space-between">
-              <EmailLink href={`mailto:${email}`}>{t(email)}</EmailLink>
+              <EmailLink href={`mailto:${email}`}>{email}</EmailLink>
             </Row>
             <Row style={{ margin: "10px"}} justify="space-between">
               <AddressLine>
@@ -46,29 +53,48 @@ const Contact = ({ title, content, phone, email, in_number, acc_number, qr_payme
               </AddressLine>
             </Row>
             <Row style={{ margin: "10px"}} justify="space-between">
-              <Image src={qr_payment_image} />
+              <Image src={qr_payment_image} alt={t("qrPaymentAlt")} loading="lazy" />
             </Row>
           </Slide>
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>
           <Slide direction="right" triggerOnce>
-            <FormGroup autoComplete="off" onSubmit={handleSubmit}>
+            <FormGroup noValidate onSubmit={handleSubmit} aria-busy={submitting}>
+              {/* Honeypot for spam bots: hidden from people and screen readers. */}
+              <HoneyPot aria-hidden="true">
+                <label htmlFor={`${id}-gotcha`}>Leave this field empty</label>
+                <input
+                  type="text"
+                  id={`${id}-gotcha`}
+                  name="_gotcha"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={values._gotcha}
+                  onChange={handleChange}
+                />
+              </HoneyPot>
               <Col span={24}>
                 <Input
                   type="text"
                   name="name"
                   placeholder="Your Name"
-                  value={values.name || ""}
+                  autoComplete="name"
+                  value={values.name}
+                  invalid={hasError("name")}
+                  errorId={errorId("name")}
                   onChange={handleChange}
                 />
                 <ValidationType type="name" />
               </Col>
               <Col span={24}>
                 <Input
-                  type="text"
+                  type="email"
                   name="email"
                   placeholder="Your Email"
-                  value={values.email || ""}
+                  autoComplete="email"
+                  value={values.email}
+                  invalid={hasError("email")}
+                  errorId={errorId("email")}
                   onChange={handleChange}
                 />
                 <ValidationType type="email" />
@@ -78,7 +104,10 @@ const Contact = ({ title, content, phone, email, in_number, acc_number, qr_payme
                   type="tel"
                   name="phone"
                   placeholder="Your Mobile Phone"
-                  value={values.phone || ""}
+                  autoComplete="tel"
+                  value={values.phone}
+                  invalid={hasError("phone")}
+                  errorId={errorId("phone")}
                   onChange={handleChange}
                 />
                 <ValidationType type="phone" />
@@ -86,14 +115,18 @@ const Contact = ({ title, content, phone, email, in_number, acc_number, qr_payme
               <Col span={24}>
                 <TextArea
                   placeholder="Your Message"
-                  value={values.message || ""}
+                  value={values.message}
                   name="message"
+                  invalid={hasError("message")}
+                  errorId={errorId("message")}
                   onChange={handleChange}
                 />
                 <ValidationType type="message" />
               </Col>
               <ButtonContainer>
-                <Button name="submit">{t("Submit")}</Button>
+                <Button name="submit" disabled={submitting}>
+                  {submitting ? t("Sending") : t("Submit")}
+                </Button>
               </ButtonContainer>
             </FormGroup>
           </Slide>

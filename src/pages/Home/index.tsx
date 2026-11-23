@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet"; // Import Helmet
+import PageMeta from "../../components/PageMeta";
+import { getLanguage } from "../../translation";
 import IntroContent from "../../content/HomePageIntroContent.json";
 import MiddleBlockContent from "../../content/HomePageMiddleBlockContent.json";
 import AboutContent from "../../content/HomePageAboutContent.json";
@@ -15,23 +16,11 @@ const Contact = lazy(() => import("../../components/ContactForm"));
 
 const Home = () => {
   const { i18n } = useTranslation(); // Hook to use translations
-  const currentLanguage = i18n.language as "en" | "cs"; // Assert the language type explicitly
+  const currentLanguage = getLanguage(i18n.language);
 
   return (
     <>
-    <Helmet>
-      <title>{`Home | ${
-        currentLanguage === "en" ? "Welcome to Our Website" : "Vítejte na našem webu"
-      }`}</title>
-      <meta
-        name="description"
-        content={
-          currentLanguage === "en"
-            ? "Discover our services and solutions tailored to your needs."
-            : "Objevte naše služby a řešení přizpůsobené vašim potřebám."
-        }
-      />
-    </Helmet>
+    <PageMeta page="home" />
     <Container>
       <ScrollToTop />
       <ContentBlock

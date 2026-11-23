@@ -4,7 +4,7 @@ import { withTranslation, TFunction } from "react-i18next";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
-import i18n from "i18next";
+import LanguageSwitcher from "../LanguageSwitcher";
 import {
   HeaderSection,
   LogoContainer,
@@ -15,23 +15,12 @@ import {
   Label,
   Outline,
   Span,
-  LanguageSwitch,
-  LanguageSwitchContainer,
   LogoAndNavBarDiv,
   CustomLink,
 } from "./styles";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
-
-  const handleChange = (language: string) => {
-    i18n.changeLanguage(language);
-    if (language === 'en') {
-      document.title = 'Arvion | Tailored Software Solutions';
-    } else if (language === 'cs') {
-      document.title = 'Arvion | Softwarová řešení na míru';
-    }
-  };
 
   const toggleButton = () => {
     setVisibility(!visible);
@@ -84,29 +73,24 @@ const Header = ({ t }: { t: TFunction }) => {
             <LogoContainer to="/" aria-label="homepage">
               <SvgIcon src="logo-opt.svg" width="101px" height="64px" />
             </LogoContainer>
-            <LanguageSwitchContainer>
-              <LanguageSwitch onClick={() => handleChange("cs")}>
-                <SvgIcon
-                  src="czech-republic.svg"
-                  aria-label="homepage"
-                  width="30px"
-                  height="30px"
-                />
-              </LanguageSwitch>
-              <LanguageSwitch onClick={() => handleChange("en")}>
-                <SvgIcon
-                  src="united-states.svg"
-                  aria-label="homepage"
-                  width="30px"
-                  height="30px"
-                />
-              </LanguageSwitch>
-            </LanguageSwitchContainer>
+            <LanguageSwitcher />
           </LogoAndNavBarDiv>
             <NotHidden>
               <MenuItem />
             </NotHidden>
-            <Burger onClick={toggleButton}>
+            <Burger
+              role="button"
+              tabIndex={0}
+              aria-label="Menu"
+              aria-expanded={visible}
+              onClick={toggleButton}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  toggleButton();
+                }
+              }}
+            >
               <Outline />
             </Burger>
         </Row>

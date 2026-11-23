@@ -98,3 +98,11 @@ export const AddressLine = styled.div`
   font-family: "Roboto", sans-serif;  /* Set the font family */
   transition: color 0.3s ease;
 `;
+
+export const HoneyPot = styled.div`
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+`;

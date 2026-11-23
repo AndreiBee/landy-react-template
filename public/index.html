@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
 
     <!-- Dynamic Title -->
-    <title id="dynamic-title">Arvion | Softwarová řešení na míru</title>
+    <title id="dynamic-title">Arvion | Custom Software Development &amp; Support</title>
 
     <!-- JSON-LD strukturovaná data -->
     <script type="application/ld+json">
@@ -23,69 +23,71 @@
     <meta name="theme-color" content="#000000" />
     <meta name="google-site-verification" content="google-site-verification=SUv6_5Ev790WibLTfoayoLeUxoBwDPDIgpe8FQpZJWc" />
 
-    <!-- Default Meta Tags (English as fallback) -->
-    <meta name="description" content="Arvion provides tailored software solutions to help businesses optimize processes and improve efficiency." />
-    <meta name="keywords" content="pomoc se softwarem, vývoj software na míru, správa software, softwarová řešení na míru, údržba firemního software, softwarová podpora, firemní IT služby" />
-    
+    <!-- Default meta tags (English). The inline script below switches them to
+         Czech for Czech/Slovak browsers; React Helmet replaces them per page
+         (data-react-helmet lets Helmet take them over instead of duplicating). -->
+    <meta name="description" content="Arvion builds, maintains and supports custom business software. A reliable software partner for companies in the US and Europe." data-react-helmet="true" />
+
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Arvion | Softwarová řešení na míru" />
-    <meta property="og:description" content="Discover Arvion's innovative software solutions designed to help you achieve your business goals." />
+    <meta property="og:title" content="Arvion | Custom Software Development & Support" data-react-helmet="true" />
+    <meta property="og:description" content="Arvion builds, maintains and supports custom business software. A reliable software partner for companies in the US and Europe." data-react-helmet="true" />
     <meta property="og:image" content="https://arvion.cz/img/svg/logo.png" />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content="en_US" data-react-helmet="true" />
+    <meta property="og:locale:alternate" content="cs_CZ" />
     <meta property="og:site_name" content="Arvion" />
-    <meta property="og:url" content="https://arvion.cz/" />
-    
+    <meta property="og:url" content="https://arvion.cz/" data-react-helmet="true" />
+
     <!-- Twitter Meta Tags -->
-    <meta property="twitter:title" content="Arvion | Softwarová řešení na míru" />
-    <meta property="twitter:description" content="Discover Arvion's innovative software solutions designed to help you achieve your business goals." />
+    <meta property="twitter:title" content="Arvion | Custom Software Development & Support" data-react-helmet="true" />
+    <meta property="twitter:description" content="Arvion builds, maintains and supports custom business software. A reliable software partner for companies in the US and Europe." data-react-helmet="true" />
     <meta property="twitter:image" content="https://arvion.cz/img/svg/logo.png" />
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:site" content="https://arvion.cz/" />
 
-    <!-- Robots -->
-    <meta name="robots" content="index, follow" />
 
 
 
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>Pro zobrazení webu povolte JavaScript. / Please enable JavaScript to view this website.</noscript>
     <div id="root"></div>
 
     <script>
-      // Detect user's language
-      const userLang = navigator.language || navigator.userLanguage;
+      // Pick the language before React loads so the first paint and the tab
+      // title match. Keep this logic in sync with src/translation.ts.
+      (function () {
+        var lang = null;
+        try {
+          var stored = localStorage.getItem('lang');
+          if (stored === 'cs' || stored === 'en') lang = stored;
+        } catch (e) {}
+        if (!lang) {
+          var langs = (navigator.languages && navigator.languages.length)
+            ? navigator.languages
+            : [navigator.language || ''];
+          lang = 'en';
+          for (var i = 0; i < langs.length; i++) {
+            if (/^(cs|sk)(-|$)/i.test(langs[i] || '')) { lang = 'cs'; break; }
+            if (/^en(-|$)/i.test(langs[i] || '')) break;
+          }
+        }
+        document.documentElement.lang = lang;
+        if (lang !== 'cs') return;
 
-      // Reference to meta tags
-      const titleElement = document.getElementById('dynamic-title');
-      const descriptionMeta = document.querySelector('meta[name="description"]');
-      const ogTitleMeta = document.querySelector('meta[property="og:title"]');
-      const ogDescriptionMeta = document.querySelector('meta[property="og:description"]');
-      const ogLocaleMeta = document.querySelector('meta[property="og:locale"]');
-      const twitterTitleMeta = document.querySelector('meta[property="twitter:title"]');
-      const twitterDescriptionMeta = document.querySelector('meta[property="twitter:description"]');
-
-      // Update meta tags based on language
-      if (userLang.startsWith('cs')) {
-        // Čeština
-        titleElement.textContent = 'Arvion | Softwarová řešení pro vaši firmu';
-        descriptionMeta.setAttribute('content', 'Arvion poskytuje softwarová řešení na míru pro optimalizaci procesů a zlepšení efektivity firem.');
-        ogTitleMeta.setAttribute('content', 'Arvion | Softwarová řešení na míru');
-        ogDescriptionMeta.setAttribute('content', 'Objevte inovativní softwarová řešení od Arvionu, která vám pomohou dosáhnout obchodních cílů.');
-        ogLocaleMeta.setAttribute('content', 'cs_CZ');
-        twitterTitleMeta.setAttribute('content', 'Arvion | Softwarová řešení na míru');
-        twitterDescriptionMeta.setAttribute('content', 'Objevte inovativní softwarová řešení od Arvionu, která vám pomohou dosáhnout obchodních cílů.');
-      } else {
-        // English
-        titleElement.textContent = 'Arvion | Tailored Software Solutions';
-        descriptionMeta.setAttribute('content', 'Arvion provides tailored software solutions to help businesses optimize processes and improve efficiency.');
-        ogTitleMeta.setAttribute('content', 'Arvion | Tailored Software Solutions');
-        ogDescriptionMeta.setAttribute('content', 'Discover Arvion\'s innovative software solutions designed to help you achieve your business goals.');
-        ogLocaleMeta.setAttribute('content', 'en_US');
-        twitterTitleMeta.setAttribute('content', 'Arvion | Tailored Software Solutions');
-        twitterDescriptionMeta.setAttribute('content', 'Discover Arvion\'s innovative software solutions designed to help you achieve your business goals.');
-      }
+        var title = 'Arvion | Vývoj a správa softwaru na míru';
+        var description = 'Arvion vyvíjí, spravuje a podporuje firemní software na míru. Spolehlivý softwarový partner pro firmy v Česku i zahraničí.';
+        var set = function (selector, value) {
+          var el = document.querySelector(selector);
+          if (el) el.setAttribute('content', value);
+        };
+        document.title = title;
+        set('meta[name="description"]', description);
+        set('meta[property="og:title"]', title);
+        set('meta[property="og:description"]', description);
+        set('meta[property="og:locale"]', 'cs_CZ');
+        set('meta[property="twitter:title"]', title);
+        set('meta[property="twitter:description"]', description);
+      })();
     </script>
   </body>
 </html>

@@ -2,8 +2,7 @@ import { Row, Col } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
-
-import i18n from "i18next";
+import LanguageSwitcher from "../LanguageSwitcher";
 import {
   FooterSection,
   Title,
@@ -17,33 +16,23 @@ import {
   FooterContainer,
   Language,
   Label,
-  LanguageSwitch,
-  LanguageSwitchContainer,
 } from "./styles";
 
 interface SocialLinkProps {
   href: string;
   src: string;
+  label: string;
 }
 
 const Footer = ({ t }: { t: TFunction }) => {
-  const handleChange = (language: string) => {
-    i18n.changeLanguage(language);
-    if (language === 'en') {
-      document.title = 'Arvion | Tailored Software Solutions';
-    } else if (language === 'cs') {
-      document.title = 'Arvion | Softwarová řešení na míru';
-    }
-  };
-
-  const SocialLink = ({ href, src }: SocialLinkProps) => {
+  const SocialLink = ({ href, src, label }: SocialLinkProps) => {
     return (
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
         key={src}
-        aria-label={src}
+        aria-label={label}
       >
         <SvgIcon src={src} width="25px" height="25px" />
       </a>
@@ -95,25 +84,8 @@ const Footer = ({ t }: { t: TFunction }) => {
               {/* <Large to="/">{t("Careers & Culture")}</Large> */}
             </Col>
             <Col lg={10} md={10} sm={12} xs={12}>
-              <Label htmlFor="select-lang">{t("Language")}</Label>
-              <LanguageSwitchContainer>
-                <LanguageSwitch onClick={() => handleChange("cs")}>
-                  <SvgIcon
-                    src="czech-republic.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-                <LanguageSwitch onClick={() => handleChange("en")}>
-                  <SvgIcon
-                    src="united-states.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-              </LanguageSwitchContainer>
+              <Label as="div">{t("Language")}</Label>
+              <LanguageSwitcher gap="25px" edge="0" />
             </Col>
           </Row>
         </Container>
@@ -150,10 +122,12 @@ const Footer = ({ t }: { t: TFunction }) => {
                 <SocialLink
                   href="https://www.linkedin.com/company/arvioncz"
                   src="linkedin.svg"
+                  label="LinkedIn"
                 />
                 <SocialLink
                   href="https://www.facebook.com/arvioncz/"
                   src="facebook.svg"
+                  label="Facebook"
                 />
               </FooterContainer>
             </Col>

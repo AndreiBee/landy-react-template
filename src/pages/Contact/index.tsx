@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet"; // Import Helmet
+import PageMeta from "../../components/PageMeta";
+import { getLanguage } from "../../translation";
 import ContactPageContent from "../../content/ContactPageContent.json";
 import ContactFormContent from "../../content/HomePageContactContent.json";
 
@@ -11,23 +12,11 @@ const ContactForm = lazy(() => import("../../components/ContactForm"));
 
 const Contact = () => {
   const { i18n } = useTranslation(); // Hook to use translations
-  const currentLanguage = i18n.language as "en" | "cs"; // Assert the language type explicitly
+  const currentLanguage = getLanguage(i18n.language);
 
   return (
     <>
-    <Helmet>
-      <title>{`Contact | ${
-        currentLanguage === "en" ? "Get in Touch" : "Kontaktujte nás"
-      }`}</title>
-      <meta
-        name="description"
-        content={
-          currentLanguage === "en"
-            ? "Reach out to us for any questions or inquiries."
-            : "Kontaktujte nás pro jakékoli dotazy nebo informace."
-        }
-      />
-    </Helmet>
+    <PageMeta page="contact" />
     <Container>
       <ContactForm
         title={ContactFormContent[currentLanguage].title}

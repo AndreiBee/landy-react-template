@@ -1,7 +1,8 @@
 import { lazy } from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import { Helmet } from "react-helmet"; // Import Helmet
+import PageMeta from "../../components/PageMeta";
+import { getLanguage } from "../../translation";
 import BlogContent from "../../content/BlogPageContent.json";
 
 const Container = lazy(() => import("../../common/Container"));
@@ -20,24 +21,13 @@ const Title = styled.h1`
 
 const Blog = () => {
   const { i18n } = useTranslation(); // Hook for translations
-  const currentLanguage = i18n.language as "en" | "cs"; // Assert language type explicitly
+  const currentLanguage = getLanguage(i18n.language);
 
   const articles = BlogContent[currentLanguage];
 
   return (
     <>
-    {/* Přidání Helmet pro SEO */}
-    <Helmet>
-    <title>{`Blog | ${currentLanguage === "en" ? "Our Articles" : "Naše články"}`}</title>
-    <meta
-      name="description"
-      content={
-        currentLanguage === "en"
-          ? "Read our articles and learn more about our services."
-          : "Přečtěte si naše články a zjistěte více o našich službách."
-      }
-    />
-    </Helmet> 
+    <PageMeta page="blog" />
     <Container>
       <ScrollToTop />
       <BlogWrapper>

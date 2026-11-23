@@ -1,0 +1,72 @@
+{
+  "home": {
+    "en": {
+      "title": "Arvion | Custom Software Development & Support",
+      "description": "Arvion builds, maintains and supports custom business software. A reliable software partner for companies in the US and Europe."
+    },
+    "cs": {
+      "title": "Arvion | Vývoj a správa softwaru na míru",
+      "description": "Arvion vyvíjí, spravuje a podporuje firemní software na míru. Spolehlivý softwarový partner pro firmy v Česku i zahraničí."
+    }
+  },
+  "about": {
+    "en": {
+      "title": "About Us | Arvion",
+      "description": "Meet Arvion, a young team passionate about technology, building efficient software that helps our clients grow."
+    },
+    "cs": {
+      "title": "O nás | Arvion",
+      "description": "Poznejte Arvion – mladý tým nadšený pro technologie, který vytváří efektivní software pro růst našich klientů."
+    }
+  },
+  "career": {
+    "en": {
+      "title": "Careers | Arvion",
+      "description": "Join Arvion. We're hiring software developers and project managers to build innovative software for our clients."
+    },
+    "cs": {
+      "title": "Kariéra | Arvion",
+      "description": "Přidejte se k Arvionu. Hledáme softwarové vývojáře a projektové manažery pro vývoj inovativního softwaru."
+    }
+  },
+  "blog": {
+    "en": {
+      "title": "Blog | Arvion",
+      "description": "Articles from the Arvion team about software development, maintenance and running business IT."
+    },
+    "cs": {
+      "title": "Blog | Arvion",
+      "description": "Články týmu Arvion o vývoji a údržbě softwaru a o firemním IT."
+    }
+  },
+  "contact": {
+    "en": {
+      "title": "Contact Us | Arvion",
+      "description": "Get in touch with Arvion for a consultation, a custom software project or technical support."
+    },
+    "cs": {
+      "title": "Kontakt | Arvion",
+      "description": "Kontaktujte Arvion – konzultace, vývoj softwaru na míru nebo technická podpora."
+    }
+  },
+  "price": {
+    "en": {
+      "title": "Pricing | Arvion",
+      "description": "Hourly rates for Arvion's software development, maintenance and support services."
+    },
+    "cs": {
+      "title": "Ceník | Arvion",
+      "description": "Hodinové sazby za vývoj, správu a podporu softwaru od Arvionu."
+    }
+  },
+  "notFound": {
+    "en": {
+      "title": "Page not found | Arvion",
+      "description": "The page you are looking for doesn't exist."
+    },
+    "cs": {
+      "title": "Stránka nenalezena | Arvion",
+      "description": "Hledaná stránka neexistuje."
+    }
+  }
+}
