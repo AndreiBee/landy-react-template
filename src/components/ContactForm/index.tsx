@@ -1,142 +1,234 @@
-import { Row, Col } from "antd";
-import { withTranslation } from "react-i18next";
-import { Slide } from "react-awesome-reveal";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { ContactProps, ValidationTypeProps } from "./types";
+import styled, { css } from "styled-components";
+import { theme } from "../../styles/theme";
 import { useForm } from "../../common/utils/useForm";
-import { useLocalizedPath } from "../../common/utils/localize";
 import validate from "../../common/utils/validationRules";
-import { Button } from "../../common/Button";
-import Block from "../Block";
-import Input from "../../common/Input";
-import TextArea from "../../common/TextArea";
-import { ContactContainer, FormGroup, Span, ButtonContainer, EmailLink, AddressLine, Image, HoneyPot, PrivacyNote } from "./styles";
+import { useLocalizedPath } from "../../common/utils/localize";
+import { Button } from "../ui/Button";
+import Icon from "../ui/Icon";
 
-const Contact = ({ title, content, email, in_number, acc_number, qr_payment_image, id, t }: ContactProps) => {
-  const { values, errors, handleChange, handleSubmit, submitting } = useForm(validate);
+const { color, radius, bp } = theme;
+
+const Form = styled.form`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  ${bp.sm} {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const Field = styled.div<{ $full?: boolean }>`
+  display: grid;
+  gap: 8px;
+  ${({ $full }) =>
+    $full &&
+    css`
+      grid-column: 1 / -1;
+    `}
+
+  label {
+    font-size: 0.92rem;
+    font-weight: 650;
+    color: ${color.ink};
+  }
+
+  label small {
+    font-weight: 500;
+    color: ${color.muted};
+  }
+`;
+
+const inputStyles = css`
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: ${radius.sm};
+  border: 1px solid ${color.line};
+  background: ${color.bg};
+  font-size: 1rem;
+  line-height: 1.5;
+  color: ${color.ink};
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+
+  &::placeholder {
+    color: #a3a8c0;
+  }
+
+  &:hover {
+    border-color: #cfd4e6;
+  }
+
+  &:focus {
+    outline: none;
+    background: #fff;
+    border-color: ${color.brand};
+    box-shadow: 0 0 0 4px rgba(24, 33, 109, 0.1);
+  }
+
+  &[aria-invalid="true"] {
+    border-color: ${color.danger};
+    background: #fff;
+  }
+`;
+
+const Input = styled.input`
+  ${inputStyles}
+`;
+
+const TextArea = styled.textarea`
+  ${inputStyles}
+  min-height: 170px;
+  resize: vertical;
+`;
+
+const Error = styled.span`
+  min-height: 1.2em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: ${color.danger};
+`;
+
+const HoneyPot = styled.div`
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+`;
+
+const Footer = styled.div`
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+`;
+
+const Note = styled.p`
+  max-width: 340px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: ${color.muted};
+
+  a {
+    text-decoration: underline;
+  }
+`;
+
+const Status = styled.div<{ $ok: boolean }>`
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 16px 18px;
+  border-radius: ${radius.sm};
+  font-size: 0.97rem;
+  color: ${({ $ok }) => ($ok ? "#145c3c" : "#8a241d")};
+  background: ${({ $ok }) => ($ok ? "#e7f6ee" : "#fdecea")};
+  border: 1px solid ${({ $ok }) => ($ok ? "#bfe6d1" : "#f6c6c1")};
+
+  strong {
+    display: block;
+    color: inherit;
+  }
+
+  svg {
+    flex: none;
+    margin-top: 2px;
+  }
+`;
+
+type FieldName = "name" | "email" | "phone" | "message";
+
+const ContactForm = ({ id = "contact-form" }: { id?: string }) => {
+  const { t } = useTranslation();
   const lp = useLocalizedPath();
+  const { values, errors, handleChange, handleSubmit, submitting, status } = useForm(validate);
 
-  const errorId = (type: string) => `${id}-${type}-error`;
-  const hasError = (type: keyof typeof errors) => Boolean(errors[type]);
+  const errorId = (field: FieldName) => `${id}-${field}-error`;
+  const fieldProps = (field: FieldName) => ({
+    id: `${id}-${field}`,
+    name: field,
+    value: values[field],
+    onChange: handleChange,
+    "aria-invalid": errors[field] ? true : undefined,
+    "aria-describedby": errorId(field),
+  });
+  const ErrorText = ({ field }: { field: FieldName }) => (
+    <Error id={errorId(field)}>{errors[field] ? t(errors[field] as string) : ""}</Error>
+  );
 
-  const ValidationType = ({ type }: ValidationTypeProps) => {
-    const errorKey = errors[type as keyof typeof errors];
-    return (
-      <Span id={errorId(type)} role="alert">
-        {errorKey ? t(errorKey) : ""}
-      </Span>
-    );
-  };
+  const statusText = {
+    success: { title: t("formSuccessTitle"), text: t("formSuccessSent") },
+    error: { title: t("formErrorTitle"), text: t("formErrorSend") },
+    network: { title: t("formErrorTitle"), text: t("formErrorNetwork") },
+  } as const;
 
   return (
-    <ContactContainer id={id}>
-      <Row justify="space-between" align="top">
-        <Col lg={12} md={11} sm={24} xs={24}>
-          <Slide direction="left" triggerOnce>
-            <Block title={title} content={content} />
-            <Row style={{ margin: "10px"}} justify="space-between">
-              <EmailLink href={`mailto:${email}`}>{email}</EmailLink>
-            </Row>
-            <Row style={{ margin: "10px"}} justify="space-between">
-              <AddressLine>
-                {t("AddressLine1")}, {t("AddressLine2")}
-              </AddressLine>
-            </Row>
-            <Row style={{ margin: "10px"}} justify="space-between">
-              <AddressLine>
-                {t("IN")}: {in_number}
-              </AddressLine>
-            </Row>
-            <Row style={{ margin: "10px"}} justify="space-between">
-              <AddressLine>
-                {t("Account Number")}: {acc_number}
-              </AddressLine>
-            </Row>
-            <Row style={{ margin: "10px"}} justify="space-between">
-              <Image src={qr_payment_image} alt={t("qrPaymentAlt")} loading="lazy" />
-            </Row>
-          </Slide>
-        </Col>
-        <Col lg={12} md={12} sm={24} xs={24}>
-          <Slide direction="right" triggerOnce>
-            <FormGroup noValidate onSubmit={handleSubmit} aria-busy={submitting}>
-              {/* Honeypot for spam bots: hidden from people and screen readers. */}
-              <HoneyPot aria-hidden="true">
-                <label htmlFor={`${id}-gotcha`}>Leave this field empty</label>
-                <input
-                  type="text"
-                  id={`${id}-gotcha`}
-                  name="_gotcha"
-                  tabIndex={-1}
-                  autoComplete="off"
-                  value={values._gotcha}
-                  onChange={handleChange}
-                />
-              </HoneyPot>
-              <Col span={24}>
-                <Input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  autoComplete="name"
-                  value={values.name}
-                  invalid={hasError("name")}
-                  errorId={errorId("name")}
-                  onChange={handleChange}
-                />
-                <ValidationType type="name" />
-              </Col>
-              <Col span={24}>
-                <Input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  autoComplete="email"
-                  value={values.email}
-                  invalid={hasError("email")}
-                  errorId={errorId("email")}
-                  onChange={handleChange}
-                />
-                <ValidationType type="email" />
-              </Col>
-              <Col span={24}>
-                <Input
-                  type="tel"
-                  name="phone"
-                  placeholder="Your Mobile Phone"
-                  autoComplete="tel"
-                  value={values.phone}
-                  invalid={hasError("phone")}
-                  errorId={errorId("phone")}
-                  onChange={handleChange}
-                />
-                <ValidationType type="phone" />
-              </Col>
-              <Col span={24}>
-                <TextArea
-                  placeholder="Your Message"
-                  value={values.message}
-                  name="message"
-                  invalid={hasError("message")}
-                  errorId={errorId("message")}
-                  onChange={handleChange}
-                />
-                <ValidationType type="message" />
-              </Col>
-              <ButtonContainer>
-                <Button name="submit" disabled={submitting}>
-                  {submitting ? t("Sending") : t("Submit")}
-                </Button>
-              </ButtonContainer>
-              <PrivacyNote>
-                {t("formPrivacyNote")} <Link to={lp("/privacy")}>{t("Privacy Policy")}</Link>
-              </PrivacyNote>
-            </FormGroup>
-          </Slide>
-        </Col>
-      </Row>
-    </ContactContainer>
+    <Form id={id} noValidate onSubmit={handleSubmit} aria-busy={submitting}>
+      {/* Honeypot for spam bots: hidden from people and screen readers. */}
+      <HoneyPot aria-hidden="true">
+        <label htmlFor={`${id}-gotcha`}>Leave this field empty</label>
+        <input
+          type="text"
+          id={`${id}-gotcha`}
+          name="_gotcha"
+          tabIndex={-1}
+          autoComplete="off"
+          value={values._gotcha}
+          onChange={handleChange}
+        />
+      </HoneyPot>
+
+      <Field>
+        <label htmlFor={`${id}-name`}>{t("name")}</label>
+        <Input type="text" autoComplete="name" maxLength={200} placeholder={t("Your Name")} {...fieldProps("name")} />
+        <ErrorText field="name" />
+      </Field>
+
+      <Field>
+        <label htmlFor={`${id}-email`}>{t("email")}</label>
+        <Input type="email" autoComplete="email" maxLength={200} placeholder={t("Your Email")} {...fieldProps("email")} />
+        <ErrorText field="email" />
+      </Field>
+
+      <Field $full>
+        <label htmlFor={`${id}-phone`}>{t("phone")}</label>
+        <Input type="tel" autoComplete="tel" maxLength={40} placeholder={t("Your Mobile Phone")} {...fieldProps("phone")} />
+        <ErrorText field="phone" />
+      </Field>
+
+      <Field $full>
+        <label htmlFor={`${id}-message`}>{t("message")}</label>
+        <TextArea maxLength={5000} placeholder={t("Your Message")} {...fieldProps("message")} />
+        <ErrorText field="message" />
+      </Field>
+
+      <div role="status" aria-live="polite" style={{ gridColumn: "1 / -1", display: status === "idle" ? "none" : "block" }}>
+        {status !== "idle" && (
+          <Status $ok={status === "success"}>
+            <Icon name={status === "success" ? "check" : "lifebuoy"} size={20} strokeWidth={2.2} />
+            <div>
+              <strong>{statusText[status].title}</strong>
+              {statusText[status].text}
+            </div>
+          </Status>
+        )}
+      </div>
+
+      <Footer>
+        <Note>
+          {t("formPrivacyNote")} <Link to={lp("/privacy")}>{t("Privacy Policy")}</Link>
+        </Note>
+        <Button type="submit" disabled={submitting} arrow={!submitting}>
+          {submitting ? t("Sending") : t("Submit")}
+        </Button>
+      </Footer>
+    </Form>
   );
 };
 
-export default withTranslation()(Contact);
+export default ContactForm;

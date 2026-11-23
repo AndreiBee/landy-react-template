@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { notification } from "antd";
 import i18n from "../../translation";
 
 interface IValues {
@@ -18,6 +17,9 @@ const initialValues: IValues = {
   _gotcha: "",
 };
 
+/** Result of the last submit, shown as a message next to the form. */
+export type FormStatus = "idle" | "success" | "error" | "network";
+
 const FORMSPREE_URL = "https://formspree.io/f/myzypwqy";
 
 export const useForm = (validate: { (values: IValues): Partial<IValues> }) => {
@@ -29,8 +31,7 @@ export const useForm = (validate: { (values: IValues): Partial<IValues> }) => {
     errors: {},
   });
   const [submitting, setSubmitting] = useState(false);
-
-  const t = (key: string) => i18n.t(key);
+  const [status, setStatus] = useState<FormStatus>("idle");
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -47,6 +48,7 @@ export const useForm = (validate: { (values: IValues): Partial<IValues> }) => {
     // Bots fill the hidden "_gotcha" field; pretend success and drop it.
     if (values._gotcha) {
       setFormState({ values: { ...initialValues }, errors: {} });
+      setStatus("success");
       return;
     }
 
@@ -70,22 +72,13 @@ export const useForm = (validate: { (values: IValues): Partial<IValues> }) => {
       });
 
       if (!response.ok) {
-        notification.error({
-          message: t("formErrorTitle"),
-          description: t("formErrorSend"),
-        });
+        setStatus("error");
       } else {
         setFormState({ values: { ...initialValues }, errors: {} });
-        notification.success({
-          message: t("formSuccessTitle"),
-          description: t("formSuccessSent"),
-        });
+        setStatus("success");
       }
     } catch (error) {
-      notification.error({
-        message: t("formErrorTitle"),
-        description: t("formErrorNetwork"),
-      });
+      setStatus("network");
     } finally {
       setSubmitting(false);
     }
@@ -95,6 +88,7 @@ export const useForm = (validate: { (values: IValues): Partial<IValues> }) => {
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = event.target;
+    if (status !== "idle") setStatus("idle");
     setFormState((prevState) => ({
       ...prevState,
       values: {
@@ -112,6 +106,7 @@ export const useForm = (validate: { (values: IValues): Partial<IValues> }) => {
     handleChange,
     handleSubmit,
     submitting,
+    status,
     values: formState.values,
     errors: formState.errors,
   };

@@ -1,0 +1,54 @@
+{
+  "en": {
+    "hero": {
+      "eyebrow": "About us",
+      "title": "A small team that cares about getting software right",
+      "lead": "Arvion is a software team based in Prague. We build and look after custom software for companies and organisations that need technology they can rely on."
+    },
+    "story": {
+      "eyebrow": "Who we are",
+      "title": "Young, curious and serious about quality",
+      "paragraphs": [
+        "We're a young team of developers who enjoy interesting, demanding problems. Our goal is simple: build software that genuinely helps the people who use it.",
+        "We believe good software streamlines processes, improves efficiency and supports growth. That's why we take the time to understand how your business works before we write a line of code, and why we aim for long-term partnerships rather than one-off projects.",
+        "Every project is a challenge we take on with enthusiasm and professionalism. Together with our clients, we deliver results that make a real difference."
+      ]
+    },
+    "values": {
+      "eyebrow": "What we stand for",
+      "title": "How we work with every client",
+      "items": [
+        { "icon": "heart", "title": "Long-term relationships", "text": "We'd rather be your software partner for years than a vendor for a single project." },
+        { "icon": "chat", "title": "Honest communication", "text": "Clear estimates, regular updates and straight answers, including when something is hard." },
+        { "icon": "shield", "title": "Quality that lasts", "text": "Reliable, maintainable code you won't need to rewrite in two years." },
+        { "icon": "sparkle", "title": "Curiosity", "text": "We enjoy demanding problems and keep learning, so we can bring you better solutions." }
+      ]
+    }
+  },
+  "cs": {
+    "hero": {
+      "eyebrow": "O nás",
+      "title": "Malý tým, kterému záleží na dobře odvedeném softwaru",
+      "lead": "Arvion je softwarový tým z Prahy. Vyvíjíme software na míru a staráme se o něj pro firmy a organizace, které potřebují technologie, na které se mohou spolehnout."
+    },
+    "story": {
+      "eyebrow": "Kdo jsme",
+      "title": "Mladí, zvídaví a nároční na kvalitu",
+      "paragraphs": [
+        "Jsme mladý tým vývojářů, které baví zajímavé a náročné úkoly. Náš cíl je jednoduchý: tvořit software, který lidem, kteří s ním pracují, opravdu pomáhá.",
+        "Věříme, že dobrý software zjednodušuje procesy, zvyšuje efektivitu a podporuje růst. Proto si nejdřív uděláme čas pochopit, jak vaše firma funguje, a teprve potom píšeme kód. A proto stavíme na dlouhodobé spolupráci, ne na jednorázových zakázkách.",
+        "Každý projekt je pro nás výzva, do které se pouštíme s nadšením a profesionalitou. Společně s našimi klienty dosahujeme výsledků, které mají skutečný dopad."
+      ]
+    },
+    "values": {
+      "eyebrow": "Na čem nám záleží",
+      "title": "Jak spolupracujeme s každým klientem",
+      "items": [
+        { "icon": "heart", "title": "Dlouhodobé vztahy", "text": "Raději budeme vaším softwarovým partnerem roky než dodavatelem jednoho projektu." },
+        { "icon": "chat", "title": "Otevřená komunikace", "text": "Jasné odhady, pravidelné informace a přímé odpovědi – i když je něco složité." },
+        { "icon": "shield", "title": "Kvalita, která vydrží", "text": "Spolehlivý a udržovatelný kód, který nebudete muset za dva roky přepisovat." },
+        { "icon": "sparkle", "title": "Zvídavost", "text": "Baví nás náročné úkoly a neustále se učíme, abychom vám mohli přinášet lepší řešení." }
+      ]
+    }
+  }
+}

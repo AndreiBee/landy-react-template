@@ -1,135 +1,118 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./theme";
+
+const { color, font } = theme;
 
 export const Styles = createGlobalStyle`
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-    body {
-        overflow-x: hidden;  /* Zamezí horizontálnímu posouvání */
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px; /* keep anchored sections clear of the sticky header */
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
     }
+  }
 
-    @font-face {
-        font-family: "Motiva Sans Light";
-        src: url("/fonts/Motiva-Sans-Light.ttf") format("truetype");
-        font-style: normal;
-    }
+  body {
+    margin: 0;
+    font-family: ${font.sans};
+    font-size: 17px;
+    line-height: 1.65;
+    color: ${color.text};
+    background: ${color.surface};
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
 
-    @font-face {
-        font-family: "Motiva Sans Bold";
-        src: url("/fonts/Motiva-Sans-Bold.ttf") format("truetype");
-        font-style: normal;
-    }
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    color: ${color.ink};
+    font-weight: 750;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
 
+  h1 {
+    font-size: clamp(2.4rem, 5.2vw, 3.9rem);
+    letter-spacing: -0.035em;
+    line-height: 1.06;
+  }
 
-    body,
-    html,
-    a {
-        font-family: 'Motiva Sans Light', sans-serif;
-    }
+  h2 {
+    font-size: clamp(1.85rem, 3.4vw, 2.7rem);
+    letter-spacing: -0.03em;
+  }
 
+  h3 {
+    font-size: 1.25rem;
+  }
 
-    /* Base styles antd 4's global stylesheet used to provide. */
-    body {
-        font-size: 14px;
-        line-height: 1.5715;
-        color: rgba(0, 0, 0, 0.85);
-    }
+  p {
+    margin: 0;
+  }
 
-    input,
-    button,
-    select,
-    optgroup,
-    textarea {
-        margin: 0;
-        color: inherit;
-        font-size: inherit;
-        font-family: inherit;
-        line-height: inherit;
-    }
+  a {
+    color: ${color.brand};
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
 
-    body {
-        margin:0;
-        padding:0;
-        border: 0;
-        outline: 0;
-        background: #fff;
-        overflow-x: hidden;
-    }
+  a:hover {
+    color: ${color.accentText};
+  }
 
-    a:hover {
-        color: #18216d;
-    }
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
 
-    input,
-    textarea {
-        border-radius: 4px;
-        border: 0;
-        background: rgb(241, 242, 243);
-        transition: all 0.3s ease-in-out;  
-        outline: none;
-        width: 100%;  
-        padding: 1rem 1.25rem;
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
+  }
 
-        &:focus-within {
-            background: none;
-            box-shadow: #2e186a 0px 0px 0px 1px;
-        }
-    }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: 'Motiva Sans Bold', serif;
-        color: #18216d;
-        font-size: 56px;
-        line-height: 1.18;
+  ::selection {
+    background: ${color.accent};
+    color: #fff;
+  }
 
-        @media only screen and (max-width: 890px) {
-          font-size: 47px;
-        }
-      
-        @media only screen and (max-width: 414px) {
-          font-size: 32px;
-        }
-    }
+  :focus-visible {
+    outline: 3px solid ${color.accent};
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
 
-    p {
-        color: #18216d;
-        font-size: 21px;        
-        line-height: 1.41;
-    }
-
-    h1 {
-        font-weight: 600;
-    }
-
-    a {
-        text-decoration: none;
-        outline: none;
-        color: #2E186A;
-
-        &:hover {
-            color: #2e186a;
-        }
-    }
-    
-    *:focus {
-        outline: none;
-    }
-
-    .about-block-image svg {
-        text-align: center;
-    }
-
-    .ant-drawer-body {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        padding-top: 1.5rem;
-    }
-
-    .ant-drawer-content-wrapper {
-        width: 300px !important;
-    }
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
 `;

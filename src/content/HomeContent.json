@@ -1,0 +1,164 @@
+{
+  "en": {
+    "hero": {
+      "eyebrow": "Custom software development · Prague",
+      "title": "Software that fits the way your business works",
+      "lead": "Arvion designs, builds and maintains custom software, and keeps the systems you already rely on running smoothly. You work directly with the people writing your code, in English or Czech.",
+      "primary": "Start a project",
+      "secondary": "Explore our services",
+      "badges": ["English & Czech", "Long-term support"]
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "Everything your software needs, from first idea to everyday support",
+      "lead": "Whether you need a new application, help with an existing system or someone to keep things running, we take care of it end to end.",
+      "items": [
+        {
+          "icon": "code",
+          "title": "Custom software development",
+          "text": "Applications, internal tools and integrations designed around your processes, not the other way round.",
+          "points": ["Web and internal applications", "Connecting your existing systems", "Automating manual work"]
+        },
+        {
+          "icon": "gauge",
+          "title": "Optimization & IT system management",
+          "text": "We make your existing systems faster, more stable and more secure, and keep them that way.",
+          "points": ["Performance and stability tuning", "Security updates", "Monitoring and administration"]
+        },
+        {
+          "icon": "lifebuoy",
+          "title": "Support & maintenance",
+          "text": "When something breaks, you have someone to call. We fix issues, ship updates and keep your software healthy.",
+          "points": ["Bug fixes and updates", "Help when something stops working", "Ongoing improvements"]
+        },
+        {
+          "icon": "users",
+          "title": "Training & consulting",
+          "text": "We help your team get the most out of the tools you use and make confident technology decisions.",
+          "points": ["Training for your team", "Technology advice", "Analysis before you invest"]
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "How we work",
+      "title": "A clear process, no surprises",
+      "lead": "Every project is different, but the way we work stays the same: transparent, step by step, with you involved throughout.",
+      "steps": [
+        {
+          "title": "Talk it through",
+          "text": "We listen to what you need, ask the right questions and suggest the simplest way to get there."
+        },
+        {
+          "title": "Plan & estimate",
+          "text": "You get a clear scope, timeline and price estimate before any work starts."
+        },
+        {
+          "title": "Build & review",
+          "text": "We build in short iterations and show you progress regularly, so you can steer as we go."
+        },
+        {
+          "title": "Launch & support",
+          "text": "After launch we stay with you, fixing, improving and keeping everything running."
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Why Arvion",
+      "title": "A partner who treats your software like their own",
+      "text": "We're a small, focused team. No layers of account managers and no handovers: the people you talk to are the people doing the work. We care about long-term relationships, not one-off projects.",
+      "button": "About us",
+      "features": [
+        { "icon": "chat", "title": "Direct communication", "text": "Talk to the developers themselves, in English or Czech." },
+        { "icon": "compass", "title": "Individual approach", "text": "Solutions shaped around your business, not a template." },
+        { "icon": "layers", "title": "Modern technology", "text": "Proven tools and good engineering practices that last." },
+        { "icon": "clock", "title": "Fast problem solving", "text": "When something needs fixing, we get on it quickly." }
+      ]
+    },
+    "blog": {
+      "eyebrow": "From the blog",
+      "title": "Practical advice on software",
+      "link": "All articles"
+    }
+  },
+  "cs": {
+    "hero": {
+      "eyebrow": "Vývoj softwaru na míru · Praha",
+      "title": "Software, který sedí na to, jak vaše firma funguje",
+      "lead": "Arvion navrhuje, vyvíjí a spravuje software na míru a stará se o to, aby systémy, na které se spoléháte, běžely bez problémů. Mluvíte přímo s lidmi, kteří váš kód píšou, česky i anglicky.",
+      "primary": "Začít projekt",
+      "secondary": "Naše služby",
+      "badges": ["Česky i anglicky", "Dlouhodobá podpora"]
+    },
+    "services": {
+      "eyebrow": "Služby",
+      "title": "Vše, co váš software potřebuje – od prvního nápadu po každodenní podporu",
+      "lead": "Ať potřebujete novou aplikaci, pomoc se stávajícím systémem, nebo někoho, kdo pohlídá hladký provoz, postaráme se o to od začátku do konce.",
+      "items": [
+        {
+          "icon": "code",
+          "title": "Vývoj softwaru na míru",
+          "text": "Aplikace, interní nástroje a integrace navržené podle vašich procesů – ne naopak.",
+          "points": ["Webové a interní aplikace", "Propojení stávajících systémů", "Automatizace ruční práce"]
+        },
+        {
+          "icon": "gauge",
+          "title": "Optimalizace a správa IT systémů",
+          "text": "Zrychlíme, stabilizujeme a zabezpečíme vaše stávající systémy – a udržíme je v dobré kondici.",
+          "points": ["Ladění výkonu a stability", "Bezpečnostní aktualizace", "Monitoring a správa"]
+        },
+        {
+          "icon": "lifebuoy",
+          "title": "Podpora a údržba",
+          "text": "Když se něco pokazí, máte se na koho obrátit. Opravujeme chyby, nasazujeme aktualizace a staráme se o kondici vašeho softwaru.",
+          "points": ["Opravy chyb a aktualizace", "Pomoc, když něco přestane fungovat", "Průběžná vylepšení"]
+        },
+        {
+          "icon": "users",
+          "title": "Školení a konzultace",
+          "text": "Pomůžeme vašemu týmu vytěžit maximum z nástrojů, které používáte, a rozhodovat se o technologiích s jistotou.",
+          "points": ["Školení vašeho týmu", "Technologické poradenství", "Analýza před investicí"]
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "Jak pracujeme",
+      "title": "Jasný postup bez překvapení",
+      "lead": "Každý projekt je jiný, ale náš přístup zůstává stejný: transparentně, krok za krokem a s vámi po celou dobu na palubě.",
+      "steps": [
+        {
+          "title": "Probereme to",
+          "text": "Vyslechneme, co potřebujete, zeptáme se na podstatné a navrhneme nejjednodušší cestu k cíli."
+        },
+        {
+          "title": "Plán a odhad",
+          "text": "Ještě před začátkem práce dostanete jasný rozsah, harmonogram a odhad ceny."
+        },
+        {
+          "title": "Vývoj a průběžná kontrola",
+          "text": "Vyvíjíme v krátkých etapách a pravidelně ukazujeme pokrok, takže můžete projekt průběžně usměrňovat."
+        },
+        {
+          "title": "Spuštění a podpora",
+          "text": "Po spuštění s vámi zůstáváme – opravujeme, vylepšujeme a hlídáme, aby vše běželo."
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Proč Arvion",
+      "title": "Partner, který se o váš software stará jako o vlastní",
+      "text": "Jsme malý a soustředěný tým. Žádné vrstvy obchodníků ani předávání mezi odděleními – lidé, se kterými mluvíte, jsou ti, kdo na projektu skutečně pracují. Záleží nám na dlouhodobé spolupráci, ne na jednorázových zakázkách.",
+      "button": "O nás",
+      "features": [
+        { "icon": "chat", "title": "Přímá komunikace", "text": "Mluvíte přímo s vývojáři, česky i anglicky." },
+        { "icon": "compass", "title": "Individuální přístup", "text": "Řešení na míru vaší firmě, ne podle šablony." },
+        { "icon": "layers", "title": "Moderní technologie", "text": "Osvědčené nástroje a dobrá vývojářská praxe, která vydrží." },
+        { "icon": "clock", "title": "Rychlé řešení problémů", "text": "Když je potřeba něco opravit, pustíme se do toho hned." }
+      ]
+    },
+    "blog": {
+      "eyebrow": "Z blogu",
+      "title": "Praktické rady ze světa softwaru",
+      "link": "Všechny články"
+    }
+  }
+}

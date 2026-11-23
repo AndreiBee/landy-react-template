@@ -1,0 +1,40 @@
+{
+  "en": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Let's talk about your project",
+      "lead": "Tell us what you're working on: a new idea, a system that needs help, or just a question. We'll get back to you with next steps."
+    },
+    "formTitle": "Send us a message",
+    "formLead": "The more you tell us, the better we can help. Fields marked * are required.",
+    "infoTitle": "Contact details",
+    "emailLabel": "Email",
+    "idLabel": "Company ID (IČO)",
+    "locationLabel": "Based in",
+    "payment": {
+      "title": "Payment details",
+      "accountLabel": "PayPal",
+      "account": "arvioncz@gmail.com",
+      "qr": "/img/svg/qr_paypal.jpg"
+    }
+  },
+  "cs": {
+    "hero": {
+      "eyebrow": "Kontakt",
+      "title": "Pojďme si promluvit o vašem projektu",
+      "lead": "Napište nám, na čem pracujete – nový nápad, systém, který potřebuje pomoc, nebo jen otázku. Ozveme se s dalším postupem."
+    },
+    "formTitle": "Napište nám",
+    "formLead": "Čím víc nám toho napíšete, tím lépe vám můžeme pomoct. Pole označená * jsou povinná.",
+    "infoTitle": "Kontaktní údaje",
+    "emailLabel": "E-mail",
+    "idLabel": "IČO",
+    "locationLabel": "Sídlíme v",
+    "payment": {
+      "title": "Platební údaje",
+      "accountLabel": "Číslo účtu",
+      "account": "1737581000/2700",
+      "qr": "/img/svg/qr_unicredit.png"
+    }
+  }
+}

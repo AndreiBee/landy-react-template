@@ -1,148 +1,175 @@
-import { Row, Col } from "antd";
-import { withTranslation } from "react-i18next";
-import type { TFunction } from "i18next";
-import { SvgIcon } from "../../common/SvgIcon";
-import Container from "../../common/Container";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import styled from "styled-components";
+import { theme } from "../../styles/theme";
+import CompanyInfo from "../../content/CompanyInfo.json";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useLocalizedPath } from "../../common/utils/localize";
-import {
-  FooterSection,
-  Title,
-  NavLink,
-  Extra,
-  LogoContainer,
-  Para,
-  Large,
-  Chat,
-  // Empty,
-  FooterContainer,
-  Language,
-  Label,
-} from "./styles";
+import { Container } from "../ui/layout";
+import Icon from "../ui/Icon";
 
-interface SocialLinkProps {
-  href: string;
-  src: string;
-  label: string;
-}
+const { color, bp } = theme;
 
-const Footer = ({ t }: { t: TFunction }) => {
+const Wrap = styled.footer`
+  background: ${color.brandDeep};
+  color: rgba(255, 255, 255, 0.7);
+  padding: 72px 0 32px;
+  font-size: 0.95rem;
+`;
+
+const Top = styled.div`
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+  ${bp.md} {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  ${bp.sm} {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const BrandCol = styled.div`
+  display: grid;
+  gap: 18px;
+  align-content: start;
+
+  img {
+    width: 130px;
+    height: auto;
+    /* the logo is navy; show it white on the dark footer */
+    filter: brightness(0) invert(1);
+  }
+
+  p {
+    max-width: 300px;
+    line-height: 1.6;
+  }
+`;
+
+const Social = styled.div`
+  display: flex;
+  gap: 10px;
+
+  a {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    transition: background 0.2s ease;
+  }
+
+  a:hover {
+    color: #fff;
+    background: ${color.accent};
+  }
+`;
+
+const Col = styled.div`
+  display: grid;
+  gap: 12px;
+  align-content: start;
+
+  h3 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.75);
+    width: fit-content;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+`;
+
+const Bottom = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 28px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+
+  a {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  a:hover {
+    color: #fff;
+  }
+`;
+
+const Footer = () => {
+  const { t } = useTranslation();
   const lp = useLocalizedPath();
-  const SocialLink = ({ href, src, label }: SocialLinkProps) => {
-    return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        key={src}
-        aria-label={label}
-      >
-        <SvgIcon src={src} width="25px" height="25px" />
-      </a>
-    );
-  };
+  const year = new Date().getFullYear();
 
   return (
-    <>
-      <FooterSection>
-        <Container>
-          <Row justify="space-between">
-            <Col lg={10} md={10} sm={12} xs={12}>
-              <Language>{t("Contact")}</Language>
-              {/* <Large to="/">{t("Tell us everything")}</Large> */}
-              <Para>
-                {t(`Do you have any question? Feel free to reach out.`)}
-              </Para>
-              <a href="mailto:arvioncz@gmail.com">
-                <Chat>{t(`Let's Chat`)}</Chat>
+    <Wrap>
+      <Container>
+        <Top>
+          <BrandCol>
+            <Link to={lp("/")} aria-label={t("homeAria")}>
+              <img src="/img/svg/logo-opt.svg" alt="Arvion" width="130" height="35" loading="lazy" />
+            </Link>
+            <p>{t("footerTagline")}</p>
+            <Social>
+              <a href="https://www.linkedin.com/company/arvioncz" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <Icon name="linkedin" size={20} />
               </a>
-            </Col>
-            <Col lg={10} md={10} sm={12} xs={12}>
-              {/* <Empty /> */}
-              <Language>{t("Address")}</Language>
-              <Para>{t("AddressLine1")}</Para>
-              <Para>{t("AddressLine2")}</Para>
-            </Col>
-            {/* <Col lg={8} md={8} sm={12} xs={12}> */}
-              {/* <Title>{t("Policy")}</Title> */}
-              {/* <Large to="/">{t("Application Security")}</Large> */}
-              {/* <Large to="/">{t("Software Principles")}</Large> */}
-            {/* </Col> */}
-            {/* <Col lg={6} md={6} sm={12} xs={12}> */}
-              {/* <Empty /> */}
-              {/* <Large to="/">{t("Support Center")}</Large> */}
-              {/* <Large to="/">{t("Customer Support")}</Large> */}
-            {/* </Col> */}
-          </Row>
-          <Row justify="space-between">
-            <Col lg={10} md={10} sm={12} xs={12}>
-              <Title>{t("Company")}</Title>
-              {/* <Large to="/">{t("About")}</Large> */}
-              {/* <Large to="/price">{t("Price List")}</Large> */}
-              <Large to={lp("/career")}>{t("Career")}</Large>
-              <Large to={lp("/contact")}>{t("Contact")}</Large>
-              <Large to={lp("/about")}>{t("About")}</Large>
-              <Large to={lp("/blog")}>{t("Blog")}</Large>
-              <Large to={lp("/privacy")} style={{ textTransform: "none" }}>
-                {t("Privacy Policy")}
-              </Large>
-              {/* <Large to="/">{t("Press")}</Large> */}
-              {/* <Large to="/">{t("Careers & Culture")}</Large> */}
-            </Col>
-            <Col lg={10} md={10} sm={12} xs={12}>
-              <Label as="div">{t("Language")}</Label>
-              <LanguageSwitcher gap="25px" edge="0" />
-            </Col>
-          </Row>
-        </Container>
-      </FooterSection>
-      <Extra>
-        <Container border={true}>
-          <Row
-            justify="space-between" // Rozdělí logo a sociální sítě na opačné strany
-            align="middle"
-            style={{ paddingTop: "3rem" }}
-          >
-            {/* Logo vlevo */}
-            <Col style={{
-              // display: "flex", // Nastaví flexbox
-              // flexDirection: "column", // Zarovná prvky vertikálně
-              // justifyContent: "center", // Vertikální zarovnání na střed
-              // alignItems: "flex-start", // Horizontální zarovnání doleva (volitelné)
-            }}>
-              <NavLink to={lp("/")}>
-                <LogoContainer>
-                  <SvgIcon
-                    src="logo-opt.svg"
-                    aria-label="homepage"
-                    width="70%"
-                    height="auto"
-                  />
-                </LogoContainer>
-              </NavLink>
-            </Col>
+              <a href="https://www.facebook.com/arvioncz/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <Icon name="facebook" size={20} />
+              </a>
+            </Social>
+          </BrandCol>
 
-            {/* Sociální sítě vpravo */}
-            <Col style={{ textAlign: "right" }}>
-              <FooterContainer>
-                <SocialLink
-                  href="https://www.linkedin.com/company/arvioncz"
-                  src="linkedin.svg"
-                  label="LinkedIn"
-                />
-                <SocialLink
-                  href="https://www.facebook.com/arvioncz/"
-                  src="facebook.svg"
-                  label="Facebook"
-                />
-              </FooterContainer>
-            </Col>
-          </Row>
- 
-        </Container>
-      </Extra>
-    </>
+          <Col>
+            <h3>{t("Company")}</h3>
+            <Link to={`${lp("/")}#services`}>{t("Services")}</Link>
+            <Link to={lp("/about")}>{t("About")}</Link>
+            <Link to={lp("/career")}>{t("Career")}</Link>
+            <Link to={lp("/blog")}>{t("Blog")}</Link>
+          </Col>
+
+          <Col>
+            <h3>{t("Contact")}</h3>
+            <a href={`mailto:${CompanyInfo.email}`}>{CompanyInfo.email}</a>
+            <Link to={lp("/contact")}>{t("contactFormLink")}</Link>
+            <span>
+              {t("AddressLine1")}, {t("AddressLine2")}
+            </span>
+          </Col>
+
+          <Col>
+            <h3>{t("Language")}</h3>
+            <LanguageSwitcher gap="12px" edge="0" />
+          </Col>
+        </Top>
+
+        <Bottom>
+          <span>
+            © {year} {CompanyInfo.name} · {t("IN")} {CompanyInfo.ico}
+          </span>
+          <Link to={lp("/privacy")}>{t("Privacy Policy")}</Link>
+        </Bottom>
+      </Container>
+    </Wrap>
   );
 };
 
-export default withTranslation()(Footer);
+export default Footer;

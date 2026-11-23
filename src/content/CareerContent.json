@@ -1,0 +1,108 @@
+{
+  "en": {
+    "hero": {
+      "eyebrow": "Careers",
+      "title": "Build software that makes a difference",
+      "lead": "We're a young, growing team looking for people who enjoy solving real problems for real clients."
+    },
+    "perks": {
+      "eyebrow": "Why join us",
+      "title": "What we offer",
+      "items": [
+        { "icon": "rocket", "title": "Meaningful projects", "text": "Work on software that makes a real difference for our clients, in a modern tech company." },
+        { "icon": "sparkle", "title": "Room to grow", "text": "Professional growth and career advancement as the team grows." },
+        { "icon": "clock", "title": "Flexibility", "text": "Flexible working hours and the option to work remotely." },
+        { "icon": "heart", "title": "Great people", "text": "A friendly, inspiring environment where your ideas count." }
+      ]
+    },
+    "positions": {
+      "eyebrow": "Open positions",
+      "title": "Join the team",
+      "tag": "Remote-friendly",
+      "requirementsLabel": "What we're looking for",
+      "items": [
+        {
+          "title": "Software Developer",
+          "summary": "You'll design and build software that helps our clients work better, from new applications to improvements of existing systems. If you love technology and want to create modern applications in a small team where your work is visible, this role is for you.",
+          "requirements": [
+            "Experience with software development (web, desktop or backend)",
+            "Good knowledge of at least one modern programming language",
+            "Familiarity with version control (Git) and good coding practices",
+            "Ability to work independently and communicate within the team",
+            "Communicative English"
+          ]
+        },
+        {
+          "title": "Project Manager",
+          "summary": "You'll organise and coordinate software projects from start to finish: communicating with clients, leading the team and making sure each project is delivered on time and meets the requirements.",
+          "requirements": [
+            "Experience managing IT projects",
+            "Excellent organisational skills and attention to detail",
+            "Ability to communicate with clients and team members",
+            "Familiarity with project management tools (e.g. Jira, Trello)",
+            "Communicative English"
+          ]
+        }
+      ]
+    },
+    "apply": {
+      "title": "Interested?",
+      "text": "Send us a short introduction and your CV. Tell us what you enjoy working on and why Arvion caught your eye.",
+      "button": "Apply by email",
+      "subject": "Job application"
+    }
+  },
+  "cs": {
+    "hero": {
+      "eyebrow": "Kariéra",
+      "title": "Tvoř software, který má smysl",
+      "lead": "Jsme mladý, rostoucí tým a hledáme lidi, které baví řešit skutečné problémy pro skutečné klienty."
+    },
+    "perks": {
+      "eyebrow": "Proč k nám",
+      "title": "Co nabízíme",
+      "items": [
+        { "icon": "rocket", "title": "Smysluplné projekty", "text": "Pracuj na softwaru, který našim klientům opravdu pomáhá, v moderní technologické firmě." },
+        { "icon": "sparkle", "title": "Prostor pro růst", "text": "Profesní rozvoj a kariérní postup spolu s tím, jak tým roste." },
+        { "icon": "clock", "title": "Flexibilita", "text": "Flexibilní pracovní doba a možnost práce na dálku." },
+        { "icon": "heart", "title": "Skvělí lidé", "text": "Přátelské a inspirativní prostředí, kde se počítá s tvými nápady." }
+      ]
+    },
+    "positions": {
+      "eyebrow": "Volné pozice",
+      "title": "Přidej se k nám",
+      "tag": "Možnost práce na dálku",
+      "requirementsLabel": "Koho hledáme",
+      "items": [
+        {
+          "title": "Softwarový vývojář",
+          "summary": "Budeš navrhovat a vyvíjet software, který našim klientům pomáhá lépe fungovat – od nových aplikací po vylepšování stávajících systémů. Pokud tě baví technologie a chceš tvořit moderní aplikace v malém týmu, kde je tvoje práce vidět, je tahle pozice pro tebe.",
+          "requirements": [
+            "Zkušenosti s vývojem softwaru (web, desktop nebo backend)",
+            "Dobrá znalost alespoň jednoho moderního programovacího jazyka",
+            "Znalost správy verzí (Git) a dobrých vývojářských postupů",
+            "Schopnost samostatné práce a komunikace v týmu",
+            "Komunikativní angličtina"
+          ]
+        },
+        {
+          "title": "Projektový manažer",
+          "summary": "Budeš organizovat a koordinovat softwarové projekty od začátku do konce: komunikovat s klienty, vést tým a dohlížet na to, aby byl každý projekt dokončen včas a splnil požadavky.",
+          "requirements": [
+            "Zkušenosti s řízením IT projektů",
+            "Výborné organizační schopnosti a smysl pro detail",
+            "Schopnost komunikovat s klienty i členy týmu",
+            "Znalost nástrojů pro řízení projektů (např. Jira, Trello)",
+            "Komunikativní angličtina"
+          ]
+        }
+      ]
+    },
+    "apply": {
+      "title": "Máš zájem?",
+      "text": "Pošli nám krátké představení a životopis. Napiš, co tě na práci baví a proč tě Arvion zaujal.",
+      "button": "Ozvat se e-mailem",
+      "subject": "Zájem o pozici"
+    }
+  }
+}
