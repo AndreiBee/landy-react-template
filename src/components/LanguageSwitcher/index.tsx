@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { useHistory, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { localizePath, stripLanguage } from "../../common/utils/localize";
 import { getLanguage, Language, setLanguage } from "../../translation";
 import { SwitchGroup, SwitchButton } from "./styles";
@@ -17,13 +17,13 @@ interface LanguageSwitcherProps {
 const LanguageSwitcher = ({ gap = "20px", edge = "10px" }: LanguageSwitcherProps) => {
   const { t, i18n } = useTranslation();
   const current = getLanguage(i18n.language);
-  const history = useHistory();
+  const navigate = useNavigate();
   const { pathname, search, hash } = useLocation();
 
   const switchTo = (lang: Language) => {
     setLanguage(lang);
     if (lang !== current) {
-      history.push(`${localizePath(lang, stripLanguage(pathname))}${search}${hash}`);
+      navigate(`${localizePath(lang, stripLanguage(pathname))}${search}${hash}`);
     }
   };
 

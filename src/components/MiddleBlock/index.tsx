@@ -1,5 +1,6 @@
 import { Row, Col } from "antd";
-import { withTranslation, TFunction } from "react-i18next";
+import { withTranslation } from "react-i18next";
+import type { TFunction } from "i18next";
 import { Slide } from "react-awesome-reveal";
 import { MiddleBlockSection, ButtonWrapper, ContentWrapper, ImageWrapper } from "./styles";
 import { SvgIcon } from "../../common/SvgIcon";

@@ -1,7 +1,7 @@
 import { Row, Col } from "antd";
 import { Fade } from "react-awesome-reveal";
 import { withTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useLocalizedPath } from "../../common/utils/localize";
 
 import { ContentBlockProps } from "./types";
@@ -29,7 +29,7 @@ const ContentBlock = ({
   direction,
   withButtons,
 }: ContentBlockProps) => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const lp = useLocalizedPath();
   const scrollTo = (id: string) => {
     const element = document.getElementById(id) as HTMLDivElement;
@@ -45,7 +45,7 @@ const ContentBlock = ({
           justify="space-between"
           align="middle"
           id={id}
-          direction={direction}
+          $direction={direction}
         >
           {icon !== "" &&
           <Col lg={11} md={11} sm={12} xs={24}>
@@ -77,7 +77,7 @@ const ContentBlock = ({
                             color={item.color}
                             onClick={() => {
                               if (item.scrollToSection && item.scrollToSection.includes("/")) {
-                                  history.push(lp(item.scrollToSection)); // Přejde na stránku v aktuálním jazyce
+                                  navigate(lp(item.scrollToSection)); // Přejde na stránku v aktuálním jazyce
                                 } else {
                                   scrollTo(item.scrollToSection ? item.scrollToSection : "contact"); // Posune stránku
                                 }

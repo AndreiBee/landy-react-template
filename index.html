@@ -16,7 +16,7 @@
     }
     </script>
 
-    <link rel="icon" href="https://arvion.cz/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" />
     <link rel="manifest" href="/manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -25,28 +25,29 @@
     <!-- Defaults for the dev server. In production build,
          scripts/generate-pages.js writes the right title, description, canonical
          and hreflang links into a separate HTML file for every page and language.
-         data-react-helmet lets React Helmet take these tags over on navigation. -->
-    <meta name="description" content="Arvion builds, maintains and supports custom business software. A reliable software partner for companies in the US and Europe." data-react-helmet="true" />
+         data-rh lets react-helmet-async take these tags over on navigation. -->
+    <meta name="description" content="Arvion builds, maintains and supports custom business software. A reliable software partner for companies in the US and Europe." data-rh="true" />
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Arvion | Custom Software Development & Support" data-react-helmet="true" />
-    <meta property="og:description" content="Arvion builds, maintains and supports custom business software. A reliable software partner for companies in the US and Europe." data-react-helmet="true" />
+    <meta property="og:title" content="Arvion | Custom Software Development & Support" data-rh="true" />
+    <meta property="og:description" content="Arvion builds, maintains and supports custom business software. A reliable software partner for companies in the US and Europe." data-rh="true" />
     <meta property="og:image" content="https://arvion.cz/img/svg/logo.png" />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" data-react-helmet="true" />
+    <meta property="og:locale" content="en_US" data-rh="true" />
     <meta property="og:locale:alternate" content="cs_CZ" />
     <meta property="og:site_name" content="Arvion" />
-    <meta property="og:url" content="https://arvion.cz/" data-react-helmet="true" />
+    <meta property="og:url" content="https://arvion.cz/" data-rh="true" />
 
     <!-- Twitter Meta Tags -->
-    <meta property="twitter:title" content="Arvion | Custom Software Development & Support" data-react-helmet="true" />
-    <meta property="twitter:description" content="Arvion builds, maintains and supports custom business software. A reliable software partner for companies in the US and Europe." data-react-helmet="true" />
+    <meta property="twitter:title" content="Arvion | Custom Software Development & Support" data-rh="true" />
+    <meta property="twitter:description" content="Arvion builds, maintains and supports custom business software. A reliable software partner for companies in the US and Europe." data-rh="true" />
     <meta property="twitter:image" content="https://arvion.cz/img/svg/logo.png" />
     <meta property="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <noscript>Pro zobrazení webu povolte JavaScript. / Please enable JavaScript to view this website.</noscript>
     <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
 
   </body>
 </html>

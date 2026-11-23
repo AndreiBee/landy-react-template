@@ -20,9 +20,9 @@ export const Para = styled("div")`
   width: 70%;
 `;
 
-export const StyledRow = styled(Row)`
-  flex-direction: ${({ direction }: { direction: string }) =>
-    direction === "left" ? "row" : "row-reverse"};
+export const StyledRow = styled(Row)<{ $direction: "left" | "right" }>`
+  flex-direction: ${({ $direction }) =>
+    $direction === "left" ? "row" : "row-reverse"};
   justify-content: center; /* Zarovnání obsahu na střed */
 `;
 

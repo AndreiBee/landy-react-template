@@ -49,7 +49,7 @@ const columnKeyMap = {
           justify="space-between"
           align="middle"
           id={id}
-          direction={direction}
+          $direction={direction}
         >
           <Col lg={10} md={10} sm={16} xs={16}>
             <SvgIcon src={icon} width="100%" height="100%" />

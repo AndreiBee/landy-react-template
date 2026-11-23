@@ -1,5 +1,5 @@
 /**
- * Runs after `react-scripts build`. For every page in src/router/pages.json
+ * Runs after `vite build`. For every page in src/router/pages.json
  * and every language it writes a static HTML file (e.g. build/en/about.html)
  * with the right <html lang>, title, description, Open Graph tags, canonical
  * and hreflang links, so search engines and link previews see the correct
@@ -10,10 +10,11 @@
  *
  * Plain Node, no dependencies. Usage: node scripts/generate-pages.js [buildDir]
  */
-const fs = require("fs");
-const path = require("path");
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-const ROOT = path.join(__dirname, "..");
+const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const BUILD = path.resolve(ROOT, process.argv[2] || process.env.BUILD_PATH || "build");
 const SITE_URL = "https://arvion.cz";
 const LANGUAGES = ["cs", "en"];
@@ -27,8 +28,8 @@ const meta = readJson("src/content/PageMetaContent.json");
 // Strip tags a previous run added, so running the script twice is harmless.
 const template = fs
   .readFileSync(path.join(BUILD, "index.html"), "utf8")
-  .replace(/<link rel="(canonical|alternate)"[^>]*data-react-helmet="true"[^>]*>/g, "")
-  .replace(/<meta name="robots"[^>]*data-react-helmet="true"[^>]*>/g, "");
+  .replace(/<link rel="(canonical|alternate)"[^>]*data-rh="true"[^>]*>/g, "")
+  .replace(/<meta name="robots"[^>]*data-rh="true"[^>]*>/g, "");
 
 const escapeAttr = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
@@ -68,9 +69,9 @@ const render = ({ lang, title, description, url, links }) => {
 
 const alternateLinks = (pagePath) => [
   ...LANGUAGES.map(
-    (l) => `<link rel="alternate" hreflang="${l}" href="${urlFor(l, pagePath)}" data-react-helmet="true" />`
+    (l) => `<link rel="alternate" hreflang="${l}" href="${urlFor(l, pagePath)}" data-rh="true" />`
   ),
-  `<link rel="alternate" hreflang="x-default" href="${SITE_URL}/" data-react-helmet="true" />`,
+  `<link rel="alternate" hreflang="x-default" href="${SITE_URL}/" data-rh="true" />`,
 ];
 
 const write = (relative, content) => {
@@ -88,8 +89,8 @@ for (const page of pages) {
   for (const lang of LANGUAGES) {
     const url = urlFor(lang, page.path);
     const links = page.noIndex
-      ? [`<meta name="robots" content="noindex, follow" data-react-helmet="true" />`]
-      : [`<link rel="canonical" href="${url}" data-react-helmet="true" />`, ...alternateLinks(page.path)];
+      ? [`<meta name="robots" content="noindex, follow" data-rh="true" />`]
+      : [`<link rel="canonical" href="${url}" data-rh="true" />`, ...alternateLinks(page.path)];
     const file = page.path === "/" ? `${lang}/index.html` : `${lang}${page.path}.html`;
     write(file, render({ lang, ...texts[lang], url, links }));
     written.push(file);
@@ -115,7 +116,7 @@ write(
     lang: "en",
     ...meta.notFound.en,
     url: `${SITE_URL}/`,
-    links: [`<meta name="robots" content="noindex" data-react-helmet="true" />`],
+    links: [`<meta name="robots" content="noindex" data-rh="true" />`],
   })
 );
 

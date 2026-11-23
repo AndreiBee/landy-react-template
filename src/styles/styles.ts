@@ -26,6 +26,25 @@ export const Styles = createGlobalStyle`
     }
 
 
+    /* Base styles antd 4's global stylesheet used to provide. */
+    body {
+        font-size: 14px;
+        line-height: 1.5715;
+        color: rgba(0, 0, 0, 0.85);
+    }
+
+    input,
+    button,
+    select,
+    optgroup,
+    textarea {
+        margin: 0;
+        color: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        line-height: inherit;
+    }
+
     body {
         margin:0;
         padding:0;
@@ -49,7 +68,7 @@ export const Styles = createGlobalStyle`
         width: 100%;  
         padding: 1rem 1.25rem;
 
-        :focus-within {
+        &:focus-within {
             background: none;
             box-shadow: #2e186a 0px 0px 0px 1px;
         }
@@ -90,7 +109,7 @@ export const Styles = createGlobalStyle`
         outline: none;
         color: #2E186A;
 
-        :hover {
+        &:hover {
             color: #2e186a;
         }
     }
