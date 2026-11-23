@@ -6,14 +6,12 @@ import "antd/dist/antd.css";
 import Router from "./router";
 import i18n from "./translation";
 
-import CookieBanner from './components/CookieBanner';
 import { Styles } from './styles/styles';
 
 const App = () => (
   <I18nextProvider i18n={i18n}>
     <Styles />
     <BrowserRouter>
-      <CookieBanner />
       <Router />
     </BrowserRouter>
   </I18nextProvider>

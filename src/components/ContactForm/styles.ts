@@ -91,3 +91,17 @@ export const HoneyPot = styled.div`
   height: 1px;
   overflow: hidden;
 `;
+
+export const PrivacyNote = styled("p")`
+  && {
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: end;
+    margin: 1rem 0 0;
+    padding: 0 5px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+`;

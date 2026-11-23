@@ -29,6 +29,11 @@ const routes = [
     exact: true,
     component: "Blog",
   },
+  {
+    path: ["/privacy"],
+    exact: true,
+    component: "Privacy",
+  },
 ];
 
 export default routes;

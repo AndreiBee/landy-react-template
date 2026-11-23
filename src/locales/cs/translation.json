@@ -31,9 +31,6 @@
   "Your Name": "Vaše jméno a příjmení",
   "email": "Email*",
   "Your Email": "Vaše E-mailová adresa",
-  "cookieBannerMsg": "Používáme cookies ke zlepšení Vašich zkušeností. Pokračováním souhlasíte s jejich použitím.",
-  "cookieBannerAcceptBtn": "Přijmout",
-  "cookieBannerRejectBtn": "Odmítnout",
   "Requirements": "Požadujeme",
   "WeOffer": "Nabízíme",
   "Blog": "Blog",
@@ -55,5 +52,7 @@
   "qrPaymentAlt": "QR kód pro platbu",
   "notFoundTitle": "Stránka nenalezena",
   "notFoundText": "Omlouváme se, hledaná stránka neexistuje nebo byla přesunuta.",
-  "notFoundButton": "Zpět na úvodní stránku"
+  "notFoundButton": "Zpět na úvodní stránku",
+  "formPrivacyNote": "Vaše údaje použijeme pouze k odpovědi na vaši zprávu.",
+  "Privacy Policy": "Ochrana osobních údajů"
 }

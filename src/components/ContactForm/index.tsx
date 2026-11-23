@@ -1,6 +1,7 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 import { ContactProps, ValidationTypeProps } from "./types";
 import { useForm } from "../../common/utils/useForm";
 import validate from "../../common/utils/validationRules";
@@ -8,7 +9,7 @@ import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
-import { ContactContainer, FormGroup, Span, ButtonContainer, EmailLink, AddressLine, Image, HoneyPot } from "./styles";
+import { ContactContainer, FormGroup, Span, ButtonContainer, EmailLink, AddressLine, Image, HoneyPot, PrivacyNote } from "./styles";
 
 const Contact = ({ title, content, email, in_number, acc_number, qr_payment_image, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit, submitting } = useForm(validate);
@@ -125,6 +126,9 @@ const Contact = ({ title, content, email, in_number, acc_number, qr_payment_imag
                   {submitting ? t("Sending") : t("Submit")}
                 </Button>
               </ButtonContainer>
+              <PrivacyNote>
+                {t("formPrivacyNote")} <Link to="/privacy">{t("Privacy Policy")}</Link>
+              </PrivacyNote>
             </FormGroup>
           </Slide>
         </Col>

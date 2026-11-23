@@ -1,0 +1,150 @@
+{
+  "en": {
+    "title": "Privacy Policy",
+    "updated": "Last updated: November 23, 2026",
+    "intro": "This policy explains what personal data we process when you visit arvion.cz or contact us, why we do it, and what rights you have. We keep it short because we collect very little.",
+    "sections": [
+      {
+        "title": "Who we are",
+        "body": [
+          "This website is run by {name}, a sole trader (OSVČ) registered in the Czech Republic under Company ID (IČO) {ico}, who is the controller of your personal data (\"Arvion\", \"we\").",
+          "For anything related to your personal data, email us at {email}."
+        ]
+      },
+      {
+        "title": "What we collect and why",
+        "body": [
+          "Contact form and email. When you send us a message through the form or by email, we receive your name, email address, phone number (only if you choose to give it), your message and the language you used on the site. We use this only to reply to you and, if you wish, to prepare an offer or a contract. The legal basis is taking steps at your request before entering into a contract (Art. 6(1)(b) GDPR) and our legitimate interest in answering inquiries (Art. 6(1)(f) GDPR).",
+          "Technical data. Like any website, our hosting provider automatically records technical data when you load a page: your IP address, browser type, the page requested and the time. This is needed to deliver the site and protect it from abuse. The legal basis is our legitimate interest in running a secure website (Art. 6(1)(f) GDPR).",
+          "We do not use analytics, advertising or tracking tools, we do not build profiles and we do not sell your data."
+        ]
+      },
+      {
+        "title": "Cookies and browser storage",
+        "body": [
+          "We do not use tracking or advertising cookies. If you switch the site's language, your browser remembers that choice (in local storage under the name \"lang\") so the site opens in the same language next time. This is strictly necessary for the function you asked for, so it does not require consent. You can delete it at any time in your browser settings.",
+          "The links to our LinkedIn and Facebook pages are ordinary links. Those services receive no data from our site unless you click on them."
+        ]
+      },
+      {
+        "title": "Who receives your data",
+        "body": [
+          "We use a few trusted service providers who process data on our behalf:",
+          {
+            "list": [
+              "Formspree, Inc. (USA) delivers messages from the contact form to our inbox.",
+              "Netlify, Inc. (USA) hosts the website.",
+              "Google LLC (USA) provides our email service (Gmail)."
+            ]
+          },
+          "Because these providers are based in the United States, your data may be transferred outside the European Union. Such transfers rely on the EU–U.S. Data Privacy Framework or on the European Commission's standard contractual clauses, as offered by each provider.",
+          "We do not share your data with anyone else unless the law requires it."
+        ]
+      },
+      {
+        "title": "How long we keep it",
+        "body": [
+          "We keep messages from the contact form and related emails for 3 years after our last communication. If your inquiry leads to a contract, we keep the data for the duration of the contract and then for as long as the law requires (for example, for accounting and tax records). Technical data is kept by our hosting provider only for the short period needed to operate and secure the site."
+        ]
+      },
+      {
+        "title": "Your rights",
+        "body": [
+          "You have the right to:",
+          {
+            "list": [
+              "access the personal data we hold about you,",
+              "have inaccurate data corrected,",
+              "have your data deleted,",
+              "restrict how we process it,",
+              "receive your data in a portable format,",
+              "object to processing based on our legitimate interest."
+            ]
+          },
+          "To use any of these rights, email us at {email}. We will reply within one month. These rights are available to you wherever you live.",
+          "You also have the right to lodge a complaint with a supervisory authority. In the Czech Republic this is the Office for Personal Data Protection (Úřad pro ochranu osobních údajů), Pplk. Sochora 27, 170 00 Prague 7, https://uoou.gov.cz."
+        ]
+      },
+      {
+        "title": "Changes to this policy",
+        "body": [
+          "If we change how we handle personal data, we will update this page and the date at the top."
+        ]
+      }
+    ]
+  },
+  "cs": {
+    "title": "Zásady ochrany osobních údajů",
+    "updated": "Poslední aktualizace: 23. listopadu 2026",
+    "intro": "Tyto zásady vysvětlují, jaké osobní údaje zpracováváme, když navštívíte arvion.cz nebo nás kontaktujete, proč to děláme a jaká máte práva. Jsou krátké, protože shromažďujeme jen velmi málo údajů.",
+    "sections": [
+      {
+        "title": "Kdo jsme",
+        "body": [
+          "Tento web provozuje {name}, osoba samostatně výdělečně činná (OSVČ) s IČO {ico}, která je správcem vašich osobních údajů („Arvion“, „my“).",
+          "S čímkoli, co se týká vašich osobních údajů, nám napište na {email}."
+        ]
+      },
+      {
+        "title": "Jaké údaje zpracováváme a proč",
+        "body": [
+          "Kontaktní formulář a e-mail. Když nám pošlete zprávu přes formulář nebo e-mailem, získáme vaše jméno, e-mailovou adresu, telefonní číslo (jen pokud ho uvedete), text zprávy a jazyk, který jste na webu používali. Tyto údaje použijeme pouze k tomu, abychom vám odpověděli, a pokud budete chtít, abychom připravili nabídku nebo smlouvu. Právním základem je provedení opatření před uzavřením smlouvy na vaši žádost (čl. 6 odst. 1 písm. b) GDPR) a náš oprávněný zájem odpovídat na dotazy (čl. 6 odst. 1 písm. f) GDPR).",
+          "Technické údaje. Jako u každého webu náš poskytovatel hostingu při načtení stránky automaticky zaznamenává technické údaje: vaši IP adresu, typ prohlížeče, požadovanou stránku a čas. Je to nutné pro doručení webu a jeho ochranu před zneužitím. Právním základem je náš oprávněný zájem na bezpečném provozu webu (čl. 6 odst. 1 písm. f) GDPR).",
+          "Nepoužíváme analytické, reklamní ani sledovací nástroje, nevytváříme profily a vaše údaje neprodáváme."
+        ]
+      },
+      {
+        "title": "Cookies a úložiště prohlížeče",
+        "body": [
+          "Nepoužíváme sledovací ani reklamní cookies. Pokud přepnete jazyk webu, váš prohlížeč si tuto volbu zapamatuje (v místním úložišti pod názvem „lang“), aby se web příště otevřel ve stejném jazyce. Je to nezbytné pro funkci, o kterou jste požádali, a proto to nevyžaduje souhlas. Kdykoli to můžete smazat v nastavení prohlížeče.",
+          "Odkazy na naše stránky na LinkedInu a Facebooku jsou běžné odkazy. Tyto služby z našeho webu nedostávají žádné údaje, dokud na odkaz nekliknete."
+        ]
+      },
+      {
+        "title": "Komu údaje předáváme",
+        "body": [
+          "Využíváme několik důvěryhodných poskytovatelů služeb, kteří pro nás údaje zpracovávají:",
+          {
+            "list": [
+              "Formspree, Inc. (USA) doručuje zprávy z kontaktního formuláře do naší schránky.",
+              "Netlify, Inc. (USA) zajišťuje hosting webu.",
+              "Google LLC (USA) poskytuje naši e-mailovou službu (Gmail)."
+            ]
+          },
+          "Protože tito poskytovatelé sídlí ve Spojených státech, mohou být vaše údaje předány mimo Evropskou unii. Takové předání probíhá na základě rámce EU–USA pro ochranu osobních údajů (Data Privacy Framework) nebo standardních smluvních doložek Evropské komise, podle toho, co daný poskytovatel nabízí.",
+          "Nikomu dalšímu údaje nepředáváme, pokud to nevyžaduje zákon."
+        ]
+      },
+      {
+        "title": "Jak dlouho údaje uchováváme",
+        "body": [
+          "Zprávy z kontaktního formuláře a související e-maily uchováváme 3 roky od naší poslední komunikace. Pokud z vašeho dotazu vznikne smlouva, uchováváme údaje po dobu trvání smlouvy a poté tak dlouho, jak vyžaduje zákon (například pro účetní a daňové záznamy). Technické údaje uchovává náš poskytovatel hostingu jen po krátkou dobu nutnou pro provoz a zabezpečení webu."
+        ]
+      },
+      {
+        "title": "Vaše práva",
+        "body": [
+          "Máte právo:",
+          {
+            "list": [
+              "na přístup k osobním údajům, které o vás máme,",
+              "na opravu nepřesných údajů,",
+              "na výmaz údajů,",
+              "na omezení zpracování,",
+              "na přenositelnost údajů,",
+              "vznést námitku proti zpracování na základě našeho oprávněného zájmu."
+            ]
+          },
+          "Pro uplatnění kteréhokoli z těchto práv nám napište na {email}. Odpovíme do jednoho měsíce.",
+          "Máte také právo podat stížnost u dozorového úřadu, kterým je Úřad pro ochranu osobních údajů, Pplk. Sochora 27, 170 00 Praha 7, https://uoou.gov.cz."
+        ]
+      },
+      {
+        "title": "Změny těchto zásad",
+        "body": [
+          "Pokud změníme způsob, jakým s osobními údaji zacházíme, aktualizujeme tuto stránku a datum v jejím záhlaví."
+        ]
+      }
+    ]
+  }
+}

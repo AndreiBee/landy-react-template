@@ -59,6 +59,16 @@
       "description": "Hodinové sazby za vývoj, správu a podporu softwaru od Arvionu."
     }
   },
+  "privacy": {
+    "en": {
+      "title": "Privacy Policy | Arvion",
+      "description": "How Arvion handles personal data from the contact form and website visits, and what rights you have."
+    },
+    "cs": {
+      "title": "Ochrana osobních údajů | Arvion",
+      "description": "Jak Arvion zpracovává osobní údaje z kontaktního formuláře a návštěv webu a jaká máte práva."
+    }
+  },
   "notFound": {
     "en": {
       "title": "Page not found | Arvion",

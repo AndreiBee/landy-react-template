@@ -80,6 +80,9 @@ const Footer = ({ t }: { t: TFunction }) => {
               <Large to="/contact">{t("Contact")}</Large>
               <Large to="/about">{t("About")}</Large>
               <Large to="/blog">{t("Blog")}</Large>
+              <Large to="/privacy" style={{ textTransform: "none" }}>
+                {t("Privacy Policy")}
+              </Large>
               {/* <Large to="/">{t("Press")}</Large> */}
               {/* <Large to="/">{t("Careers & Culture")}</Large> */}
             </Col>

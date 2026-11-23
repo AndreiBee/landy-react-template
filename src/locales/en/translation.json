@@ -32,9 +32,6 @@
   "Your Name": "Your Name",
   "email": "Email*",
   "Your Email": "Your Email",
-  "cookieBannerMsg": "We use cookies to improve your experience. By continuing, you agree to our use of cookies.",
-  "cookieBannerAcceptBtn": "Accept",
-  "cookieBannerRejectBtn": "Reject",
   "Requirements": "Requirements",
   "WeOffer": "We Offer",
   "Blog": "Blog",
@@ -56,5 +53,7 @@
   "qrPaymentAlt": "QR code for payment",
   "notFoundTitle": "Page not found",
   "notFoundText": "Sorry, the page you're looking for doesn't exist or has been moved.",
-  "notFoundButton": "Back to homepage"
+  "notFoundButton": "Back to homepage",
+  "formPrivacyNote": "We'll use your details only to reply to your message.",
+  "Privacy Policy": "Privacy Policy"
 }
