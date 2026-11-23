@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8" />
 
-    <!-- Dynamic Title -->
-    <title id="dynamic-title">Arvion | Custom Software Development &amp; Support</title>
+    <title>Arvion | Custom Software Development &amp; Support</title>
 
     <!-- JSON-LD strukturovaná data -->
     <script type="application/ld+json">
@@ -23,9 +22,10 @@
     <meta name="theme-color" content="#000000" />
     <meta name="google-site-verification" content="google-site-verification=SUv6_5Ev790WibLTfoayoLeUxoBwDPDIgpe8FQpZJWc" />
 
-    <!-- Default meta tags (English). The inline script below switches them to
-         Czech for Czech/Slovak browsers; React Helmet replaces them per page
-         (data-react-helmet lets Helmet take them over instead of duplicating). -->
+    <!-- Defaults for the dev server. In production build,
+         scripts/generate-pages.js writes the right title, description, canonical
+         and hreflang links into a separate HTML file for every page and language.
+         data-react-helmet lets React Helmet take these tags over on navigation. -->
     <meta name="description" content="Arvion builds, maintains and supports custom business software. A reliable software partner for companies in the US and Europe." data-react-helmet="true" />
 
     <!-- Open Graph Meta Tags -->
@@ -43,51 +43,10 @@
     <meta property="twitter:description" content="Arvion builds, maintains and supports custom business software. A reliable software partner for companies in the US and Europe." data-react-helmet="true" />
     <meta property="twitter:image" content="https://arvion.cz/img/svg/logo.png" />
     <meta property="twitter:card" content="summary_large_image" />
-
-
-
-
   </head>
   <body>
     <noscript>Pro zobrazení webu povolte JavaScript. / Please enable JavaScript to view this website.</noscript>
     <div id="root"></div>
 
-    <script>
-      // Pick the language before React loads so the first paint and the tab
-      // title match. Keep this logic in sync with src/translation.ts.
-      (function () {
-        var lang = null;
-        try {
-          var stored = localStorage.getItem('lang');
-          if (stored === 'cs' || stored === 'en') lang = stored;
-        } catch (e) {}
-        if (!lang) {
-          var langs = (navigator.languages && navigator.languages.length)
-            ? navigator.languages
-            : [navigator.language || ''];
-          lang = 'en';
-          for (var i = 0; i < langs.length; i++) {
-            if (/^(cs|sk)(-|$)/i.test(langs[i] || '')) { lang = 'cs'; break; }
-            if (/^en(-|$)/i.test(langs[i] || '')) break;
-          }
-        }
-        document.documentElement.lang = lang;
-        if (lang !== 'cs') return;
-
-        var title = 'Arvion | Vývoj a správa softwaru na míru';
-        var description = 'Arvion vyvíjí, spravuje a podporuje firemní software na míru. Spolehlivý softwarový partner pro firmy v Česku i zahraničí.';
-        var set = function (selector, value) {
-          var el = document.querySelector(selector);
-          if (el) el.setAttribute('content', value);
-        };
-        document.title = title;
-        set('meta[name="description"]', description);
-        set('meta[property="og:title"]', title);
-        set('meta[property="og:description"]', description);
-        set('meta[property="og:locale"]', 'cs_CZ');
-        set('meta[property="twitter:title"]', title);
-        set('meta[property="twitter:description"]', description);
-      })();
-    </script>
   </body>
 </html>

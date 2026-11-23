@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { useHistory, useLocation } from "react-router-dom";
+import { localizePath, stripLanguage } from "../../common/utils/localize";
 import { getLanguage, Language, setLanguage } from "../../translation";
 import { SwitchGroup, SwitchButton } from "./styles";
 
@@ -15,6 +17,15 @@ interface LanguageSwitcherProps {
 const LanguageSwitcher = ({ gap = "20px", edge = "10px" }: LanguageSwitcherProps) => {
   const { t, i18n } = useTranslation();
   const current = getLanguage(i18n.language);
+  const history = useHistory();
+  const { pathname, search, hash } = useLocation();
+
+  const switchTo = (lang: Language) => {
+    setLanguage(lang);
+    if (lang !== current) {
+      history.push(`${localizePath(lang, stripLanguage(pathname))}${search}${hash}`);
+    }
+  };
 
   return (
     <SwitchGroup role="group" aria-label={t("Language")} $gap={gap} $edge={edge}>
@@ -26,7 +37,7 @@ const LanguageSwitcher = ({ gap = "20px", edge = "10px" }: LanguageSwitcherProps
           aria-label={label}
           aria-pressed={current === lang}
           title={label}
-          onClick={() => setLanguage(lang)}
+          onClick={() => switchTo(lang)}
         >
           <img src={`/img/svg/${flag}`} alt="" width="30" height="30" />
         </SwitchButton>

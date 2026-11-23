@@ -1,39 +1,14 @@
-const routes = [
-  {
-    path: ["/", "/home"],
-    exact: true,
-    component: "Home",
-  },
-  {
-    path: ["/about"],
-    exact: true,
-    component: "About",
-  },
-  {
-    path: ["/career"],
-    exact: true,
-    component: "Career",
-  },
-  {
-    path: ["/contact"],
-    exact: true,
-    component: "Contact",
-  },
-  {
-    path: ["/price"],
-    exact: true,
-    component: "Price",
-  },
-  {
-    path: ["/blog"],
-    exact: true,
-    component: "Blog",
-  },
-  {
-    path: ["/privacy"],
-    exact: true,
-    component: "Privacy",
-  },
-];
+import pages from "./pages.json";
+
+// Single list of pages, shared with scripts/generate-pages.js (static HTML,
+// sitemap and Netlify redirects are generated from it after the build).
+export interface PageConfig {
+  key: string;
+  path: string;
+  component: string;
+  noIndex?: boolean;
+}
+
+const routes: PageConfig[] = pages;
 
 export default routes;

@@ -6,7 +6,8 @@ import translationCs from "./locales/cs/translation.json";
 export type Language = "en" | "cs";
 
 const STORAGE_KEY = "lang";
-const SUPPORTED: Language[] = ["en", "cs"];
+export const SUPPORTED_LANGUAGES: Language[] = ["cs", "en"];
+const SUPPORTED = SUPPORTED_LANGUAGES;
 
 const isSupported = (value: unknown): value is Language =>
   typeof value === "string" && SUPPORTED.includes(value as Language);
@@ -22,7 +23,6 @@ const readStoredLanguage = (): Language | null => {
 
 // Walk the visitor's preferred languages in order: the first Czech/Slovak or
 // English entry wins. Anyone else (or no match) gets English.
-// Keep in sync with the inline script in public/index.html.
 const detectBrowserLanguage = (): Language => {
   const languages =
     typeof navigator !== "undefined"
@@ -37,8 +37,18 @@ const detectBrowserLanguage = (): Language => {
   return "en";
 };
 
-export const initialLanguage: Language =
+/** Where to send a visitor who arrives without a language in the URL. */
+export const preferredLanguage = (): Language =>
   readStoredLanguage() ?? detectBrowserLanguage();
+
+// The URL (/cs/..., /en/...) decides the language; otherwise use preference.
+const languageInUrl = (): Language | null => {
+  if (typeof window === "undefined") return null;
+  const match = window.location.pathname.match(/^\/(cs|en)(?=\/|$)/);
+  return match ? (match[1] as Language) : null;
+};
+
+export const initialLanguage: Language = languageInUrl() ?? preferredLanguage();
 
 const syncDocumentLanguage = (lang: string) => {
   if (typeof document !== "undefined") {
@@ -75,7 +85,7 @@ i18n.on("languageChanged", (lang) => {
   syncDocumentLanguage(lang);
 });
 
-/** Switch language and remember the visitor's choice. */
+/** Switch language and remember the visitor's choice. Callers also change the URL. */
 export const setLanguage = (lang: Language) => {
   try {
     window.localStorage.setItem(STORAGE_KEY, lang);

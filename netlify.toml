@@ -1,0 +1,6 @@
+# Build settings in this file override the ones in the Netlify dashboard.
+# The build runs scripts/generate-pages.js after react-scripts, which writes
+# the per-language pages, sitemap.xml and _redirects into build/.
+[build]
+  command = "npm run build"
+  publish = "build"

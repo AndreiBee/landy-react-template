@@ -1,0 +1,9 @@
+[
+  { "key": "home", "path": "/", "component": "Home" },
+  { "key": "about", "path": "/about", "component": "About" },
+  { "key": "career", "path": "/career", "component": "Career" },
+  { "key": "blog", "path": "/blog", "component": "Blog" },
+  { "key": "contact", "path": "/contact", "component": "Contact" },
+  { "key": "privacy", "path": "/privacy", "component": "Privacy" },
+  { "key": "price", "path": "/price", "component": "Price", "noIndex": true }
+]

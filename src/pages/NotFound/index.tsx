@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Container from "../../common/Container";
 import PageMeta from "../../components/PageMeta";
+import { useLocalizedPath } from "../../common/utils/localize";
 
 const Wrapper = styled.section`
   text-align: center;
@@ -32,6 +33,7 @@ const HomeLink = styled(Link)`
 
 const NotFound = () => {
   const { t } = useTranslation();
+  const lp = useLocalizedPath();
 
   return (
     <>
@@ -41,7 +43,7 @@ const NotFound = () => {
           <h1>404</h1>
           <h2>{t("notFoundTitle")}</h2>
           <p>{t("notFoundText")}</p>
-          <HomeLink to="/">{t("notFoundButton")}</HomeLink>
+          <HomeLink to={lp("/")}>{t("notFoundButton")}</HomeLink>
         </Wrapper>
       </Container>
     </>

@@ -5,6 +5,7 @@ import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
 import LanguageSwitcher from "../LanguageSwitcher";
+import { useLocalizedPath } from "../../common/utils/localize";
 import {
   HeaderSection,
   LogoContainer,
@@ -21,6 +22,7 @@ import {
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
+  const lp = useLocalizedPath();
 
   const toggleButton = () => {
     setVisibility(!visible);
@@ -40,23 +42,23 @@ const Header = ({ t }: { t: TFunction }) => {
     };
     return (
       <>
-        <CustomLink to="/about" onClick={handleLinkClick}>
+        <CustomLink to={lp("/about")} onClick={handleLinkClick}>
           <Span>{t("About")}</Span>
         </CustomLink>
 
-        {/* <CustomLink to="/price" onClick={handleLinkClick}>
+        {/* <CustomLink to={lp("/price")} onClick={handleLinkClick}>
           <Span>{t("Price List")}</Span>
         </CustomLink> */}
 
-        <CustomLink to="/career" onClick={handleLinkClick}>
+        <CustomLink to={lp("/career")} onClick={handleLinkClick}>
           <Span>{t("Career")}</Span>
         </CustomLink>
 
-        <CustomLink to="/blog" onClick={handleLinkClick}>
+        <CustomLink to={lp("/blog")} onClick={handleLinkClick}>
           <Span>{t("Blog")}</Span>
         </CustomLink>
 
-        <CustomNavLinkSmall to="/contact" onClick={handleLinkClick}>
+        <CustomNavLinkSmall to={lp("/contact")} onClick={handleLinkClick}>
           <Span>
             <Button>{t("Contact")}</Button>
           </Span>
@@ -70,7 +72,7 @@ const Header = ({ t }: { t: TFunction }) => {
       <Container>
         <Row justify="space-between">
           <LogoAndNavBarDiv>
-            <LogoContainer to="/" aria-label="homepage">
+            <LogoContainer to={lp("/")} aria-label="homepage">
               <SvgIcon src="logo-opt.svg" width="101px" height="64px" />
             </LogoContainer>
             <LanguageSwitcher />

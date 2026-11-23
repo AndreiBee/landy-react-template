@@ -3,6 +3,7 @@ import { withTranslation, TFunction } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
 import LanguageSwitcher from "../LanguageSwitcher";
+import { useLocalizedPath } from "../../common/utils/localize";
 import {
   FooterSection,
   Title,
@@ -25,6 +26,7 @@ interface SocialLinkProps {
 }
 
 const Footer = ({ t }: { t: TFunction }) => {
+  const lp = useLocalizedPath();
   const SocialLink = ({ href, src, label }: SocialLinkProps) => {
     return (
       <a
@@ -76,11 +78,11 @@ const Footer = ({ t }: { t: TFunction }) => {
               <Title>{t("Company")}</Title>
               {/* <Large to="/">{t("About")}</Large> */}
               {/* <Large to="/price">{t("Price List")}</Large> */}
-              <Large to="/career">{t("Career")}</Large>
-              <Large to="/contact">{t("Contact")}</Large>
-              <Large to="/about">{t("About")}</Large>
-              <Large to="/blog">{t("Blog")}</Large>
-              <Large to="/privacy" style={{ textTransform: "none" }}>
+              <Large to={lp("/career")}>{t("Career")}</Large>
+              <Large to={lp("/contact")}>{t("Contact")}</Large>
+              <Large to={lp("/about")}>{t("About")}</Large>
+              <Large to={lp("/blog")}>{t("Blog")}</Large>
+              <Large to={lp("/privacy")} style={{ textTransform: "none" }}>
                 {t("Privacy Policy")}
               </Large>
               {/* <Large to="/">{t("Press")}</Large> */}
@@ -107,7 +109,7 @@ const Footer = ({ t }: { t: TFunction }) => {
               // justifyContent: "center", // Vertikální zarovnání na střed
               // alignItems: "flex-start", // Horizontální zarovnání doleva (volitelné)
             }}>
-              <NavLink to="/">
+              <NavLink to={lp("/")}>
                 <LogoContainer>
                   <SvgIcon
                     src="logo-opt.svg"

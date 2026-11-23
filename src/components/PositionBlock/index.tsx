@@ -1,6 +1,8 @@
 import { Col } from "antd";
 import { Fade } from "react-awesome-reveal";
 import { withTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
+import { useLocalizedPath } from "../../common/utils/localize";
 
 import { PositionBlockProps } from "./types";
 import { Button } from "../../common/Button";
@@ -31,6 +33,8 @@ const PositionBlock = ({
   direction,
   withButtons,
 }: PositionBlockProps) => {
+  const history = useHistory();
+  const lp = useLocalizedPath();
   const scrollTo = (id: string) => {
     const element = document.getElementById(id) as HTMLDivElement;
     element.scrollIntoView({
@@ -97,7 +101,7 @@ const PositionBlock = ({
                             color={item.color}
                             onClick={() => {
                               if (item.scrollToSection && item.scrollToSection.includes("/")) {
-                                  window.location.href = item.scrollToSection; // Přesměruje na stránku za lomítkem
+                                  history.push(lp(item.scrollToSection)); // Přejde na stránku v aktuálním jazyce
                                 } else {
                                   scrollTo(item.scrollToSection ? item.scrollToSection : "contact"); // Posune stránku
                                 }

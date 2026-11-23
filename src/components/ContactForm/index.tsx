@@ -4,6 +4,7 @@ import { Slide } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 import { ContactProps, ValidationTypeProps } from "./types";
 import { useForm } from "../../common/utils/useForm";
+import { useLocalizedPath } from "../../common/utils/localize";
 import validate from "../../common/utils/validationRules";
 import { Button } from "../../common/Button";
 import Block from "../Block";
@@ -13,6 +14,7 @@ import { ContactContainer, FormGroup, Span, ButtonContainer, EmailLink, AddressL
 
 const Contact = ({ title, content, email, in_number, acc_number, qr_payment_image, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit, submitting } = useForm(validate);
+  const lp = useLocalizedPath();
 
   const errorId = (type: string) => `${id}-${type}-error`;
   const hasError = (type: keyof typeof errors) => Boolean(errors[type]);
@@ -127,7 +129,7 @@ const Contact = ({ title, content, email, in_number, acc_number, qr_payment_imag
                 </Button>
               </ButtonContainer>
               <PrivacyNote>
-                {t("formPrivacyNote")} <Link to="/privacy">{t("Privacy Policy")}</Link>
+                {t("formPrivacyNote")} <Link to={lp("/privacy")}>{t("Privacy Policy")}</Link>
               </PrivacyNote>
             </FormGroup>
           </Slide>
