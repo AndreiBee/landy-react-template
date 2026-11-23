@@ -21,7 +21,6 @@ const Contact = () => {
       <ContactForm
         title={ContactFormContent[currentLanguage].title}
         content={ContactFormContent[currentLanguage].text}
-        phone={ContactFormContent[currentLanguage].phone}
         email={ContactFormContent[currentLanguage].email}
         in_number={ContactFormContent[currentLanguage].in_number}
         acc_number={ContactFormContent[currentLanguage].acc_number}

@@ -8,9 +8,9 @@ import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
-import { ContactContainer, FormGroup, Span, ButtonContainer, PhoneLink, EmailLink, AddressLine, Image, HoneyPot } from "./styles";
+import { ContactContainer, FormGroup, Span, ButtonContainer, EmailLink, AddressLine, Image, HoneyPot } from "./styles";
 
-const Contact = ({ title, content, phone, email, in_number, acc_number, qr_payment_image, id, t }: ContactProps) => {
+const Contact = ({ title, content, email, in_number, acc_number, qr_payment_image, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit, submitting } = useForm(validate);
 
   const errorId = (type: string) => `${id}-${type}-error`;
@@ -31,9 +31,6 @@ const Contact = ({ title, content, phone, email, in_number, acc_number, qr_payme
         <Col lg={12} md={11} sm={24} xs={24}>
           <Slide direction="left" triggerOnce>
             <Block title={title} content={content} />
-            <Row style={{ margin: "10px"}} justify="space-between">
-              <PhoneLink href={`tel:${phone.replace(/\s+/g, "")}`}>{phone}</PhoneLink>
-            </Row>
             <Row style={{ margin: "10px"}} justify="space-between">
               <EmailLink href={`mailto:${email}`}>{email}</EmailLink>
             </Row>

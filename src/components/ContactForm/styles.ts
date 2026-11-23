@@ -62,21 +62,6 @@ export const ButtonContainer = styled("div")`
   }
 `;
 
-export const PhoneLink = styled.a`
-  text-decoration: none;
-  // color: blue;
-  // font-weight: bold;
-  font-size: 20px;
-  font-family: "Roboto", sans-serif; /* Set the font style */
-  transition: color 0.3s ease;
-  word-wrap: break-word; /* Přidání */
-  overflow-wrap: break-word; /* Přidání */
-
-  &:hover {
-    color: rgb(255, 130, 92);  /* Change color on hover */
-  }
-`;
-
 export const EmailLink = styled.a`
   text-decoration: none;
   // color: blue;  /* Change the color as needed */
